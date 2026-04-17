@@ -1,0 +1,11 @@
+.github/
+data/
+docs/
+test/
+scripts/
+node_modules/
+*.log
+.env
+.env.local
+.env.development
+.env.production

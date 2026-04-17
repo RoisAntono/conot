@@ -9,8 +9,6 @@ Conot ditujukan untuk komunitas yang butuh notifikasi YouTube yang ringan, grati
 - [Terms of Service](TERMS_OF_SERVICE.md)
 - [Privacy Policy](PRIVACY_POLICY.md)
 - [License](LICENSE)
-- [Security Policy](SECURITY.md)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## Key Features
 

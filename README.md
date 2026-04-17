@@ -85,7 +85,7 @@ npm run lint:secrets
 ```env
 DISCORD_TOKEN=your_discord_bot_token
 GUILD_ID=
-BOT_OWNER_IDS=123456789012345678
+BOT_OWNER_IDS=YOUR_OWNER_USER_ID
 GUARD_GUILD_WHITELIST_ENABLED=false
 GUARD_USER_WHITELIST_ENABLED=false
 GUARD_LEAVE_UNAUTHORIZED_GUILDS=false
@@ -158,8 +158,8 @@ npm run backup:restore:dry-run
 
 ```text
 ?n setlogchannel #bot-logs
-?n addchannel @WindahBasudara #youtube-updates
-?n addtitlewatch dr gia #title-watch --days 3
+?n addchannel @creatorchannel #youtube-updates
+?n addtitlewatch keyword topik #title-watch --days 3
 ?n listchannels
 ?n listtitlewatches
 ```
@@ -212,16 +212,16 @@ npm run backup:restore:dry-run
 ## Examples
 
 ```text
-?n addchannel @DeddyCorbuzier #podcast-updates @Subscriber video --layout compact --title "Praz Teguh, Habib Jafar" --message "Ada video baru dari {channel}!"
-?n updatechannel @LuthfiHalimawan #live-alert @Subscriber live_now --layout rich
-?n updatechannel @LuthfiHalimawan --refresh-source
-?n addtitlewatch dr gia #alert-judul --days 3
+?n addchannel @creatorchannel #content-updates @MemberRole video --layout compact --title "Keyword A, Keyword B" --message "Ada video baru dari {channel}!"
+?n updatechannel @creatorchannel #live-alert @MemberRole live_now --layout rich
+?n updatechannel @creatorchannel --refresh-source
+?n addtitlewatch keyword topik #alert-judul --days 3
 ?n setlogchannel #bot-logs
 ?n health
 ?n setguard guild on user on leave off
-?n setdevlogchannel #conot-devlog
-?n whitelistguild add 123456789012345678
-?n whitelistuser add 987654321098765432
+?n setdevlogchannel #dev-log
+?n whitelistguild add YOUR_GUILD_ID
+?n whitelistuser add TARGET_USER_ID
 ```
 
 ## Notification Format
@@ -307,8 +307,8 @@ Contoh:
 
 ```text
 ?n setguard guild on user on leave off
-?n whitelistguild add 123456789012345678
-?n whitelistuser add 987654321098765432
+?n whitelistguild add YOUR_GUILD_ID
+?n whitelistuser add TARGET_USER_ID
 ?n whitelistguild list
 ?n whitelistuser list
 ```

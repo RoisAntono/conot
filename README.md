@@ -372,23 +372,6 @@ Struktur inti:
 - Bot tidak memakai YouTube Data API v3
 - Akurasi title watch dan klasifikasi konten tetap bergantung pada data publik YouTube
 
-## Contributing
-
-Jika proyek ini dibuka sebagai open source, arah kontribusi yang paling relevan:
-
-- peningkatan akurasi deteksi konten
-- peningkatan stabilitas scraping dan polling
-- peningkatan UX command dan embed
-- peningkatan logging dan observability
-
-Jaga karakter proyek tetap:
-
-- ringan
-- modular
-- tanpa YouTube Data API
-
-Panduan kontribusi lengkap ada di [CONTRIBUTING.md](CONTRIBUTING.md).
-
 ## Testing
 
 Proyek ini memakai test dasar bawaan Node:

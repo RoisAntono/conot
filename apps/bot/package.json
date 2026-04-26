@@ -1,0 +1,15 @@
+{
+  "name": "@conot/bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --env-file=../../.env src/index.js",
+    "dev": "node --watch --env-file=../../.env src/index.js",
+    "lint": "echo \"bot lint delegated to root lint\"",
+    "test": "echo \"bot test delegated to root test\"",
+    "build": "echo \"no build step for bot wrapper\"",
+    "typecheck": "echo \"typecheck pending migration to TypeScript\""
+  }
+}

@@ -29,8 +29,14 @@ jobs:
       - name: Run lint
         run: npm run lint
 
+      - name: Run workspace lint
+        run: npm run lint:workspaces
+
       - name: Run tests with coverage
         run: npm run test:coverage
+
+      - name: Run workspace tests
+        run: npm run test:workspaces
 
       - name: Secret scan
         run: npm run lint:secrets

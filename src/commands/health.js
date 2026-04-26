@@ -13,6 +13,7 @@ const {
 } = require("../config/constants");
 const { getAccessControl, isGuildAuthorized, isOwnerUser } = require("../services/accessGuardService");
 const { getCanaryStatus } = require("../services/canaryService");
+const { getDashboardConfigSyncStatus } = require("../services/dashboardConfigSyncService");
 const { getLogChannelIdForGuild } = require("../services/logChannelService");
 const { getPrefixForGuild } = require("../services/prefixService");
 const { getPreviewOnAddForGuild } = require("../services/previewService");
@@ -198,10 +199,11 @@ function buildHealthEmbed({
         inline: false
       }
     )
-    .setFooter({ text: `Gunakan ${prefix} setlogchannel untuk log dan ${prefix} setguard untuk guard instance.` })
+    .setFooter({ text: `Gunakan ${prefix} setlogchannel untuk audit log admin dan ${prefix} setguard untuk guard instance.` })
     .setTimestamp();
 
   if (isDevView) {
+    const configSyncStatus = getDashboardConfigSyncStatus();
     embed.addFields(
       {
         name: "Storage",
@@ -238,6 +240,27 @@ function buildHealthEmbed({
           `Siklus: ${canaryStatus.cycleCount || 0}`,
           `Run Terakhir: ${formatTimestamp(canaryStatus.lastRunAt)}`,
           `Error Terakhir: ${canaryStatus.lastError ? `\`${canaryStatus.lastError}\`` : "Tidak ada"}`
+        ].join("\n"),
+        inline: false
+      },
+      {
+        name: "Config Sync",
+        value: [
+          `Enabled: ${configSyncStatus.enabled ? "Ya" : "Tidak"}`,
+          `Sedang Sinkron: ${configSyncStatus.running ? "Ya" : "Tidak"}`,
+          `Event Stream: ${configSyncStatus.eventStreamEnabled ? "Aktif" : "Nonaktif"}`,
+          `Event Loop: ${configSyncStatus.eventStreamRunning ? "Jalan" : "Idle"} (${configSyncStatus.eventStreamStatus || "idle"})`,
+          `Interval: ${Math.floor((configSyncStatus.intervalMs || 0) / 1000)} detik`,
+          `Event Terakhir: ${
+            configSyncStatus.lastEventSeq
+              ? `#${configSyncStatus.lastEventSeq} (${configSyncStatus.lastEventTopic || "unknown"})`
+              : "Belum ada"
+          }`,
+          `Waktu Event Terakhir: ${formatTimestamp(configSyncStatus.lastEventAt)}`,
+          `Status Terakhir: ${configSyncStatus.lastSyncStatus || "idle"}`,
+          `Sinkron Terakhir: ${formatTimestamp(configSyncStatus.lastSyncAt)}`,
+          `Error Sync Terakhir: ${configSyncStatus.lastSyncError ? `\`${configSyncStatus.lastSyncError}\`` : "Tidak ada"}`,
+          `Error Event Stream: ${configSyncStatus.eventStreamError ? `\`${configSyncStatus.eventStreamError}\`` : "Tidak ada"}`
         ].join("\n"),
         inline: false
       },

@@ -12,6 +12,7 @@ const {
 const { getPrefixForGuild } = require("../services/prefixService");
 const { getPreviewOnAddForGuild } = require("../services/previewService");
 const { addChannelTracker } = require("../services/trackerService");
+const { logGuildAction } = require("../services/userActionLogService");
 const { resolveGuildChannel, resolveGuildRole } = require("../utils/discordResolvers");
 const { diagnoseChannelAccess } = require("../utils/discordDeliveryDiagnostics");
 const {
@@ -157,6 +158,33 @@ module.exports = {
     }
 
     await interaction.editReply({ embeds: [embed] });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: result.isNew ? "Tracker ditambahkan" : "Tracker diperbarui lewat addchannel",
+      description: result.isNew
+        ? "Admin menambahkan tracker YouTube baru."
+        : "Admin menjalankan addchannel pada tracker yang sudah ada.",
+      keyParts: [result.entry.youtube.channelId, interaction.user?.id],
+      details: [
+        {
+          name: "YouTube",
+          value: `${result.entry.youtube.title || result.entry.youtube.username} (\`${result.entry.youtube.channelId}\`)`,
+          inline: false
+        },
+        {
+          name: "Target Channel",
+          value: `<#${result.entry.discord.channelId}>`,
+          inline: true
+        },
+        {
+          name: "Ping Role",
+          value: result.entry.discord.roleId ? `<@&${result.entry.discord.roleId}>` : "Tidak ada",
+          inline: true
+        }
+      ]
+    });
   },
   async executePrefix(message, args, context) {
     const parsed = parseTrackerCommandArgs(args);
@@ -233,5 +261,32 @@ module.exports = {
     }
 
     await message.reply({ embeds: [embed] });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: result.isNew ? "Tracker ditambahkan" : "Tracker diperbarui lewat addchannel",
+      description: result.isNew
+        ? "Admin menambahkan tracker YouTube baru."
+        : "Admin menjalankan addchannel pada tracker yang sudah ada.",
+      keyParts: [result.entry.youtube.channelId, message.author?.id],
+      details: [
+        {
+          name: "YouTube",
+          value: `${result.entry.youtube.title || result.entry.youtube.username} (\`${result.entry.youtube.channelId}\`)`,
+          inline: false
+        },
+        {
+          name: "Target Channel",
+          value: `<#${result.entry.discord.channelId}>`,
+          inline: true
+        },
+        {
+          name: "Ping Role",
+          value: result.entry.discord.roleId ? `<@&${result.entry.discord.roleId}>` : "Tidak ada",
+          inline: true
+        }
+      ]
+    });
   }
 };

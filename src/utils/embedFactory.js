@@ -4,6 +4,7 @@ const {
   DEFAULT_TITLE_WATCH_MAX_AGE_DAYS
 } = require("../config/constants");
 const { getContentFilterLabel } = require("./contentFilter");
+const { buildGuildDashboardUrl } = require("./dashboardLink");
 const { getEmbedLayoutLabel } = require("./embedLayout");
 const { getTitleFilterLabel } = require("./titleFilter");
 
@@ -112,6 +113,19 @@ function buildEmbedVideoTitle(latestVideo) {
 
 function buildVideoLinkFieldValue(link) {
   return `[Buka di YouTube](${link})`;
+}
+
+function buildDashboardField(guildId, section) {
+  const url = buildGuildDashboardUrl(guildId, section);
+  if (!url) {
+    return null;
+  }
+
+  return {
+    name: "Dashboard",
+    value: `[Buka Dashboard](${url})`,
+    inline: false
+  };
 }
 
 function formatDiscordTimestamp(value) {
@@ -248,6 +262,8 @@ function applyNotificationMediaLayout(embed, latestVideo, trackedChannel) {
 }
 
 function buildTrackerResultEmbed({ actionLabel, trackedEntry, latestVideo, prefix }) {
+  const dashboardField = buildDashboardField(trackedEntry?.discord?.guildId, "trackers");
+
   return buildStatusEmbed({
     tone: "success",
     title: `Tracker berhasil ${actionLabel}`,
@@ -287,12 +303,15 @@ function buildTrackerResultEmbed({ actionLabel, trackedEntry, latestVideo, prefi
           ? `[${latestVideo.title}](${latestVideo.link})`
           : "Baseline RSS belum tersedia. Polling berikutnya akan mencoba lagi.",
         inline: false
-      }
+      },
+      ...(dashboardField ? [dashboardField] : [])
     ]
   });
 }
 
 function buildTrackerRemovedEmbed(removedEntry, prefix) {
+  const dashboardField = buildDashboardField(removedEntry?.discord?.guildId, "trackers");
+
   return buildStatusEmbed({
     tone: "info",
     title: "Tracker dihapus",
@@ -305,45 +324,58 @@ function buildTrackerRemovedEmbed(removedEntry, prefix) {
           `YouTube ID: \`${removedEntry.youtube.channelId}\``,
           `Target Discord: <#${removedEntry.discord.channelId}>`
         ].join("\n")
-      }
+      },
+      ...(dashboardField ? [dashboardField] : [])
     ]
   });
 }
 
-function buildTrackerNotFoundEmbed(prefix) {
+function buildTrackerNotFoundEmbed(prefix, guildId = null) {
+  const dashboardField = buildDashboardField(guildId, "trackers");
+
   return buildStatusEmbed({
     tone: "warning",
     title: "Tracker tidak ditemukan",
     description: "Bot tidak menemukan tracker YouTube yang cocok di server ini.",
-    footerText: `Gunakan ${prefix} listchannels untuk mengecek daftar tracker aktif.`
+    footerText: `Gunakan ${prefix} listchannels untuk mengecek daftar tracker aktif.`,
+    fields: dashboardField ? [dashboardField] : []
   });
 }
 
-function buildPrefixUpdatedEmbed({ oldPrefix, newPrefix }) {
+function buildPrefixUpdatedEmbed({ oldPrefix, newPrefix, guildId = null }) {
+  const dashboardField = buildDashboardField(guildId, "settings");
+
   return buildStatusEmbed({
     tone: "success",
     title: "Prefix diperbarui",
-    description: `Prefix berhasil diubah dari \`${oldPrefix}\` menjadi \`${newPrefix}\`.`
+    description: `Prefix berhasil diubah dari \`${oldPrefix}\` menjadi \`${newPrefix}\`.`,
+    fields: dashboardField ? [dashboardField] : []
   });
 }
 
-function buildPreviewOnAddUpdatedEmbed(enabled) {
+function buildPreviewOnAddUpdatedEmbed(enabled, guildId = null) {
+  const dashboardField = buildDashboardField(guildId, "settings");
+
   return buildStatusEmbed({
     tone: "success",
     title: "Preview On Add diperbarui",
     description: enabled
       ? "Setup preview saat menambahkan tracker atau title watch sekarang **aktif**."
-      : "Setup preview saat menambahkan tracker atau title watch sekarang **nonaktif**."
+      : "Setup preview saat menambahkan tracker atau title watch sekarang **nonaktif**.",
+    fields: dashboardField ? [dashboardField] : []
   });
 }
 
-function buildLogChannelUpdatedEmbed(logChannelId) {
+function buildLogChannelUpdatedEmbed(logChannelId, guildId = null) {
+  const dashboardField = buildDashboardField(guildId, "settings");
+
   return buildStatusEmbed({
     tone: "success",
     title: "Log Channel diperbarui",
     description: logChannelId
-      ? `Log bot sekarang akan dikirim ke <#${logChannelId}>.`
-      : "Log bot untuk server ini sekarang **dinonaktifkan**."
+      ? `Log aktivitas admin sekarang akan dikirim ke <#${logChannelId}>.`
+      : "Log aktivitas admin untuk server ini sekarang **dinonaktifkan**.",
+    fields: dashboardField ? [dashboardField] : []
   });
 }
 
@@ -352,7 +384,7 @@ function buildDevLogChannelUpdatedEmbed(logChannelId) {
     tone: "success",
     title: "Dev Log Channel diperbarui",
     description: logChannelId
-      ? `Dev log detail sekarang dikirim ke <#${logChannelId}> (owner-only setup).`
+      ? `Dev log owner sekarang dikirim ke <#${logChannelId}> untuk error teknis yang actionable.`
       : "Dev log detail global sekarang **dinonaktifkan**."
   });
 }
@@ -368,7 +400,7 @@ function buildValidationErrorEmbed(message) {
 function buildCommandErrorEmbed(commandName) {
   return buildStatusEmbed({
     title: "Command gagal dijalankan",
-    description: `Terjadi error saat menjalankan \`${commandName}\`. Cek log bot untuk detailnya.`,
+    description: `Terjadi error saat menjalankan \`${commandName}\`. Cek dev log owner untuk detail teknisnya.`,
     tone: "error"
   });
 }
@@ -464,11 +496,14 @@ function buildWhitelistUpdatedEmbed({ type, action, targetId, accessControl }) {
   });
 }
 
-function buildEmptyListEmbed(prefix) {
+function buildEmptyListEmbed(prefix, guildId = null) {
+  const dashboardField = buildDashboardField(guildId, "trackers");
+
   return buildStatusEmbed({
     tone: "info",
     title: "Belum ada tracker",
-    description: `Belum ada channel YouTube yang dipantau di server ini.\nMulai dengan \`${prefix} addchannel @username #channel\` atau gunakan \`/addchannel\`.`
+    description: `Belum ada channel YouTube yang dipantau di server ini.\nMulai dengan \`${prefix} addchannel @username #channel\` atau gunakan \`/addchannel\`.`,
+    fields: dashboardField ? [dashboardField] : []
   });
 }
 
@@ -507,7 +542,9 @@ function buildCustomMessagePreview(messageTemplate) {
   return messageTemplate || DEFAULT_CUSTOM_MESSAGE;
 }
 
-function buildTitleWatchResultEmbed({ actionLabel, watch, prefix }) {
+function buildTitleWatchResultEmbed({ actionLabel, watch, prefix, guildId = null }) {
+  const dashboardField = buildDashboardField(guildId, "title-watches");
+
   return buildStatusEmbed({
     tone: "success",
     title: `Title Watch berhasil ${actionLabel}`,
@@ -531,33 +568,41 @@ function buildTitleWatchResultEmbed({ actionLabel, watch, prefix }) {
         name: "Batas Umur Konten",
         value: `${watch.maxAgeDays || DEFAULT_TITLE_WATCH_MAX_AGE_DAYS} hari`,
         inline: true
-      }
+      },
+      ...(dashboardField ? [dashboardField] : [])
     ]
   });
 }
 
-function buildTitleWatchRemovedEmbed(watch, prefix) {
+function buildTitleWatchRemovedEmbed(watch, prefix, guildId = null) {
+  const dashboardField = buildDashboardField(guildId, "title-watches");
+
   return buildStatusEmbed({
     tone: "info",
     title: "Title Watch dihapus",
     description: `Keyword judul **${watch.keyword}** berhasil dihapus.`,
-    footerText: `Prefix saat ini: ${prefix}`
+    footerText: `Prefix saat ini: ${prefix}`,
+    fields: dashboardField ? [dashboardField] : []
   });
 }
 
-function buildTitleWatchNotFoundEmbed(prefix) {
+function buildTitleWatchNotFoundEmbed(prefix, guildId = null) {
+  const dashboardField = buildDashboardField(guildId, "title-watches");
+
   return buildStatusEmbed({
     tone: "warning",
     title: "Title Watch tidak ditemukan",
     description: "Bot tidak menemukan keyword title watch yang cocok di server ini.",
-    footerText: `Gunakan ${prefix} listtitlewatches untuk mengecek daftar title watch aktif.`
+    footerText: `Gunakan ${prefix} listtitlewatches untuk mengecek daftar title watch aktif.`,
+    fields: dashboardField ? [dashboardField] : []
   });
 }
 
-function buildTitleWatchListEmbed(titleWatches, prefix) {
+function buildTitleWatchListEmbed(titleWatches, prefix, guildId = null) {
   const maxVisible = 10;
   const visibleEntries = titleWatches.slice(0, maxVisible);
   const hiddenCount = Math.max(0, titleWatches.length - visibleEntries.length);
+  const dashboardField = buildDashboardField(guildId, "title-watches");
 
   return buildStatusEmbed({
     tone: "info",
@@ -579,17 +624,21 @@ function buildTitleWatchListEmbed(titleWatches, prefix) {
             value: `${hiddenCount} title watch lainnya tidak ditampilkan agar embed tetap ringkas.`,
             inline: false
           }]
-        : [])
+        : []),
+      ...(dashboardField ? [dashboardField] : [])
     ],
     footerText: `Prefix saat ini: ${prefix}`
   });
 }
 
-function buildEmptyTitleWatchListEmbed(prefix) {
+function buildEmptyTitleWatchListEmbed(prefix, guildId = null) {
+  const dashboardField = buildDashboardField(guildId, "title-watches");
+
   return buildStatusEmbed({
     tone: "info",
     title: "Belum ada Title Watch",
-    description: `Belum ada keyword judul global di server ini.\nGunakan \`${prefix} addtitlewatch "Frimawan" #channel --days ${DEFAULT_TITLE_WATCH_MAX_AGE_DAYS}\` atau slash \`/addtitlewatch\`.`
+    description: `Belum ada keyword judul global di server ini.\nGunakan \`${prefix} addtitlewatch "Frimawan" #channel --days ${DEFAULT_TITLE_WATCH_MAX_AGE_DAYS}\` atau slash \`/addtitlewatch\`.`,
+    fields: dashboardField ? [dashboardField] : []
   });
 }
 

@@ -1,0 +1,19 @@
+{
+  "name": "@conot/shared-schema",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@conot/shared-types": "file:../shared-types"
+  },
+  "scripts": {
+    "build": "echo \"shared-schema build not required\"",
+    "lint": "echo \"shared-schema lint delegated to root\"",
+    "test": "echo \"shared-schema test delegated to root\"",
+    "typecheck": "echo \"shared-schema typecheck pending TS migration\""
+  }
+}

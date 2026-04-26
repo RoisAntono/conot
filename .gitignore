@@ -1,4 +1,11 @@
 node_modules/
+.turbo/
+.next/
+.vercel/
+dist/
+test-results/
+apps/dashboard-web/.playwright-data/
+apps/dashboard-web/test-results/
 .env
 .env.local
 .env.development
@@ -6,5 +13,6 @@ node_modules/
 *.log
 data/backups/
 data/data.json
+data/dashboard-sessions.json
 data/*.pre-restore-*.json
 data/*.restore-drill-*.json

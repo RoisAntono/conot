@@ -6,6 +6,7 @@ const {
 } = require("../config/constants");
 const { getPrefixForGuild } = require("../services/prefixService");
 const { updateChannelTracker } = require("../services/trackerService");
+const { logGuildAction } = require("../services/userActionLogService");
 const {
   buildTrackerNotFoundEmbed,
   buildTrackerResultEmbed,
@@ -56,7 +57,7 @@ module.exports = {
     });
 
     if (!result) {
-      await interaction.editReply({ embeds: [buildTrackerNotFoundEmbed(prefix)] });
+      await interaction.editReply({ embeds: [buildTrackerNotFoundEmbed(prefix, interaction.guildId)] });
       return;
     }
 
@@ -68,6 +69,26 @@ module.exports = {
           latestVideo: result.latestVideo,
           prefix
         })
+      ]
+    });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: "Layout tracker diperbarui",
+      description: "Admin mengubah layout embed notifikasi tracker.",
+      keyParts: [result.entry.youtube.channelId, embedLayout, interaction.user?.id],
+      details: [
+        {
+          name: "YouTube",
+          value: `${result.entry.youtube.title || result.entry.youtube.username} (\`${result.entry.youtube.channelId}\`)`,
+          inline: false
+        },
+        {
+          name: "Layout",
+          value: `\`${embedLayout}\``,
+          inline: true
+        }
       ]
     });
   },
@@ -89,7 +110,7 @@ module.exports = {
     });
 
     if (!result) {
-      await message.reply({ embeds: [buildTrackerNotFoundEmbed(context.prefix)] });
+      await message.reply({ embeds: [buildTrackerNotFoundEmbed(context.prefix, message.guild.id)] });
       return;
     }
 
@@ -101,6 +122,26 @@ module.exports = {
           latestVideo: result.latestVideo,
           prefix: context.prefix
         })
+      ]
+    });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: "Layout tracker diperbarui",
+      description: "Admin mengubah layout embed notifikasi tracker.",
+      keyParts: [result.entry.youtube.channelId, embedLayout, message.author?.id],
+      details: [
+        {
+          name: "YouTube",
+          value: `${result.entry.youtube.title || result.entry.youtube.username} (\`${result.entry.youtube.channelId}\`)`,
+          inline: false
+        },
+        {
+          name: "Layout",
+          value: `\`${embedLayout}\``,
+          inline: true
+        }
       ]
     });
   }

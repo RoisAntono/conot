@@ -35,6 +35,7 @@ const recentNotificationHistory = new Map();
 const TRACKER_SEEN_VIDEO_HISTORY_LIMIT = 25;
 
 const baseRuntimeDeps = {
+  appendNotificationHistory: fileDb.appendNotificationHistory,
   classifyNetworkError: networkRetry.classifyNetworkError,
   diagnoseChannelAccess: discordDeliveryDiagnostics.diagnoseChannelAccess,
   diagnoseDiscordSendError: discordDeliveryDiagnostics.diagnoseDiscordSendError,
@@ -53,7 +54,7 @@ const baseRuntimeDeps = {
   isVideoWithinMaxAgeDays: videoAge.isVideoWithinMaxAgeDays,
   mergeInspectedVideo: youtubeVideoInspector.mergeInspectedVideo,
   searchYouTubeVideos: youtubeSearchScraper.searchYouTubeVideos,
-  sendGuildLog: botLogService.sendGuildLog,
+  sendGuildLog: botLogService.sendSystemLog,
   shouldNotifyForVideo: rssChecker.shouldNotifyForVideo,
   updateLastVideoState: fileDb.updateLastVideoState,
   updateTitleWatchLastVideo: fileDb.updateTitleWatchLastVideo,
@@ -343,6 +344,55 @@ function buildTitleWatchNotificationSignature(watch, latestVideo) {
   ].join(":");
 }
 
+function buildTrackerHistoryPayload(trackedChannel, latestVideo, signature, event, status) {
+  return {
+    guildId: trackedChannel?.discord?.guildId || null,
+    source: "tracker",
+    status,
+    event,
+    signature,
+    youtubeChannelId: trackedChannel?.youtube?.channelId || null,
+    youtubeChannelTitle: trackedChannel?.youtube?.title || latestVideo?.channelTitle || null,
+    youtubeUsername: trackedChannel?.youtube?.username || null,
+    videoId: latestVideo?.videoId || null,
+    title: latestVideo?.title || null,
+    link: latestVideo?.link || null,
+    contentState: latestVideo?.contentState || null,
+    contentLabel: latestVideo?.contentLabel || null,
+    discordChannelId: trackedChannel?.discord?.channelId || null,
+    discordRoleId: trackedChannel?.discord?.roleId || null
+  };
+}
+
+function buildTitleWatchHistoryPayload(guildId, watch, latestVideo, signature, status) {
+  return {
+    guildId: guildId || null,
+    source: "titlewatch",
+    status,
+    event: "new",
+    signature,
+    keyword: watch?.keyword || null,
+    youtubeChannelId: latestVideo?.channelId || null,
+    youtubeChannelTitle: latestVideo?.channelTitle || null,
+    youtubeUsername: latestVideo?.channelHandle || null,
+    videoId: latestVideo?.videoId || null,
+    title: latestVideo?.title || null,
+    link: latestVideo?.link || null,
+    contentState: latestVideo?.contentState || null,
+    contentLabel: latestVideo?.contentLabel || null,
+    discordChannelId: watch?.channelId || null,
+    discordRoleId: watch?.roleId || null
+  };
+}
+
+async function appendNotificationHistorySafe(payload) {
+  try {
+    await runtimeDeps.appendNotificationHistory(payload);
+  } catch (error) {
+    logger.warn("Gagal menyimpan notification history.", error);
+  }
+}
+
 async function processGlobalTitleWatchesForGuild(client, guildId) {
   const titleWatches = await runtimeDeps.getTitleWatchesByGuild(guildId);
 
@@ -519,6 +569,9 @@ async function processGlobalTitleWatchesForGuild(client, guildId) {
         lastDeliveryAttemptSignature: notificationSignature,
         lastDeliveryAttemptAt: new Date().toISOString()
       });
+      await appendNotificationHistorySafe(
+        buildTitleWatchHistoryPayload(guildId, watch, latestVideo, notificationSignature, "blocked")
+      );
       continue;
     }
 
@@ -554,6 +607,9 @@ async function processGlobalTitleWatchesForGuild(client, guildId) {
         lastDeliveryAttemptSignature: notificationSignature,
         lastDeliveryAttemptAt: new Date().toISOString()
       });
+      await appendNotificationHistorySafe(
+        buildTitleWatchHistoryPayload(guildId, watch, latestVideo, notificationSignature, "blocked")
+      );
       continue;
     }
 
@@ -566,6 +622,9 @@ async function processGlobalTitleWatchesForGuild(client, guildId) {
         lastDeliveryAttemptSignature: notificationSignature,
         lastDeliveryAttemptAt: new Date().toISOString()
       });
+      await appendNotificationHistorySafe(
+        buildTitleWatchHistoryPayload(guildId, watch, latestVideo, notificationSignature, "sent")
+      );
     } catch (error) {
       logger.error(`Gagal mengirim title watch notification ke channel ${watch.channelId}.`, error);
       const diagnosis = runtimeDeps.diagnoseDiscordSendError({
@@ -610,6 +669,9 @@ async function processGlobalTitleWatchesForGuild(client, guildId) {
         lastDeliveryAttemptSignature: notificationSignature,
         lastDeliveryAttemptAt: new Date().toISOString()
       });
+      await appendNotificationHistorySafe(
+        buildTitleWatchHistoryPayload(guildId, watch, latestVideo, notificationSignature, "failed")
+      );
       continue;
     }
 
@@ -747,6 +809,9 @@ async function sendTrackerNotification(client, trackedChannel, latestVideo, form
         lastDeliveryAttemptAt: new Date().toISOString()
       }
     );
+    await appendNotificationHistorySafe(
+      buildTrackerHistoryPayload(trackedChannel, latestVideo, notificationSignature, notificationKind, "blocked")
+    );
     return false;
   }
 
@@ -787,6 +852,9 @@ async function sendTrackerNotification(client, trackedChannel, latestVideo, form
         lastDeliveryAttemptAt: new Date().toISOString()
       }
     );
+    await appendNotificationHistorySafe(
+      buildTrackerHistoryPayload(trackedChannel, latestVideo, notificationSignature, notificationKind, "blocked")
+    );
     return false;
   }
 
@@ -803,6 +871,9 @@ async function sendTrackerNotification(client, trackedChannel, latestVideo, form
         lastDeliveryAttemptSignature: notificationSignature,
         lastDeliveryAttemptAt: new Date().toISOString()
       }
+    );
+    await appendNotificationHistorySafe(
+      buildTrackerHistoryPayload(trackedChannel, latestVideo, notificationSignature, notificationKind, "sent")
     );
     return true;
   } catch (error) {
@@ -853,6 +924,9 @@ async function sendTrackerNotification(client, trackedChannel, latestVideo, form
         lastDeliveryAttemptSignature: notificationSignature,
         lastDeliveryAttemptAt: new Date().toISOString()
       }
+    );
+    await appendNotificationHistorySafe(
+      buildTrackerHistoryPayload(trackedChannel, latestVideo, notificationSignature, notificationKind, "failed")
     );
     return false;
   }

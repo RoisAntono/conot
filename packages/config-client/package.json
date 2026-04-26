@@ -1,0 +1,19 @@
+{
+  "name": "@conot/config-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@conot/shared-types": "file:../shared-types"
+  },
+  "scripts": {
+    "build": "echo \"config-client build not required\"",
+    "lint": "echo \"config-client lint delegated to root\"",
+    "test": "echo \"config-client test delegated to root\"",
+    "typecheck": "echo \"config-client typecheck pending TS migration\""
+  }
+}

@@ -1,6 +1,6 @@
 const logger = require("../utils/logger");
 const { evaluateAccess, isOwnerUser } = require("../services/accessGuardService");
-const { sendGuildLog } = require("../services/botLogService");
+const { sendSystemLog } = require("../services/botLogService");
 const { consumeCommandRateLimit } = require("../services/commandRateLimitService");
 const { getPrefixForGuild } = require("../services/prefixService");
 const {
@@ -94,7 +94,7 @@ module.exports = {
       await command.executePrefix(message, parsed.args, { prefix });
     } catch (error) {
       logger.error(`Prefix command ${parsed.commandName} gagal dijalankan.`, error);
-      await sendGuildLog(message.client, {
+      await sendSystemLog(message.client, {
         guildId: message.guild.id,
         level: "error",
         scope: "Command",

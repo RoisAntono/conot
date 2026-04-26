@@ -23,24 +23,24 @@ module.exports = {
 
     if (!trackedChannels.length) {
       await interaction.reply({
-        embeds: [buildEmptyListEmbed(guildPrefix)],
+        embeds: [buildEmptyListEmbed(guildPrefix, interaction.guildId)],
         ephemeral: true
       });
       return;
     }
 
-    const embed = buildTrackedChannelsEmbed(trackedChannels, guildPrefix);
+    const embed = buildTrackedChannelsEmbed(trackedChannels, guildPrefix, interaction.guildId);
     await interaction.reply({ embeds: [embed], ephemeral: true });
   },
   async executePrefix(message, args, context) {
     const trackedChannels = await listTrackedChannels(message.guild.id);
 
     if (!trackedChannels.length) {
-      await message.reply({ embeds: [buildEmptyListEmbed(context.prefix)] });
+      await message.reply({ embeds: [buildEmptyListEmbed(context.prefix, message.guild.id)] });
       return;
     }
 
-    const embed = buildTrackedChannelsEmbed(trackedChannels, context.prefix);
+    const embed = buildTrackedChannelsEmbed(trackedChannels, context.prefix, message.guild.id);
     await message.reply({ embeds: [embed] });
   }
 };

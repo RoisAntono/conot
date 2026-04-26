@@ -11,6 +11,7 @@ const {
 } = require("../config/constants");
 const { getPrefixForGuild } = require("../services/prefixService");
 const { getPreviewOnAddForGuild } = require("../services/previewService");
+const { logGuildAction } = require("../services/userActionLogService");
 const {
   addTitleWatch,
   normalizeTitleWatchMaxAgeDays
@@ -162,7 +163,8 @@ module.exports = {
     const embed = buildTitleWatchResultEmbed({
       actionLabel: result.isNew ? "ditambahkan" : "diperbarui",
       watch: result.watch,
-      prefix
+      prefix,
+      guildId: interaction.guildId
     });
 
     if (result.isNew) {
@@ -200,6 +202,33 @@ module.exports = {
 
     await interaction.editReply({
       embeds: [embed]
+    });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: result.isNew ? "Title watch ditambahkan" : "Title watch diperbarui",
+      description: result.isNew
+        ? "Admin menambahkan keyword title watch."
+        : "Admin memperbarui keyword title watch.",
+      keyParts: [result.watch.keyword, interaction.user?.id],
+      details: [
+        {
+          name: "Keyword",
+          value: `\`${result.watch.keyword}\``,
+          inline: true
+        },
+        {
+          name: "Target Channel",
+          value: `<#${result.watch.channelId}>`,
+          inline: true
+        },
+        {
+          name: "Ping Role",
+          value: result.watch.roleId ? `<@&${result.watch.roleId}>` : "Tidak ada",
+          inline: true
+        }
+      ]
     });
   },
   async executePrefix(message, args, context) {
@@ -273,7 +302,8 @@ module.exports = {
     const embed = buildTitleWatchResultEmbed({
       actionLabel: result.isNew ? "ditambahkan" : "diperbarui",
       watch: result.watch,
-      prefix: context.prefix
+      prefix: context.prefix,
+      guildId: message.guild.id
     });
 
     if (result.isNew) {
@@ -310,5 +340,32 @@ module.exports = {
     }
 
     await message.reply({ embeds: [embed] });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: result.isNew ? "Title watch ditambahkan" : "Title watch diperbarui",
+      description: result.isNew
+        ? "Admin menambahkan keyword title watch."
+        : "Admin memperbarui keyword title watch.",
+      keyParts: [result.watch.keyword, message.author?.id],
+      details: [
+        {
+          name: "Keyword",
+          value: `\`${result.watch.keyword}\``,
+          inline: true
+        },
+        {
+          name: "Target Channel",
+          value: `<#${result.watch.channelId}>`,
+          inline: true
+        },
+        {
+          name: "Ping Role",
+          value: result.watch.roleId ? `<@&${result.watch.roleId}>` : "Tidak ada",
+          inline: true
+        }
+      ]
+    });
   }
 };

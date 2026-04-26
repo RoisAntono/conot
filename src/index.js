@@ -7,6 +7,7 @@ const {
 } = require("discord.js");
 const { broadcastGlobalLog } = require("./services/botLogService");
 const { stopCanaryScheduler } = require("./services/canaryService");
+const { stopDashboardConfigSync } = require("./services/dashboardConfigSyncService");
 const { stopDataBackupScheduler } = require("./services/dataBackupService");
 const { stopYouTubePoller } = require("./services/youtubePoller");
 const { validateEnvironmentVariables } = require("./utils/envValidator");
@@ -88,6 +89,7 @@ async function shutdownGracefully(signal) {
   logger.warn(`Menerima sinyal ${signal}. Memulai graceful shutdown...`);
 
   stopCanaryScheduler();
+  stopDashboardConfigSync();
   stopDataBackupScheduler();
   stopYouTubePoller();
 

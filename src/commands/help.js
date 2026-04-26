@@ -20,7 +20,7 @@ function createCommandGroups({ prefixMode = false, prefixValue = DEFAULT_PREFIX 
   return {
     summary: {
       name: commandName("setlogchannel", "setlogchannel #bot-logs"),
-      description: "Atur channel log lebih dulu agar error operasional bisa dipantau dengan jelas."
+      description: "Atur channel log lebih dulu agar riwayat aksi admin (add/update/remove) tercatat rapi."
     },
     tracker: [
       { name: commandName("addchannel", "addchannel @windahbasudara #youtube-updates"), description: "Tambahkan channel YouTube ke daftar tracker server." },
@@ -38,13 +38,13 @@ function createCommandGroups({ prefixMode = false, prefixValue = DEFAULT_PREFIX 
       { name: commandName("help", "help"), description: "Tampilkan panduan command yang tersedia." },
       { name: commandName("about", "about"), description: "Lihat gambaran singkat tujuan dan batasan sistem bot." },
       { name: commandName("health", "health"), description: "Cek status runtime bot, poller, dan storage." },
-      { name: commandName("setlogchannel", "setlogchannel #bot-logs"), description: "Atur channel untuk log operasional server." },
+      { name: commandName("setlogchannel", "setlogchannel #bot-logs"), description: "Atur channel untuk log aktivitas admin server." },
       { name: commandName("setpreviewonadd", "setpreviewonadd on"), description: "Aktifkan atau matikan setup preview saat menambah tracker atau title watch." },
       { name: commandName("setprefix", "setprefix !"), description: "Ubah prefix command untuk mode pesan biasa." }
     ],
     owner: [
       { name: commandName("setguard", "setguard guild on user on leave off"), description: "Atur mode whitelist guild dan user untuk instance bot." },
-      { name: commandName("setdevlogchannel", "setdevlogchannel #dev-log"), description: "Atur channel dev log global untuk diagnosa owner." },
+      { name: commandName("setdevlogchannel", "setdevlogchannel #dev-log"), description: "Atur channel dev log global untuk error teknis owner (tanpa noise RSS)." },
       { name: commandName("whitelistguild", "whitelistguild add 123456789012345678"), description: "Kelola daftar guild yang diizinkan memakai bot." },
       { name: commandName("whitelistuser", "whitelistuser add 987654321098765432"), description: "Kelola daftar user yang diizinkan menjalankan command." }
     ]

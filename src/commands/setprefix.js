@@ -4,6 +4,7 @@ const {
   SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS
 } = require("../config/constants");
 const { DEFAULT_PREFIX, getPrefixForGuild, updatePrefixForGuild } = require("../services/prefixService");
+const { logGuildAction } = require("../services/userActionLogService");
 const {
   buildPrefixUpdatedEmbed,
   buildValidationErrorEmbed
@@ -40,8 +41,29 @@ module.exports = {
       embeds: [
         buildPrefixUpdatedEmbed({
           oldPrefix: currentPrefix || DEFAULT_PREFIX,
-          newPrefix: updated.prefix
+          newPrefix: updated.prefix,
+          guildId: interaction.guildId
         })
+      ]
+    });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: "Prefix diperbarui",
+      description: "Admin mengubah prefix command server.",
+      keyParts: [updated.prefix, interaction.user?.id],
+      details: [
+        {
+          name: "Prefix Lama",
+          value: `\`${currentPrefix || DEFAULT_PREFIX}\``,
+          inline: true
+        },
+        {
+          name: "Prefix Baru",
+          value: `\`${updated.prefix}\``,
+          inline: true
+        }
       ]
     });
   },
@@ -62,8 +84,29 @@ module.exports = {
       embeds: [
         buildPrefixUpdatedEmbed({
           oldPrefix: currentPrefix || DEFAULT_PREFIX,
-          newPrefix: updated.prefix
+          newPrefix: updated.prefix,
+          guildId: message.guild.id
         })
+      ]
+    });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: "Prefix diperbarui",
+      description: "Admin mengubah prefix command server.",
+      keyParts: [updated.prefix, message.author?.id],
+      details: [
+        {
+          name: "Prefix Lama",
+          value: `\`${currentPrefix || DEFAULT_PREFIX}\``,
+          inline: true
+        },
+        {
+          name: "Prefix Baru",
+          value: `\`${updated.prefix}\``,
+          inline: true
+        }
       ]
     });
   }

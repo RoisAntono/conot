@@ -4,6 +4,7 @@ const {
   SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS
 } = require("../config/constants");
 const { getPreviewOnAddForGuild, updatePreviewOnAddForGuild } = require("../services/previewService");
+const { logGuildAction } = require("../services/userActionLogService");
 const {
   buildPreviewOnAddUpdatedEmbed,
   buildValidationErrorEmbed
@@ -51,7 +52,22 @@ module.exports = {
     const updated = await updatePreviewOnAddForGuild(interaction.guildId, enabled);
 
     await interaction.editReply({
-      embeds: [buildPreviewOnAddUpdatedEmbed(updated.previewOnAdd ?? current)]
+      embeds: [buildPreviewOnAddUpdatedEmbed(updated.previewOnAdd ?? current, interaction.guildId)]
+    });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: "Preview on add diperbarui",
+      description: "Admin mengubah status setup preview otomatis.",
+      keyParts: [updated.previewOnAdd ? "on" : "off", interaction.user?.id],
+      details: [
+        {
+          name: "Status",
+          value: updated.previewOnAdd ? "Aktif" : "Nonaktif",
+          inline: true
+        }
+      ]
     });
   },
   async executePrefix(message, args, context) {
@@ -66,7 +82,22 @@ module.exports = {
 
     const updated = await updatePreviewOnAddForGuild(message.guild.id, enabled);
     await message.reply({
-      embeds: [buildPreviewOnAddUpdatedEmbed(updated.previewOnAdd)]
+      embeds: [buildPreviewOnAddUpdatedEmbed(updated.previewOnAdd, message.guild.id)]
+    });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: "Preview on add diperbarui",
+      description: "Admin mengubah status setup preview otomatis.",
+      keyParts: [updated.previewOnAdd ? "on" : "off", message.author?.id],
+      details: [
+        {
+          name: "Status",
+          value: updated.previewOnAdd ? "Aktif" : "Nonaktif",
+          inline: true
+        }
+      ]
     });
   }
 };

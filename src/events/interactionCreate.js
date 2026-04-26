@@ -1,5 +1,5 @@
 const logger = require("../utils/logger");
-const { sendGuildLog } = require("../services/botLogService");
+const { sendSystemLog } = require("../services/botLogService");
 const { consumeCommandRateLimit } = require("../services/commandRateLimitService");
 const { evaluateAccess, isOwnerUser } = require("../services/accessGuardService");
 const {
@@ -77,7 +77,7 @@ module.exports = {
       await command.execute(interaction);
     } catch (error) {
       logger.error(`Command /${interaction.commandName} gagal dijalankan.`, error);
-      await sendGuildLog(interaction.client, {
+      await sendSystemLog(interaction.client, {
         guildId: interaction.guildId,
         level: "error",
         scope: "Command",

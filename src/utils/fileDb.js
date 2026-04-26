@@ -1,5 +1,6 @@
 const fs = require("node:fs/promises");
 const path = require("node:path");
+const { randomUUID } = require("node:crypto");
 const {
   DATA_FILE,
   DATA_SCHEMA_VERSION,
@@ -19,6 +20,9 @@ const { normalizeEmbedLayout } = require("./embedLayout");
 const { decodeHtmlEntities } = require("./htmlEntities");
 const logger = require("./logger");
 const { normalizeTitleFilters } = require("./titleFilter");
+const NOTIFICATION_HISTORY_LIMIT = 5000;
+const GUILD_LOG_HISTORY_LIMIT = 1000;
+const AUDIT_LOG_HISTORY_LIMIT = 3000;
 
 function createDefaultData() {
   return {
@@ -28,7 +32,10 @@ function createDefaultData() {
       logging: sanitizeGlobalLogging(null)
     },
     guildSettings: [],
-    trackedChannels: []
+    trackedChannels: [],
+    guildLogs: [],
+    auditLogs: [],
+    notificationHistory: []
   };
 }
 
@@ -112,6 +119,15 @@ function migrateToVersion4(data) {
   };
 }
 
+function migrateToVersion5(data) {
+  return {
+    ...data,
+    guildLogs: Array.isArray(data?.guildLogs) ? data.guildLogs : [],
+    auditLogs: Array.isArray(data?.auditLogs) ? data.auditLogs : [],
+    notificationHistory: Array.isArray(data?.notificationHistory) ? data.notificationHistory : []
+  };
+}
+
 function migrateData(rawData) {
   let current = rawData && typeof rawData === "object" ? { ...rawData } : createDefaultData();
   const initialVersion = normalizeDataVersion(current?.dataVersion);
@@ -136,6 +152,13 @@ function migrateData(rawData) {
     if (workingVersion === 3) {
       current = migrateToVersion4(current);
       workingVersion = 4;
+      changed = true;
+      continue;
+    }
+
+    if (workingVersion === 4) {
+      current = migrateToVersion5(current);
+      workingVersion = 5;
       changed = true;
       continue;
     }
@@ -205,6 +228,7 @@ function sanitizeTitleWatch(item) {
     : DEFAULT_TITLE_WATCH_MAX_AGE_DAYS;
   const configuredAt = item?.configuredAt || item?.createdAt || item?.updatedAt || null;
   const stateUpdatedAt = item?.stateUpdatedAt || item?.updatedAt || item?.createdAt || null;
+  const lastMatchedAt = item?.lastMatchedAt || (lastVideoId ? stateUpdatedAt : null);
 
   return {
     keyword: String(item?.keyword || "").trim(),
@@ -212,8 +236,10 @@ function sanitizeTitleWatch(item) {
     roleId: item?.roleId ? String(item.roleId) : null,
     lastVideoId,
     maxAgeDays,
+    configUpdatedAt: item?.configUpdatedAt || configuredAt,
     configuredAt,
     stateUpdatedAt,
+    lastMatchedAt,
     lastNotificationSignature: item?.lastNotificationSignature ? String(item.lastNotificationSignature) : null,
     lastNotificationAt: item?.lastNotificationAt || null,
     lastDeliveryAttemptSignature: item?.lastDeliveryAttemptSignature ? String(item.lastDeliveryAttemptSignature) : null,
@@ -240,6 +266,96 @@ function normalizeRecentSeenVideoIds(videoIds, lastVideoId = null, limit = 25) {
   }
 
   return [...new Set(candidates)].slice(0, Math.max(1, Number(limit) || 25));
+}
+
+function firstTimestamp(...values) {
+  return values.find((value) => value !== undefined && value !== null && value !== "") || null;
+}
+
+function sanitizeTrackedChannel(item) {
+  const configUpdatedAt = firstTimestamp(item?.configUpdatedAt, item?.configuredAt, item?.createdAt);
+  const legacyStateUpdatedAt = item?.lastVideoId ? item?.updatedAt : null;
+  const stateUpdatedAt = firstTimestamp(item?.stateUpdatedAt, item?.lastCheckedAt, legacyStateUpdatedAt);
+
+  return {
+    ...item,
+    youtube: {
+      ...item?.youtube,
+      title: item?.youtube?.title ? decodeHtmlEntities(item.youtube.title) : null
+    },
+    configUpdatedAt,
+    configuredAt: firstTimestamp(item?.configuredAt, configUpdatedAt),
+    stateUpdatedAt,
+    lastCheckedAt: firstTimestamp(item?.lastCheckedAt, stateUpdatedAt),
+    lastContentState: item?.lastContentState || null,
+    lastNotifiedVideoId: item?.lastNotifiedVideoId || null,
+    lastNotifiedContentState: item?.lastNotifiedContentState || null,
+    lastNotificationSignature: item?.lastNotificationSignature || null,
+    lastNotificationAt: item?.lastNotificationAt || null,
+    lastDeliveryAttemptSignature: item?.lastDeliveryAttemptSignature || null,
+    lastDeliveryAttemptAt: item?.lastDeliveryAttemptAt || null,
+    recentSeenVideoIds: normalizeRecentSeenVideoIds(item?.recentSeenVideoIds, item?.lastVideoId),
+    notifications: {
+      contentFilter: item?.notifications?.contentFilter || DEFAULT_CONTENT_FILTER,
+      embedLayout: normalizeEmbedLayout(item?.notifications?.embedLayout || DEFAULT_EMBED_LAYOUT),
+      customMessage: item?.notifications?.customMessage || null,
+      titleFilters: normalizeTitleFilters(
+        item?.notifications?.titleFilters ?? item?.notifications?.titleFilter ?? []
+      )
+    }
+  };
+}
+
+function sanitizeGuildLog(item) {
+  return {
+    id: item?.id ? String(item.id) : randomUUID(),
+    guildId: item?.guildId ? String(item.guildId) : null,
+    createdAt: item?.createdAt || null,
+    level: String(item?.level || "warn").trim().toLowerCase(),
+    scope: String(item?.scope || "System").trim(),
+    title: item?.title ? String(item.title) : null,
+    message: item?.message ? String(item.message) : "",
+    description: item?.description ? String(item.description) : null,
+    meta: item?.meta && typeof item.meta === "object" ? item.meta : {}
+  };
+}
+
+function sanitizeAuditLog(item) {
+  return {
+    id: item?.id ? String(item.id) : randomUUID(),
+    guildId: item?.guildId ? String(item.guildId) : null,
+    actorUserId: item?.actorUserId ? String(item.actorUserId) : null,
+    action: String(item?.action || "unknown").trim(),
+    resourceType: String(item?.resourceType || "unknown").trim(),
+    resourceId: item?.resourceId ? String(item.resourceId) : null,
+    before: item?.before ?? null,
+    after: item?.after ?? null,
+    createdAt: item?.createdAt || null
+  };
+}
+
+function sanitizeNotificationHistoryEntry(item) {
+  return {
+    id: item?.id ? String(item.id) : randomUUID(),
+    guildId: item?.guildId ? String(item.guildId) : null,
+    source: String(item?.source || "tracker").trim().toLowerCase(),
+    status: String(item?.status || "sent").trim().toLowerCase(),
+    event: String(item?.event || "new").trim().toLowerCase(),
+    signature: item?.signature ? String(item.signature) : null,
+    keyword: item?.keyword ? String(item.keyword) : null,
+    message: item?.message ? String(item.message) : null,
+    youtubeChannelId: item?.youtubeChannelId ? String(item.youtubeChannelId) : null,
+    youtubeChannelTitle: item?.youtubeChannelTitle ? decodeHtmlEntities(item.youtubeChannelTitle) : null,
+    youtubeUsername: item?.youtubeUsername ? String(item.youtubeUsername) : null,
+    videoId: item?.videoId ? String(item.videoId) : null,
+    title: item?.title ? decodeHtmlEntities(item.title) : null,
+    link: item?.link ? String(item.link) : null,
+    contentState: item?.contentState ? String(item.contentState) : null,
+    contentLabel: item?.contentLabel ? String(item.contentLabel) : null,
+    discordChannelId: item?.discordChannelId ? String(item.discordChannelId) : null,
+    discordRoleId: item?.discordRoleId ? String(item.discordRoleId) : null,
+    createdAt: item?.createdAt || null
+  };
 }
 
 let writeQueue = Promise.resolve();
@@ -274,29 +390,19 @@ function sanitizeData(data) {
         }))
       : [],
     trackedChannels: Array.isArray(data?.trackedChannels)
-      ? data.trackedChannels.map((item) => ({
-          ...item,
-          youtube: {
-            ...item?.youtube,
-            title: item?.youtube?.title ? decodeHtmlEntities(item.youtube.title) : null
-          },
-          lastContentState: item?.lastContentState || null,
-          lastNotifiedVideoId: item?.lastNotifiedVideoId || null,
-          lastNotifiedContentState: item?.lastNotifiedContentState || null,
-          lastNotificationSignature: item?.lastNotificationSignature || null,
-          lastNotificationAt: item?.lastNotificationAt || null,
-          lastDeliveryAttemptSignature: item?.lastDeliveryAttemptSignature || null,
-          lastDeliveryAttemptAt: item?.lastDeliveryAttemptAt || null,
-          recentSeenVideoIds: normalizeRecentSeenVideoIds(item?.recentSeenVideoIds, item?.lastVideoId),
-          notifications: {
-            contentFilter: item?.notifications?.contentFilter || DEFAULT_CONTENT_FILTER,
-            embedLayout: normalizeEmbedLayout(item?.notifications?.embedLayout || DEFAULT_EMBED_LAYOUT),
-            customMessage: item?.notifications?.customMessage || null,
-            titleFilters: normalizeTitleFilters(
-              item?.notifications?.titleFilters ?? item?.notifications?.titleFilter ?? []
-            )
-          }
-        }))
+      ? data.trackedChannels.map(sanitizeTrackedChannel)
+      : [],
+    guildLogs: Array.isArray(data?.guildLogs)
+      ? data.guildLogs.map(sanitizeGuildLog).filter((item) => item.guildId).slice(-GUILD_LOG_HISTORY_LIMIT)
+      : [],
+    auditLogs: Array.isArray(data?.auditLogs)
+      ? data.auditLogs.map(sanitizeAuditLog).filter((item) => item.guildId).slice(-AUDIT_LOG_HISTORY_LIMIT)
+      : [],
+    notificationHistory: Array.isArray(data?.notificationHistory)
+      ? data.notificationHistory
+        .map(sanitizeNotificationHistoryEntry)
+        .filter((item) => item.guildId)
+        .slice(-NOTIFICATION_HISTORY_LIMIT)
       : []
   };
 }
@@ -422,6 +528,24 @@ async function getAllTrackedChannels() {
   return data.trackedChannels;
 }
 
+async function getNotificationHistoryByGuild(guildId, options = {}) {
+  const data = await readData();
+  const limit = Number.isInteger(options.limit)
+    ? Math.max(1, Math.min(NOTIFICATION_HISTORY_LIMIT, options.limit))
+    : 120;
+  const source = options.source ? String(options.source).trim().toLowerCase() : null;
+  const status = options.status ? String(options.status).trim().toLowerCase() : null;
+  const event = options.event ? String(options.event).trim().toLowerCase() : null;
+
+  return (data.notificationHistory || [])
+    .filter((item) => item.guildId === guildId)
+    .filter((item) => (source ? item.source === source : true))
+    .filter((item) => (status ? item.status === status : true))
+    .filter((item) => (event ? item.event === event : true))
+    .slice(-limit)
+    .reverse();
+}
+
 function getCurrentDataSchemaVersion() {
   return DATA_SCHEMA_VERSION;
 }
@@ -493,6 +617,10 @@ function buildTrackedChannelEntry(existing, payload, now) {
       payload.recentSeenVideoIds ?? existing?.recentSeenVideoIds ?? [],
       payload.lastVideoId ?? existing?.lastVideoId ?? null
     ),
+    configUpdatedAt: now,
+    configuredAt: existing?.configuredAt || existing?.configUpdatedAt || existing?.createdAt || now,
+    stateUpdatedAt: existing?.stateUpdatedAt || existing?.lastCheckedAt || null,
+    lastCheckedAt: existing?.lastCheckedAt || existing?.stateUpdatedAt || null,
     createdAt: existing?.createdAt || now,
     updatedAt: now
   };
@@ -622,7 +750,10 @@ async function updateLastVideoState(guildId, youtubeChannelId, latestVideo, opti
       );
     }
 
-    item.updatedAt = new Date().toISOString();
+    const now = new Date().toISOString();
+    item.stateUpdatedAt = now;
+    item.lastCheckedAt = now;
+    item.updatedAt = now;
 
     await writeData(data);
     return item;
@@ -711,6 +842,28 @@ async function setGuildLogChannelId(guildId, logChannelId) {
   });
 }
 
+async function appendNotificationHistory(payload = {}) {
+  return queueWrite(async () => {
+    const data = await readData();
+    const now = new Date().toISOString();
+    const nextEntry = sanitizeNotificationHistoryEntry({
+      id: payload.id || randomUUID(),
+      createdAt: payload.createdAt || now,
+      ...payload
+    });
+
+    if (!nextEntry.guildId) {
+      return null;
+    }
+
+    data.notificationHistory = Array.isArray(data.notificationHistory) ? data.notificationHistory : [];
+    data.notificationHistory.push(nextEntry);
+    data.notificationHistory = data.notificationHistory.slice(-NOTIFICATION_HISTORY_LIMIT);
+    await writeData(data);
+    return nextEntry;
+  });
+}
+
 async function setGlobalAccessControl(overrides = {}) {
   return queueWrite(async () => {
     const data = await readData();
@@ -796,8 +949,10 @@ async function upsertTitleWatch(guildId, payload) {
       roleId: payload.roleId ?? existing?.roleId ?? null,
       lastVideoId: nextLastVideoId,
       maxAgeDays: nextMaxAgeDays,
+      configUpdatedAt: now,
       configuredAt: now,
       stateUpdatedAt: payload.stateUpdatedAt ?? existing?.stateUpdatedAt ?? now,
+      lastMatchedAt: payload.lastMatchedAt ?? existing?.lastMatchedAt ?? null,
       lastNotificationSignature: payload.lastNotificationSignature ?? existing?.lastNotificationSignature ?? null,
       lastNotificationAt: payload.lastNotificationAt ?? existing?.lastNotificationAt ?? null,
       lastDeliveryAttemptSignature: payload.lastDeliveryAttemptSignature ?? existing?.lastDeliveryAttemptSignature ?? null,
@@ -873,8 +1028,10 @@ async function updateTitleWatchLastVideo(guildId, keyword, videoId, recentVideoI
       null
     );
     watch.lastVideoId = watch.recentVideoIds[0] || null;
-    watch.stateUpdatedAt = new Date().toISOString();
-    watch.updatedAt = new Date().toISOString();
+    const now = new Date().toISOString();
+    watch.stateUpdatedAt = now;
+    watch.lastMatchedAt = now;
+    watch.updatedAt = now;
     guildSettings.updatedAt = watch.stateUpdatedAt;
     await writeData(data);
     return watch;
@@ -918,12 +1075,14 @@ async function updateTitleWatchNotificationState(guildId, keyword, updates = {})
 module.exports = {
   addGlobalWhitelistGuildId,
   addGlobalWhitelistUserId,
+  appendNotificationHistory,
   ensureDataFile,
   findTrackedChannel,
   getCurrentDataSchemaVersion,
   getAllTrackedChannels,
   getGlobalAccessControl,
   getGlobalLoggingSettings,
+  getNotificationHistoryByGuild,
   getGuildLogChannelId,
   getGuildLogLevel,
   getGuildPrefix,

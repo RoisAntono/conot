@@ -1,0 +1,32 @@
+{
+  "sessions": [
+    {
+      "id": "6c17e9ac-5f5a-4909-a8b1-f637a2fe2513",
+      "session": {
+        "user": {
+          "id": "100000000000000001",
+          "username": "mock-admin",
+          "handle": "@mock-admin",
+          "avatar": null,
+          "discriminator": "0"
+        },
+        "guilds": [
+          {
+            "id": "123456789012345678",
+            "name": "Guild 5678",
+            "icon": null,
+            "owner": false,
+            "permissions": "8",
+            "permissionsNew": "8"
+          }
+        ],
+        "csrfToken": "3c00379e-dfe4-4c05-8603-230365ba9302",
+        "authMode": "mock",
+        "botGuildSource": "discord_api",
+        "signedInAt": "2026-04-26T11:23:14.152Z",
+        "issuedAt": 1777202594152,
+        "expiresAt": 1777231394152
+      }
+    }
+  ]
+}

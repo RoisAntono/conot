@@ -1,0 +1,16 @@
+{
+  "name": "@conot/domain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "build": "echo \"domain build not required\"",
+    "lint": "echo \"domain lint delegated to root\"",
+    "test": "echo \"domain test delegated to root\"",
+    "typecheck": "echo \"domain typecheck pending TS migration\""
+  }
+}

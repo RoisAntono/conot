@@ -21,12 +21,12 @@ function isDisableValue(value) {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("setdevlogchannel")
-    .setDescription("Atur channel dev-log detail global (owner-only).")
+    .setDescription("Atur channel dev log global untuk error teknis yang actionable (owner-only).")
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
     .addChannelOption((option) =>
       option
         .setName("discord_channel")
-        .setDescription("Channel tujuan dev log")
+        .setDescription("Channel tujuan dev log owner")
         .addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)
         .setRequired(false)
     )

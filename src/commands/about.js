@@ -51,7 +51,7 @@ function buildAboutEmbed(prefix) {
         ].join("\n")
       }
     )
-    .setFooter({ text: `Gunakan ${prefix} help untuk setup command dan ${prefix} setlogchannel #bot-logs untuk log.` })
+    .setFooter({ text: `Gunakan ${prefix} help untuk setup command dan ${prefix} setlogchannel #bot-logs untuk audit log admin.` })
     .setTimestamp();
 }
 

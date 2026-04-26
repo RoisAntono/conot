@@ -3,7 +3,7 @@ const path = require("node:path");
 const POLL_INTERVAL_MS = 5 * 60 * 1000;
 const DATA_FILE = path.join(process.cwd(), "data", "data.json");
 const DATA_BACKUP_DIR = path.join(process.cwd(), "data", "backups");
-const DATA_SCHEMA_VERSION = 4;
+const DATA_SCHEMA_VERSION = 5;
 const DATA_BACKUP_INTERVAL_MS = Number(process.env.DATA_BACKUP_INTERVAL_MS || (6 * 60 * 60 * 1000));
 const DATA_BACKUP_RETENTION = Number(process.env.DATA_BACKUP_RETENTION || 30);
 const DEFAULT_PREFIX = "?n";
@@ -46,6 +46,13 @@ const CANARY_ENABLED = String(process.env.CANARY_ENABLED || "false").toLowerCase
 const CANARY_INTERVAL_MS = Number(process.env.CANARY_INTERVAL_MS || 30 * 60 * 1000);
 const CANARY_FAILURE_THRESHOLD = Number(process.env.CANARY_FAILURE_THRESHOLD || 3);
 const EXTERNAL_LOG_WEBHOOK_URL = String(process.env.EXTERNAL_LOG_WEBHOOK_URL || "").trim() || null;
+const CONFIG_SYNC_ENABLED = String(process.env.CONFIG_SYNC_ENABLED || "false").toLowerCase() === "true";
+const CONFIG_SYNC_INTERVAL_MS = Number(process.env.CONFIG_SYNC_INTERVAL_MS || 60 * 1000);
+const CONFIG_SYNC_BOOTSTRAP_ON_READY = String(process.env.CONFIG_SYNC_BOOTSTRAP_ON_READY || "true").toLowerCase() === "true";
+const CONFIG_SYNC_EVENT_STREAM_ENABLED = String(process.env.CONFIG_SYNC_EVENT_STREAM_ENABLED || "true").toLowerCase() === "true";
+const CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS = Number(process.env.CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS || 25_000);
+const CONFIG_SERVICE_BASE_URL = String(process.env.CONFIG_SERVICE_BASE_URL || "").trim().replace(/\/+$/, "");
+const CONFIG_SERVICE_TOKEN = String(process.env.CONFIG_SERVICE_TOKEN || "").trim();
 const CONTENT_FILTERS = {
   ALL: "all",
   VIDEO: "video",
@@ -114,6 +121,13 @@ module.exports = {
   CANARY_INTERVAL_MS,
   CANARY_FAILURE_THRESHOLD,
   EXTERNAL_LOG_WEBHOOK_URL,
+  CONFIG_SYNC_ENABLED,
+  CONFIG_SYNC_INTERVAL_MS,
+  CONFIG_SYNC_BOOTSTRAP_ON_READY,
+  CONFIG_SYNC_EVENT_STREAM_ENABLED,
+  CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS,
+  CONFIG_SERVICE_BASE_URL,
+  CONFIG_SERVICE_TOKEN,
   SETTINGS_COMMAND_RATE_LIMIT_MS,
   TITLE_WATCH_HISTORY_LIMIT,
   TITLE_WATCH_SEARCH_LIMIT,

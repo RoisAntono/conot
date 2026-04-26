@@ -1,5 +1,6 @@
 const { registerSlashCommands } = require("../services/commandRegistry");
 const { startCanaryScheduler } = require("../services/canaryService");
+const { startDashboardConfigSync } = require("../services/dashboardConfigSyncService");
 const { startDataBackupScheduler } = require("../services/dataBackupService");
 const { enforceGuildWhitelistForClient } = require("../services/accessGuardService");
 const { bindBotLogClient } = require("../services/botLogService");
@@ -21,6 +22,7 @@ module.exports = {
     }
 
     startYouTubePoller(client);
+    startDashboardConfigSync();
     startDataBackupScheduler();
     startCanaryScheduler();
   }

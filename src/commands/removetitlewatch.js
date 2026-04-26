@@ -8,6 +8,7 @@ const {
 } = require("../config/constants");
 const { getPrefixForGuild } = require("../services/prefixService");
 const { deleteTitleWatch } = require("../services/titleWatchService");
+const { logGuildAction } = require("../services/userActionLogService");
 const {
   buildTitleWatchNotFoundEmbed,
   buildTitleWatchRemovedEmbed,
@@ -40,11 +41,31 @@ module.exports = {
     const removed = await deleteTitleWatch(interaction.guildId, interaction.options.getString("keyword", true));
 
     if (!removed) {
-      await interaction.editReply({ embeds: [buildTitleWatchNotFoundEmbed(prefix)] });
+      await interaction.editReply({ embeds: [buildTitleWatchNotFoundEmbed(prefix, interaction.guildId)] });
       return;
     }
 
-    await interaction.editReply({ embeds: [buildTitleWatchRemovedEmbed(removed, prefix)] });
+    await interaction.editReply({ embeds: [buildTitleWatchRemovedEmbed(removed, prefix, interaction.guildId)] });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: "Title watch dihapus",
+      description: "Admin menghapus keyword title watch.",
+      keyParts: [removed.keyword, interaction.user?.id],
+      details: [
+        {
+          name: "Keyword",
+          value: `\`${removed.keyword}\``,
+          inline: true
+        },
+        {
+          name: "Target Channel",
+          value: `<#${removed.channelId}>`,
+          inline: true
+        }
+      ]
+    });
   },
   async executePrefix(message, args, context) {
     const keyword = args.join(" ").trim();
@@ -59,10 +80,30 @@ module.exports = {
     const removed = await deleteTitleWatch(message.guild.id, keyword);
 
     if (!removed) {
-      await message.reply({ embeds: [buildTitleWatchNotFoundEmbed(context.prefix)] });
+      await message.reply({ embeds: [buildTitleWatchNotFoundEmbed(context.prefix, message.guild.id)] });
       return;
     }
 
-    await message.reply({ embeds: [buildTitleWatchRemovedEmbed(removed, context.prefix)] });
+    await message.reply({ embeds: [buildTitleWatchRemovedEmbed(removed, context.prefix, message.guild.id)] });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: "Title watch dihapus",
+      description: "Admin menghapus keyword title watch.",
+      keyParts: [removed.keyword, message.author?.id],
+      details: [
+        {
+          name: "Keyword",
+          value: `\`${removed.keyword}\``,
+          inline: true
+        },
+        {
+          name: "Target Channel",
+          value: `<#${removed.channelId}>`,
+          inline: true
+        }
+      ]
+    });
   }
 };

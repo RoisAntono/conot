@@ -1,0 +1,5072 @@
+{
+  "sessions": [
+    {
+      "id": "8d42bc6b-f689-429e-a268-5e7d32fa1fcd",
+      "session": {
+        "user": {
+          "id": "394124093936500737",
+          "username": "Oke",
+          "handle": "@roiiiii",
+          "avatar": "069145aefd390508af896ec5158d1962",
+          "discriminator": "0"
+        },
+        "guilds": [
+          {
+            "id": "259409057474019328",
+            "name": "THE HALIMAWAN FOUNDATION",
+            "icon": "a_2b1ee92b85eb80a9602910821eabe01a",
+            "owner": false,
+            "permissions": "2151201046105600",
+            "permissionsNew": "2151201046105600"
+          },
+          {
+            "id": "285276870159630338",
+            "name": "Ultraw Games",
+            "icon": "a_05d718ad11c95bbd45b5f79c889e776d",
+            "owner": false,
+            "permissions": "141293723388928",
+            "permissionsNew": "141293723388928"
+          },
+          {
+            "id": "349051257702580224",
+            "name": "BIG Games",
+            "icon": "a_5dcabd68103f75267ee3a22e87105c31",
+            "owner": false,
+            "permissions": "175921860447232",
+            "permissionsNew": "175921860447232"
+          },
+          {
+            "id": "350467905391034391",
+            "name": "Rumble Studios",
+            "icon": "c35fa8cc6883810a58fd7ca2e54423e3",
+            "owner": false,
+            "permissions": "140737525124097",
+            "permissionsNew": "140737525124097"
+          },
+          {
+            "id": "436103915625250817",
+            "name": "Arena Pro Gaming™",
+            "icon": "a08f5e7c14496cad945ac4fcef85ee00",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "503045718102114305",
+            "name": "Infinite Yield",
+            "icon": "0abc928723b459ad843cbdbbc307c13d",
+            "owner": false,
+            "permissions": "1096082199530049",
+            "permissionsNew": "1096082199530049"
+          },
+          {
+            "id": "505306686907744266",
+            "name": "LNC Discord",
+            "icon": "a_01084920c9a999d25250728d6b2c9b61",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "523059903812599811",
+            "name": "Hytale",
+            "icon": "bbae5f77834487ccbe51db7576488531",
+            "owner": false,
+            "permissions": "141014513812544",
+            "permissionsNew": "141014513812544"
+          },
+          {
+            "id": "525991957118320650",
+            "name": "Reconnect",
+            "icon": "fb7ae8908bc430e994748dc7631c3b43",
+            "owner": false,
+            "permissions": "2221982040301121",
+            "permissionsNew": "2221982040301121"
+          },
+          {
+            "id": "548396374299770881",
+            "name": "MuMuPlayer",
+            "icon": "d969d8df44aa925997dd63a4ba571596",
+            "owner": false,
+            "permissions": "149533651699201",
+            "permissionsNew": "149533651699201"
+          },
+          {
+            "id": "562762757905186828",
+            "name": "RELL Games",
+            "icon": "05d312e0df9dbae9d43273987a53a794",
+            "owner": false,
+            "permissions": "2222085119217216",
+            "permissionsNew": "2222085119217216"
+          },
+          {
+            "id": "614043942089916438",
+            "name": "La Vamillia",
+            "icon": "a_d5e7d08ffd23be31fd9aa65d8f621a96",
+            "owner": false,
+            "permissions": "2221705014873600",
+            "permissionsNew": "2221705014873600"
+          },
+          {
+            "id": "688077625863831560",
+            "name": "~HTH~ Hide The Hamsters",
+            "icon": "b65515b90bc43195252caa27ab9bdaaf",
+            "owner": false,
+            "permissions": "141154204372544",
+            "permissionsNew": "141154204372544"
+          },
+          {
+            "id": "723057746546655249",
+            "name": "Lapak Juragan",
+            "icon": "a_f349297544701d798e3caea02a74b1a9",
+            "owner": false,
+            "permissions": "1302100976930304",
+            "permissionsNew": "1302100976930304"
+          },
+          {
+            "id": "732658777630703637",
+            "name": "Assasine03's Scripts",
+            "icon": "a_a6491f85e18c1bb92bc7b119012ae984",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "744540055837736970",
+            "name": "MheeHub Community",
+            "icon": "0f86516194b750647f826f46c853390b",
+            "owner": false,
+            "permissions": "2222050759790144",
+            "permissionsNew": "2222050759790144"
+          },
+          {
+            "id": "751082376465088614",
+            "name": "Crew Indo",
+            "icon": "837defc09f381706bcc6f6ce27b35c7b",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "762747182268022864",
+            "name": "g5 | Roblox Community",
+            "icon": null,
+            "owner": false,
+            "permissions": "2221707229464129",
+            "permissionsNew": "2221707229464129"
+          },
+          {
+            "id": "821226190189625396",
+            "name": "Frost Trading Hub",
+            "icon": "8c187df0b65bffad812b915ffda56a1d",
+            "owner": false,
+            "permissions": "2221707162095169",
+            "permissionsNew": "2221707162095169"
+          },
+          {
+            "id": "832881901429063710",
+            "name": "Sea Market",
+            "icon": "ea0598825f388908e85ce3d751460990",
+            "owner": false,
+            "permissions": "65537",
+            "permissionsNew": "65537"
+          },
+          {
+            "id": "834159468560384080",
+            "name": "LUNATIC",
+            "icon": "c34065cfacc8de340f5d76dba3ac1453",
+            "owner": false,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "871845273800957982",
+            "name": "Roblox Account Manager",
+            "icon": "95d9e06a4ca634c99c00b84bc5f85103",
+            "owner": false,
+            "permissions": "2221567575657985",
+            "permissionsNew": "2221567575657985"
+          },
+          {
+            "id": "880044612343955457",
+            "name": "Banana Cat Hub",
+            "icon": "a_9c5ac13034e706a3f8e8062bd6950224",
+            "owner": false,
+            "permissions": "1095253201636417",
+            "permissionsNew": "1095253201636417"
+          },
+          {
+            "id": "889325574655467560",
+            "name": "Electron",
+            "icon": "1823cac290739086335c66f74bdf368c",
+            "owner": false,
+            "permissions": "2216759360031744",
+            "permissionsNew": "2216759360031744"
+          },
+          {
+            "id": "900709213817430057",
+            "name": "StayFrosty! | Roblox Community",
+            "icon": "3eeb14965ad5ebaff49111041a8562f0",
+            "owner": false,
+            "permissions": "968552156737",
+            "permissionsNew": "968552156737"
+          },
+          {
+            "id": "906426036772818954",
+            "name": "[ HoHo Community ]",
+            "icon": "01b231120e2fbc0b91ad71ef89c860c1",
+            "owner": false,
+            "permissions": "70508334095425",
+            "permissionsNew": "70508334095425"
+          },
+          {
+            "id": "921014861205504030",
+            "name": "DRACO HUB | $6.50",
+            "icon": "d5a9a8138957574d5af636561e4140b5",
+            "owner": false,
+            "permissions": "554087550529",
+            "permissionsNew": "554087550529"
+          },
+          {
+            "id": "931810629151510569",
+            "name": "siff",
+            "icon": "0de13512d8bbb3c856a0b77b54df796b",
+            "owner": false,
+            "permissions": "110919782043137",
+            "permissionsNew": "110919782043137"
+          },
+          {
+            "id": "935853803419357214",
+            "name": "✿ Cark Store - Market Place ✿",
+            "icon": "671265aa5943366e50f8b577cf7bf6ea",
+            "owner": false,
+            "permissions": "2221982107373121",
+            "permissionsNew": "2221982107373121"
+          },
+          {
+            "id": "973907295413088286",
+            "name": "TPW Store",
+            "icon": "d308c6e3696e6e4b356fa747f0d43631",
+            "owner": false,
+            "permissions": "2221707229515265",
+            "permissionsNew": "2221707229515265"
+          },
+          {
+            "id": "978632997425283092",
+            "name": "Codex Collective",
+            "icon": "808632ee0656e6da0ddf1d4e40734349",
+            "owner": false,
+            "permissions": "2217583993802305",
+            "permissionsNew": "2217583993802305"
+          },
+          {
+            "id": "984530118368165908",
+            "name": "Bizarre Lineage",
+            "icon": "0da3f5a9b38e9a3e7266a17d24316629",
+            "owner": false,
+            "permissions": "140743930872833",
+            "permissionsNew": "140743930872833"
+          },
+          {
+            "id": "991702878257422347",
+            "name": "Arceus X | Intelligent Units | 2026",
+            "icon": "2c8a1d2b4f7f617aa0108ad664e8fecc",
+            "owner": false,
+            "permissions": "1658757208935937",
+            "permissionsNew": "1658757208935937"
+          },
+          {
+            "id": "1006628609991114895",
+            "name": "Swordburst 3",
+            "icon": "eb7b5ea94b4c60e80fb56641abded004",
+            "owner": false,
+            "permissions": "739700779322369",
+            "permissionsNew": "739700779322369"
+          },
+          {
+            "id": "1010643857882501190",
+            "name": "OMORI",
+            "icon": "dc8ae1bc735e7572660ef3253cdd014d",
+            "owner": false,
+            "permissions": "1307291512327745",
+            "permissionsNew": "1307291512327745"
+          },
+          {
+            "id": "1044697884706230332",
+            "name": "Banana Hub",
+            "icon": "2744bee85eca39b14e45a5d9e2afc2ef",
+            "owner": false,
+            "permissions": "2222085186768449",
+            "permissionsNew": "2222085186768449"
+          },
+          {
+            "id": "1063817265910386741",
+            "name": "Carti Hub",
+            "icon": "a_50e62d02f683db25dff0d8d1763700ab",
+            "owner": false,
+            "permissions": "1095807322672705",
+            "permissionsNew": "1095807322672705"
+          },
+          {
+            "id": "1092853395947278478",
+            "name": "Zenith Studios",
+            "icon": "141c16d383392dea25e0d33232089296",
+            "owner": false,
+            "permissions": "110093000887872",
+            "permissionsNew": "110093000887872"
+          },
+          {
+            "id": "1118677956370374748",
+            "name": "Yummy Auto",
+            "icon": "217e84400afcb81c133ec01191aa3bc6",
+            "owner": false,
+            "permissions": "40273945364033",
+            "permissionsNew": "40273945364033"
+          },
+          {
+            "id": "1121190214715576381",
+            "name": "Grand Alfheim",
+            "icon": "bb47f29c5adbca67809bc5456c5c1100",
+            "owner": false,
+            "permissions": "140741820091905",
+            "permissionsNew": "140741820091905"
+          },
+          {
+            "id": "1127725762405998715",
+            "name": "Carti Backup",
+            "icon": "ca1b33bdf9d8bcb63f603586a50ff22f",
+            "owner": false,
+            "permissions": "2221707229466177",
+            "permissionsNew": "2221707229466177"
+          },
+          {
+            "id": "1128986471244771338",
+            "name": "FarmSync",
+            "icon": "383c2aa125b809fad5b0586f62d4e92f",
+            "owner": false,
+            "permissions": "687231848001",
+            "permissionsNew": "687231848001"
+          },
+          {
+            "id": "1129018190308061214",
+            "name": "NS HUB",
+            "icon": "a_4e9acfb415fa00ba8ca440f7c50faa50",
+            "owner": false,
+            "permissions": "2081347698281985",
+            "permissionsNew": "2081347698281985"
+          },
+          {
+            "id": "1130798506358079540",
+            "name": "Magenta Hub | COMMUNITY",
+            "icon": "a_ddd0b990c477473cac68a5d8033be2a5",
+            "owner": false,
+            "permissions": "1799769642307073",
+            "permissionsNew": "1799769642307073"
+          },
+          {
+            "id": "1131244497179783219",
+            "name": "NexusHub",
+            "icon": "4c552971718452cd9af1585e2723cb30",
+            "owner": false,
+            "permissions": "1834984045662017",
+            "permissionsNew": "1834984045662017"
+          },
+          {
+            "id": "1137781727000002561",
+            "name": "Punk Team",
+            "icon": "dd3eebf29a5e86c9adacc85c637e0e0e",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1139973402048856084",
+            "name": "Flame Trading Hub",
+            "icon": "5a28db84132d6044531980e54c3bb39b",
+            "owner": false,
+            "permissions": "2221569723403841",
+            "permissionsNew": "2221569723403841"
+          },
+          {
+            "id": "1142850986159915118",
+            "name": "OMG Hub | Community",
+            "icon": "4d9603fddb0144763406e19975f7cac0",
+            "owner": false,
+            "permissions": "211936271764993",
+            "permissionsNew": "211936271764993"
+          },
+          {
+            "id": "1149319581907832954",
+            "name": "NCL Store",
+            "icon": "b8f824286294d09428d38e223daa50bd",
+            "owner": false,
+            "permissions": "2221982107422273",
+            "permissionsNew": "2221982107422273"
+          },
+          {
+            "id": "1159465984487346226",
+            "name": "MPRI",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1159565695294636233",
+            "name": "RELL Seas: Community",
+            "icon": "4fac4b0e94fa5020f701458e01459589",
+            "owner": false,
+            "permissions": "1935971577826881",
+            "permissionsNew": "1935971577826881"
+          },
+          {
+            "id": "1174965014109618176",
+            "name": "BUANGERS",
+            "icon": "a_7f0570d7c43ad12740045f0b3701dca6",
+            "owner": false,
+            "permissions": "533235259264577",
+            "permissionsNew": "533235259264577"
+          },
+          {
+            "id": "1204973330449567774",
+            "name": "Motion Ime",
+            "icon": "a_1ccb1d61f345a5480770dbb5dbc3aadd",
+            "owner": false,
+            "permissions": "35734231778817",
+            "permissionsNew": "35734231778817"
+          },
+          {
+            "id": "1211536404543307876",
+            "name": "SS",
+            "icon": "add000301d4ad32c61f8564932916059",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1218911125958295642",
+            "name": "Nousigi Hideout",
+            "icon": "1f857b3d03f983aa74a9840882316340",
+            "owner": false,
+            "permissions": "1125899906842624",
+            "permissionsNew": "1125899906842624"
+          },
+          {
+            "id": "1221935816515911850",
+            "name": "Delta Dynamics",
+            "icon": "42dc0822bc4f734f9d8884d7923122c0",
+            "owner": false,
+            "permissions": "2221707162355201",
+            "permissionsNew": "2221707162355201"
+          },
+          {
+            "id": "1224243448685658213",
+            "name": "Zeke Hub",
+            "icon": "97e3a5395262bb4712cf0a423a6e10e1",
+            "owner": false,
+            "permissions": "35598873464384",
+            "permissionsNew": "35598873464384"
+          },
+          {
+            "id": "1233424544673300541",
+            "name": "Goomba Hub",
+            "icon": "3c03914ee90649097c66a6be238589e5",
+            "owner": false,
+            "permissions": "1659133085732417",
+            "permissionsNew": "1659133085732417"
+          },
+          {
+            "id": "1271517538848604181",
+            "name": "NATIVE | 🐰",
+            "icon": "8e8a9da65a283d63fdae7d1e69375128",
+            "owner": false,
+            "permissions": "549792583169",
+            "permissionsNew": "549792583169"
+          },
+          {
+            "id": "1287193618226090005",
+            "name": "Imp Hub | Community",
+            "icon": "e41df427499622817798121ff6bb9aed",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1287367199337611327",
+            "name": "Flutel.com",
+            "icon": "f58b68fdb82659d1c44a106f002e09bc",
+            "owner": false,
+            "permissions": "2222085186641729",
+            "permissionsNew": "2222085186641729"
+          },
+          {
+            "id": "1294212919608872982",
+            "name": "Carti Trading & MM | ROBLOX",
+            "icon": "a_b8a8f2c022437a0220249196d4c33338",
+            "owner": false,
+            "permissions": "1095669883670081",
+            "permissionsNew": "1095669883670081"
+          },
+          {
+            "id": "1301121394112987136",
+            "name": "Sea Hub",
+            "icon": "a_304b81d1a00dd1d98b4885c126201878",
+            "owner": false,
+            "permissions": "1096185212685889",
+            "permissionsNew": "1096185212685889"
+          },
+          {
+            "id": "1325734452382531624",
+            "name": "Leveling: Reborn",
+            "icon": "45970a1dcca4722f6b8dd7530c3f6eae",
+            "owner": false,
+            "permissions": "141014550514689",
+            "permissionsNew": "141014550514689"
+          },
+          {
+            "id": "1330027698671718440",
+            "name": "The Forge Official Community",
+            "icon": "a_d1ba8bdf1c1b6aa230309bd86e961824",
+            "owner": false,
+            "permissions": "141012403031040",
+            "permissionsNew": "141012403031040"
+          },
+          {
+            "id": "1336720839881785417",
+            "name": "Volcano",
+            "icon": "45ab9e1558834bf263c59a3190677633",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "1352066418744754318",
+            "name": "Ronix Studios",
+            "icon": "84385dd4e6abe93edacd7702d7a8e75e",
+            "owner": false,
+            "permissions": "140737525122049",
+            "permissionsNew": "140737525122049"
+          },
+          {
+            "id": "1358613519117062356",
+            "name": "AtherHub",
+            "icon": "b7a20682b2f1e50a9ecef199fdc65746",
+            "owner": false,
+            "permissions": "1096185279794753",
+            "permissionsNew": "1096185279794753"
+          },
+          {
+            "id": "1362923499588550736",
+            "name": "Aeonic Hub",
+            "icon": "8297a9dd4f31e47d9b49fbfb18267696",
+            "owner": false,
+            "permissions": "140737488456705",
+            "permissionsNew": "140737488456705"
+          },
+          {
+            "id": "1364220918225834085",
+            "name": "Lunor Lounge",
+            "icon": "1b4c7fdca3bf612ad549c8912ac3899a",
+            "owner": false,
+            "permissions": "140874927686720",
+            "permissionsNew": "140874927686720"
+          },
+          {
+            "id": "1370730311624687690",
+            "name": "Axon Hub",
+            "icon": "dde354ce0c9b20142d03a23b22430c6e",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1370799935628382489",
+            "name": "Chiyo",
+            "icon": "1e266645132e71da045b987855490140",
+            "owner": false,
+            "permissions": "493412322184769",
+            "permissionsNew": "493412322184769"
+          },
+          {
+            "id": "1376645805498302574",
+            "name": "New Moon",
+            "icon": "50c59e5758e5d82d602bbc002485275b",
+            "owner": false,
+            "permissions": "66560",
+            "permissionsNew": "66560"
+          },
+          {
+            "id": "1377717359002779729",
+            "name": "Anime Overload",
+            "icon": "ceb159eee733992460cc3ec7014c9f6c",
+            "owner": false,
+            "permissions": "140741820091393",
+            "permissionsNew": "140741820091393"
+          },
+          {
+            "id": "1382347306048684155",
+            "name": "MOVED",
+            "icon": "a43455b60c579a32769e28f3e5d8813d",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1388832005419958372",
+            "name": "Merqury Hub",
+            "icon": "704f6f7bc3099e85c5ca260f269b505e",
+            "owner": false,
+            "permissions": "141012436585985",
+            "permissionsNew": "141012436585985"
+          },
+          {
+            "id": "1392562594430320782",
+            "name": "AirFlow",
+            "icon": "2dfac0cc3de21ae28fd658ff1c9617c8",
+            "owner": false,
+            "permissions": "311297",
+            "permissionsNew": "311297"
+          },
+          {
+            "id": "1395020539915014185",
+            "name": "Seliware",
+            "icon": "d0372c5b7593de23b30c86f34f580555",
+            "owner": false,
+            "permissions": "251382392491521",
+            "permissionsNew": "251382392491521"
+          },
+          {
+            "id": "1395039621687152791",
+            "name": "EzHub",
+            "icon": "ba204aae2172ab446270222b7621a405",
+            "owner": false,
+            "permissions": "673972814728769",
+            "permissionsNew": "673972814728769"
+          },
+          {
+            "id": "1404647251980325007",
+            "name": "Kali Hub",
+            "icon": "aead1776d7c3d4f811cc71078d93ebac",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1409079683953328150",
+            "name": "Toasties Community",
+            "icon": "cdcc0d3b3aefc5e48c5ac9556fa963bc",
+            "owner": false,
+            "permissions": "1096183132442177",
+            "permissionsNew": "1096183132442177"
+          },
+          {
+            "id": "1411211795724636289",
+            "name": "Azurix Bloxburg #1",
+            "icon": "e7b0be054605f568ac9aab37721fa2e5",
+            "owner": false,
+            "permissions": "532857302142529",
+            "permissionsNew": "532857302142529"
+          },
+          {
+            "id": "1416408995798978582",
+            "name": "BONK HUB | Community",
+            "icon": "e85e342bc1ddeddffc651ec706467cb9",
+            "owner": false,
+            "permissions": "2221705081982529",
+            "permissionsNew": "2221705081982529"
+          },
+          {
+            "id": "1438517107720720386",
+            "name": "astra [BETA]",
+            "icon": "e839335e6a1764fbe3ecd8ba6c104ad2",
+            "owner": false,
+            "permissions": "110988501536321",
+            "permissionsNew": "110988501536321"
+          },
+          {
+            "id": "1449149654838153341",
+            "name": "MaiHub",
+            "icon": "c6b0f37c2bd990eb2610b5dc8dd60828",
+            "owner": false,
+            "permissions": "2248473465835073",
+            "permissionsNew": "2248473465835073"
+          },
+          {
+            "id": "1458691648241532972",
+            "name": "ud.wtf",
+            "icon": "a_cf53f9dce5ba4cb2ff4e74228de68aed",
+            "owner": false,
+            "permissions": "2248473465704001",
+            "permissionsNew": "2248473465704001"
+          },
+          {
+            "id": "1460670721188430041",
+            "name": "Iron Soul",
+            "icon": "b5aa2a3259775bef4e021e182ca78871",
+            "owner": false,
+            "permissions": "140737488355329",
+            "permissionsNew": "140737488355329"
+          },
+          {
+            "id": "1487432517119246477",
+            "name": "Daily Content For Cliper",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          }
+        ],
+        "csrfToken": "38d5f98d-2772-4667-8358-754f026f3894",
+        "authMode": "discord",
+        "botGuildSource": "discord_api",
+        "signedInAt": "2026-04-26T04:56:11.089Z",
+        "issuedAt": 1777179371089,
+        "expiresAt": 1777208171089
+      }
+    },
+    {
+      "id": "3956c0c3-2e6d-46e2-81ef-1c482ef23313",
+      "session": {
+        "user": {
+          "id": "394124093936500737",
+          "username": "Oke",
+          "handle": "@roiiiii",
+          "avatar": "069145aefd390508af896ec5158d1962",
+          "discriminator": "0"
+        },
+        "guilds": [
+          {
+            "id": "259409057474019328",
+            "name": "THE HALIMAWAN FOUNDATION",
+            "icon": "a_2b1ee92b85eb80a9602910821eabe01a",
+            "owner": false,
+            "permissions": "2151201046105600",
+            "permissionsNew": "2151201046105600"
+          },
+          {
+            "id": "285276870159630338",
+            "name": "Ultraw Games",
+            "icon": "a_05d718ad11c95bbd45b5f79c889e776d",
+            "owner": false,
+            "permissions": "141293723388928",
+            "permissionsNew": "141293723388928"
+          },
+          {
+            "id": "349051257702580224",
+            "name": "BIG Games",
+            "icon": "a_5dcabd68103f75267ee3a22e87105c31",
+            "owner": false,
+            "permissions": "175921860447232",
+            "permissionsNew": "175921860447232"
+          },
+          {
+            "id": "350467905391034391",
+            "name": "Rumble Studios",
+            "icon": "c35fa8cc6883810a58fd7ca2e54423e3",
+            "owner": false,
+            "permissions": "140737525124097",
+            "permissionsNew": "140737525124097"
+          },
+          {
+            "id": "436103915625250817",
+            "name": "Arena Pro Gaming™",
+            "icon": "a08f5e7c14496cad945ac4fcef85ee00",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "503045718102114305",
+            "name": "Infinite Yield",
+            "icon": "0abc928723b459ad843cbdbbc307c13d",
+            "owner": false,
+            "permissions": "1096082199530049",
+            "permissionsNew": "1096082199530049"
+          },
+          {
+            "id": "505306686907744266",
+            "name": "LNC Discord",
+            "icon": "a_01084920c9a999d25250728d6b2c9b61",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "523059903812599811",
+            "name": "Hytale",
+            "icon": "bbae5f77834487ccbe51db7576488531",
+            "owner": false,
+            "permissions": "141014513812544",
+            "permissionsNew": "141014513812544"
+          },
+          {
+            "id": "525991957118320650",
+            "name": "Reconnect",
+            "icon": "fb7ae8908bc430e994748dc7631c3b43",
+            "owner": false,
+            "permissions": "2221982040301121",
+            "permissionsNew": "2221982040301121"
+          },
+          {
+            "id": "548396374299770881",
+            "name": "MuMuPlayer",
+            "icon": "d969d8df44aa925997dd63a4ba571596",
+            "owner": false,
+            "permissions": "149533651699201",
+            "permissionsNew": "149533651699201"
+          },
+          {
+            "id": "562762757905186828",
+            "name": "RELL Games",
+            "icon": "05d312e0df9dbae9d43273987a53a794",
+            "owner": false,
+            "permissions": "2222085119217216",
+            "permissionsNew": "2222085119217216"
+          },
+          {
+            "id": "614043942089916438",
+            "name": "La Vamillia",
+            "icon": "a_d5e7d08ffd23be31fd9aa65d8f621a96",
+            "owner": false,
+            "permissions": "2221705014873600",
+            "permissionsNew": "2221705014873600"
+          },
+          {
+            "id": "688077625863831560",
+            "name": "~HTH~ Hide The Hamsters",
+            "icon": "b65515b90bc43195252caa27ab9bdaaf",
+            "owner": false,
+            "permissions": "141154204372544",
+            "permissionsNew": "141154204372544"
+          },
+          {
+            "id": "723057746546655249",
+            "name": "Lapak Juragan",
+            "icon": "a_f349297544701d798e3caea02a74b1a9",
+            "owner": false,
+            "permissions": "1302100976930304",
+            "permissionsNew": "1302100976930304"
+          },
+          {
+            "id": "732658777630703637",
+            "name": "Assasine03's Scripts",
+            "icon": "a_a6491f85e18c1bb92bc7b119012ae984",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "744540055837736970",
+            "name": "MheeHub Community",
+            "icon": "0f86516194b750647f826f46c853390b",
+            "owner": false,
+            "permissions": "2222050759790144",
+            "permissionsNew": "2222050759790144"
+          },
+          {
+            "id": "751082376465088614",
+            "name": "Crew Indo",
+            "icon": "837defc09f381706bcc6f6ce27b35c7b",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "762747182268022864",
+            "name": "g5 | Roblox Community",
+            "icon": null,
+            "owner": false,
+            "permissions": "2221707229464129",
+            "permissionsNew": "2221707229464129"
+          },
+          {
+            "id": "821226190189625396",
+            "name": "Frost Trading Hub",
+            "icon": "8c187df0b65bffad812b915ffda56a1d",
+            "owner": false,
+            "permissions": "2221707162095169",
+            "permissionsNew": "2221707162095169"
+          },
+          {
+            "id": "832881901429063710",
+            "name": "Sea Market",
+            "icon": "ea0598825f388908e85ce3d751460990",
+            "owner": false,
+            "permissions": "65537",
+            "permissionsNew": "65537"
+          },
+          {
+            "id": "834159468560384080",
+            "name": "LUNATIC",
+            "icon": "c34065cfacc8de340f5d76dba3ac1453",
+            "owner": false,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "871845273800957982",
+            "name": "Roblox Account Manager",
+            "icon": "95d9e06a4ca634c99c00b84bc5f85103",
+            "owner": false,
+            "permissions": "2221567575657985",
+            "permissionsNew": "2221567575657985"
+          },
+          {
+            "id": "880044612343955457",
+            "name": "Banana Cat Hub",
+            "icon": "a_9c5ac13034e706a3f8e8062bd6950224",
+            "owner": false,
+            "permissions": "1095253201636417",
+            "permissionsNew": "1095253201636417"
+          },
+          {
+            "id": "889325574655467560",
+            "name": "Electron",
+            "icon": "1823cac290739086335c66f74bdf368c",
+            "owner": false,
+            "permissions": "2216759360031744",
+            "permissionsNew": "2216759360031744"
+          },
+          {
+            "id": "900709213817430057",
+            "name": "StayFrosty! | Roblox Community",
+            "icon": "3eeb14965ad5ebaff49111041a8562f0",
+            "owner": false,
+            "permissions": "968552156737",
+            "permissionsNew": "968552156737"
+          },
+          {
+            "id": "906426036772818954",
+            "name": "[ HoHo Community ]",
+            "icon": "01b231120e2fbc0b91ad71ef89c860c1",
+            "owner": false,
+            "permissions": "70508334095425",
+            "permissionsNew": "70508334095425"
+          },
+          {
+            "id": "921014861205504030",
+            "name": "DRACO HUB | $6.50",
+            "icon": "d5a9a8138957574d5af636561e4140b5",
+            "owner": false,
+            "permissions": "554087550529",
+            "permissionsNew": "554087550529"
+          },
+          {
+            "id": "931810629151510569",
+            "name": "siff",
+            "icon": "0de13512d8bbb3c856a0b77b54df796b",
+            "owner": false,
+            "permissions": "110919782043137",
+            "permissionsNew": "110919782043137"
+          },
+          {
+            "id": "935853803419357214",
+            "name": "✿ Cark Store - Market Place ✿",
+            "icon": "671265aa5943366e50f8b577cf7bf6ea",
+            "owner": false,
+            "permissions": "2221982107373121",
+            "permissionsNew": "2221982107373121"
+          },
+          {
+            "id": "973907295413088286",
+            "name": "TPW Store",
+            "icon": "d308c6e3696e6e4b356fa747f0d43631",
+            "owner": false,
+            "permissions": "2221707229515265",
+            "permissionsNew": "2221707229515265"
+          },
+          {
+            "id": "978632997425283092",
+            "name": "Codex Collective",
+            "icon": "808632ee0656e6da0ddf1d4e40734349",
+            "owner": false,
+            "permissions": "2217583993802305",
+            "permissionsNew": "2217583993802305"
+          },
+          {
+            "id": "984530118368165908",
+            "name": "Bizarre Lineage",
+            "icon": "0da3f5a9b38e9a3e7266a17d24316629",
+            "owner": false,
+            "permissions": "140743930872833",
+            "permissionsNew": "140743930872833"
+          },
+          {
+            "id": "991702878257422347",
+            "name": "Arceus X | Intelligent Units | 2026",
+            "icon": "2c8a1d2b4f7f617aa0108ad664e8fecc",
+            "owner": false,
+            "permissions": "1658757208935937",
+            "permissionsNew": "1658757208935937"
+          },
+          {
+            "id": "1006628609991114895",
+            "name": "Swordburst 3",
+            "icon": "eb7b5ea94b4c60e80fb56641abded004",
+            "owner": false,
+            "permissions": "739700779322369",
+            "permissionsNew": "739700779322369"
+          },
+          {
+            "id": "1010643857882501190",
+            "name": "OMORI",
+            "icon": "dc8ae1bc735e7572660ef3253cdd014d",
+            "owner": false,
+            "permissions": "1307291512327745",
+            "permissionsNew": "1307291512327745"
+          },
+          {
+            "id": "1044697884706230332",
+            "name": "Banana Hub",
+            "icon": "2744bee85eca39b14e45a5d9e2afc2ef",
+            "owner": false,
+            "permissions": "2222085186768449",
+            "permissionsNew": "2222085186768449"
+          },
+          {
+            "id": "1063817265910386741",
+            "name": "Carti Hub",
+            "icon": "a_50e62d02f683db25dff0d8d1763700ab",
+            "owner": false,
+            "permissions": "1095807322672705",
+            "permissionsNew": "1095807322672705"
+          },
+          {
+            "id": "1092853395947278478",
+            "name": "Zenith Studios",
+            "icon": "141c16d383392dea25e0d33232089296",
+            "owner": false,
+            "permissions": "110093000887872",
+            "permissionsNew": "110093000887872"
+          },
+          {
+            "id": "1118677956370374748",
+            "name": "Yummy Auto",
+            "icon": "217e84400afcb81c133ec01191aa3bc6",
+            "owner": false,
+            "permissions": "40273945364033",
+            "permissionsNew": "40273945364033"
+          },
+          {
+            "id": "1121190214715576381",
+            "name": "Grand Alfheim",
+            "icon": "bb47f29c5adbca67809bc5456c5c1100",
+            "owner": false,
+            "permissions": "140741820091905",
+            "permissionsNew": "140741820091905"
+          },
+          {
+            "id": "1127725762405998715",
+            "name": "Carti Backup",
+            "icon": "ca1b33bdf9d8bcb63f603586a50ff22f",
+            "owner": false,
+            "permissions": "2221707229466177",
+            "permissionsNew": "2221707229466177"
+          },
+          {
+            "id": "1128986471244771338",
+            "name": "FarmSync",
+            "icon": "383c2aa125b809fad5b0586f62d4e92f",
+            "owner": false,
+            "permissions": "687231848001",
+            "permissionsNew": "687231848001"
+          },
+          {
+            "id": "1129018190308061214",
+            "name": "NS HUB",
+            "icon": "a_4e9acfb415fa00ba8ca440f7c50faa50",
+            "owner": false,
+            "permissions": "2081347698281985",
+            "permissionsNew": "2081347698281985"
+          },
+          {
+            "id": "1130798506358079540",
+            "name": "Magenta Hub | COMMUNITY",
+            "icon": "a_ddd0b990c477473cac68a5d8033be2a5",
+            "owner": false,
+            "permissions": "1799769642307073",
+            "permissionsNew": "1799769642307073"
+          },
+          {
+            "id": "1131244497179783219",
+            "name": "NexusHub",
+            "icon": "4c552971718452cd9af1585e2723cb30",
+            "owner": false,
+            "permissions": "1834984045662017",
+            "permissionsNew": "1834984045662017"
+          },
+          {
+            "id": "1137781727000002561",
+            "name": "Punk Team",
+            "icon": "dd3eebf29a5e86c9adacc85c637e0e0e",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1139973402048856084",
+            "name": "Flame Trading Hub",
+            "icon": "5a28db84132d6044531980e54c3bb39b",
+            "owner": false,
+            "permissions": "2221569723403841",
+            "permissionsNew": "2221569723403841"
+          },
+          {
+            "id": "1142850986159915118",
+            "name": "OMG Hub | Community",
+            "icon": "4d9603fddb0144763406e19975f7cac0",
+            "owner": false,
+            "permissions": "211936271764993",
+            "permissionsNew": "211936271764993"
+          },
+          {
+            "id": "1149319581907832954",
+            "name": "NCL Store",
+            "icon": "b8f824286294d09428d38e223daa50bd",
+            "owner": false,
+            "permissions": "2221982107422273",
+            "permissionsNew": "2221982107422273"
+          },
+          {
+            "id": "1159465984487346226",
+            "name": "MPRI",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1159565695294636233",
+            "name": "RELL Seas: Community",
+            "icon": "4fac4b0e94fa5020f701458e01459589",
+            "owner": false,
+            "permissions": "1935971577826881",
+            "permissionsNew": "1935971577826881"
+          },
+          {
+            "id": "1174965014109618176",
+            "name": "BUANGERS",
+            "icon": "a_7f0570d7c43ad12740045f0b3701dca6",
+            "owner": false,
+            "permissions": "533235259264577",
+            "permissionsNew": "533235259264577"
+          },
+          {
+            "id": "1204973330449567774",
+            "name": "Motion Ime",
+            "icon": "a_1ccb1d61f345a5480770dbb5dbc3aadd",
+            "owner": false,
+            "permissions": "35734231778817",
+            "permissionsNew": "35734231778817"
+          },
+          {
+            "id": "1211536404543307876",
+            "name": "SS",
+            "icon": "add000301d4ad32c61f8564932916059",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1218911125958295642",
+            "name": "Nousigi Hideout",
+            "icon": "1f857b3d03f983aa74a9840882316340",
+            "owner": false,
+            "permissions": "1125899906842624",
+            "permissionsNew": "1125899906842624"
+          },
+          {
+            "id": "1221935816515911850",
+            "name": "Delta Dynamics",
+            "icon": "42dc0822bc4f734f9d8884d7923122c0",
+            "owner": false,
+            "permissions": "2221707162355201",
+            "permissionsNew": "2221707162355201"
+          },
+          {
+            "id": "1224243448685658213",
+            "name": "Zeke Hub",
+            "icon": "97e3a5395262bb4712cf0a423a6e10e1",
+            "owner": false,
+            "permissions": "35598873464384",
+            "permissionsNew": "35598873464384"
+          },
+          {
+            "id": "1233424544673300541",
+            "name": "Goomba Hub",
+            "icon": "3c03914ee90649097c66a6be238589e5",
+            "owner": false,
+            "permissions": "1659133085732417",
+            "permissionsNew": "1659133085732417"
+          },
+          {
+            "id": "1271517538848604181",
+            "name": "NATIVE | 🐰",
+            "icon": "8e8a9da65a283d63fdae7d1e69375128",
+            "owner": false,
+            "permissions": "549792583169",
+            "permissionsNew": "549792583169"
+          },
+          {
+            "id": "1287193618226090005",
+            "name": "Imp Hub | Community",
+            "icon": "e41df427499622817798121ff6bb9aed",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1287367199337611327",
+            "name": "Flutel.com",
+            "icon": "f58b68fdb82659d1c44a106f002e09bc",
+            "owner": false,
+            "permissions": "2222085186641729",
+            "permissionsNew": "2222085186641729"
+          },
+          {
+            "id": "1294212919608872982",
+            "name": "Carti Trading & MM | ROBLOX",
+            "icon": "a_b8a8f2c022437a0220249196d4c33338",
+            "owner": false,
+            "permissions": "1095669883670081",
+            "permissionsNew": "1095669883670081"
+          },
+          {
+            "id": "1301121394112987136",
+            "name": "Sea Hub",
+            "icon": "a_304b81d1a00dd1d98b4885c126201878",
+            "owner": false,
+            "permissions": "1096185212685889",
+            "permissionsNew": "1096185212685889"
+          },
+          {
+            "id": "1325734452382531624",
+            "name": "Leveling: Reborn",
+            "icon": "45970a1dcca4722f6b8dd7530c3f6eae",
+            "owner": false,
+            "permissions": "141014550514689",
+            "permissionsNew": "141014550514689"
+          },
+          {
+            "id": "1330027698671718440",
+            "name": "The Forge Official Community",
+            "icon": "a_d1ba8bdf1c1b6aa230309bd86e961824",
+            "owner": false,
+            "permissions": "141012403031040",
+            "permissionsNew": "141012403031040"
+          },
+          {
+            "id": "1336720839881785417",
+            "name": "Volcano",
+            "icon": "45ab9e1558834bf263c59a3190677633",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "1352066418744754318",
+            "name": "Ronix Studios",
+            "icon": "84385dd4e6abe93edacd7702d7a8e75e",
+            "owner": false,
+            "permissions": "140737525122049",
+            "permissionsNew": "140737525122049"
+          },
+          {
+            "id": "1358613519117062356",
+            "name": "AtherHub",
+            "icon": "b7a20682b2f1e50a9ecef199fdc65746",
+            "owner": false,
+            "permissions": "1096185279794753",
+            "permissionsNew": "1096185279794753"
+          },
+          {
+            "id": "1362923499588550736",
+            "name": "Aeonic Hub",
+            "icon": "8297a9dd4f31e47d9b49fbfb18267696",
+            "owner": false,
+            "permissions": "140737488456705",
+            "permissionsNew": "140737488456705"
+          },
+          {
+            "id": "1364220918225834085",
+            "name": "Lunor Lounge",
+            "icon": "1b4c7fdca3bf612ad549c8912ac3899a",
+            "owner": false,
+            "permissions": "140874927686720",
+            "permissionsNew": "140874927686720"
+          },
+          {
+            "id": "1370730311624687690",
+            "name": "Axon Hub",
+            "icon": "dde354ce0c9b20142d03a23b22430c6e",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1370799935628382489",
+            "name": "Chiyo",
+            "icon": "1e266645132e71da045b987855490140",
+            "owner": false,
+            "permissions": "493412322184769",
+            "permissionsNew": "493412322184769"
+          },
+          {
+            "id": "1376645805498302574",
+            "name": "New Moon",
+            "icon": "50c59e5758e5d82d602bbc002485275b",
+            "owner": false,
+            "permissions": "66560",
+            "permissionsNew": "66560"
+          },
+          {
+            "id": "1377717359002779729",
+            "name": "Anime Overload",
+            "icon": "ceb159eee733992460cc3ec7014c9f6c",
+            "owner": false,
+            "permissions": "140741820091393",
+            "permissionsNew": "140741820091393"
+          },
+          {
+            "id": "1382347306048684155",
+            "name": "MOVED",
+            "icon": "a43455b60c579a32769e28f3e5d8813d",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1388832005419958372",
+            "name": "Merqury Hub",
+            "icon": "704f6f7bc3099e85c5ca260f269b505e",
+            "owner": false,
+            "permissions": "141012436585985",
+            "permissionsNew": "141012436585985"
+          },
+          {
+            "id": "1392562594430320782",
+            "name": "AirFlow",
+            "icon": "2dfac0cc3de21ae28fd658ff1c9617c8",
+            "owner": false,
+            "permissions": "311297",
+            "permissionsNew": "311297"
+          },
+          {
+            "id": "1395020539915014185",
+            "name": "Seliware",
+            "icon": "d0372c5b7593de23b30c86f34f580555",
+            "owner": false,
+            "permissions": "251382392491521",
+            "permissionsNew": "251382392491521"
+          },
+          {
+            "id": "1395039621687152791",
+            "name": "EzHub",
+            "icon": "ba204aae2172ab446270222b7621a405",
+            "owner": false,
+            "permissions": "673972814728769",
+            "permissionsNew": "673972814728769"
+          },
+          {
+            "id": "1404647251980325007",
+            "name": "Kali Hub",
+            "icon": "aead1776d7c3d4f811cc71078d93ebac",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1409079683953328150",
+            "name": "Toasties Community",
+            "icon": "cdcc0d3b3aefc5e48c5ac9556fa963bc",
+            "owner": false,
+            "permissions": "1096183132442177",
+            "permissionsNew": "1096183132442177"
+          },
+          {
+            "id": "1411211795724636289",
+            "name": "Azurix Bloxburg #1",
+            "icon": "e7b0be054605f568ac9aab37721fa2e5",
+            "owner": false,
+            "permissions": "532857302142529",
+            "permissionsNew": "532857302142529"
+          },
+          {
+            "id": "1416408995798978582",
+            "name": "BONK HUB | Community",
+            "icon": "e85e342bc1ddeddffc651ec706467cb9",
+            "owner": false,
+            "permissions": "2221705081982529",
+            "permissionsNew": "2221705081982529"
+          },
+          {
+            "id": "1438517107720720386",
+            "name": "astra [BETA]",
+            "icon": "e839335e6a1764fbe3ecd8ba6c104ad2",
+            "owner": false,
+            "permissions": "110988501536321",
+            "permissionsNew": "110988501536321"
+          },
+          {
+            "id": "1449149654838153341",
+            "name": "MaiHub",
+            "icon": "c6b0f37c2bd990eb2610b5dc8dd60828",
+            "owner": false,
+            "permissions": "2248473465835073",
+            "permissionsNew": "2248473465835073"
+          },
+          {
+            "id": "1458691648241532972",
+            "name": "ud.wtf",
+            "icon": "a_cf53f9dce5ba4cb2ff4e74228de68aed",
+            "owner": false,
+            "permissions": "2248473465704001",
+            "permissionsNew": "2248473465704001"
+          },
+          {
+            "id": "1460670721188430041",
+            "name": "Iron Soul",
+            "icon": "b5aa2a3259775bef4e021e182ca78871",
+            "owner": false,
+            "permissions": "140737488355329",
+            "permissionsNew": "140737488355329"
+          },
+          {
+            "id": "1487432517119246477",
+            "name": "Daily Content For Cliper",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          }
+        ],
+        "csrfToken": "ee099d90-271e-42e6-9cc1-543ab9f6907a",
+        "authMode": "discord",
+        "botGuildSource": "discord_api",
+        "signedInAt": "2026-04-26T05:01:52.126Z",
+        "issuedAt": 1777179712126,
+        "expiresAt": 1777208512126
+      }
+    },
+    {
+      "id": "acf540de-52dc-4a5c-825b-5f3483a4d506",
+      "session": {
+        "user": {
+          "id": "394124093936500737",
+          "username": "Oke",
+          "handle": "@roiiiii",
+          "avatar": "069145aefd390508af896ec5158d1962",
+          "discriminator": "0"
+        },
+        "guilds": [
+          {
+            "id": "259409057474019328",
+            "name": "THE HALIMAWAN FOUNDATION",
+            "icon": "a_2b1ee92b85eb80a9602910821eabe01a",
+            "owner": false,
+            "permissions": "2151201046105600",
+            "permissionsNew": "2151201046105600"
+          },
+          {
+            "id": "285276870159630338",
+            "name": "Ultraw Games",
+            "icon": "a_05d718ad11c95bbd45b5f79c889e776d",
+            "owner": false,
+            "permissions": "141293723388928",
+            "permissionsNew": "141293723388928"
+          },
+          {
+            "id": "349051257702580224",
+            "name": "BIG Games",
+            "icon": "a_5dcabd68103f75267ee3a22e87105c31",
+            "owner": false,
+            "permissions": "175921860447232",
+            "permissionsNew": "175921860447232"
+          },
+          {
+            "id": "350467905391034391",
+            "name": "Rumble Studios",
+            "icon": "c35fa8cc6883810a58fd7ca2e54423e3",
+            "owner": false,
+            "permissions": "140737525124097",
+            "permissionsNew": "140737525124097"
+          },
+          {
+            "id": "436103915625250817",
+            "name": "Arena Pro Gaming™",
+            "icon": "a08f5e7c14496cad945ac4fcef85ee00",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "503045718102114305",
+            "name": "Infinite Yield",
+            "icon": "0abc928723b459ad843cbdbbc307c13d",
+            "owner": false,
+            "permissions": "1096082199530049",
+            "permissionsNew": "1096082199530049"
+          },
+          {
+            "id": "505306686907744266",
+            "name": "LNC Discord",
+            "icon": "a_01084920c9a999d25250728d6b2c9b61",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "523059903812599811",
+            "name": "Hytale",
+            "icon": "bbae5f77834487ccbe51db7576488531",
+            "owner": false,
+            "permissions": "141014513812544",
+            "permissionsNew": "141014513812544"
+          },
+          {
+            "id": "525991957118320650",
+            "name": "Reconnect",
+            "icon": "fb7ae8908bc430e994748dc7631c3b43",
+            "owner": false,
+            "permissions": "2221982040301121",
+            "permissionsNew": "2221982040301121"
+          },
+          {
+            "id": "548396374299770881",
+            "name": "MuMuPlayer",
+            "icon": "d969d8df44aa925997dd63a4ba571596",
+            "owner": false,
+            "permissions": "149533651699201",
+            "permissionsNew": "149533651699201"
+          },
+          {
+            "id": "562762757905186828",
+            "name": "RELL Games",
+            "icon": "05d312e0df9dbae9d43273987a53a794",
+            "owner": false,
+            "permissions": "2222085119217216",
+            "permissionsNew": "2222085119217216"
+          },
+          {
+            "id": "614043942089916438",
+            "name": "La Vamillia",
+            "icon": "a_d5e7d08ffd23be31fd9aa65d8f621a96",
+            "owner": false,
+            "permissions": "2221705014873600",
+            "permissionsNew": "2221705014873600"
+          },
+          {
+            "id": "688077625863831560",
+            "name": "~HTH~ Hide The Hamsters",
+            "icon": "b65515b90bc43195252caa27ab9bdaaf",
+            "owner": false,
+            "permissions": "141154204372544",
+            "permissionsNew": "141154204372544"
+          },
+          {
+            "id": "723057746546655249",
+            "name": "Lapak Juragan",
+            "icon": "a_f349297544701d798e3caea02a74b1a9",
+            "owner": false,
+            "permissions": "1302100976930304",
+            "permissionsNew": "1302100976930304"
+          },
+          {
+            "id": "732658777630703637",
+            "name": "Assasine03's Scripts",
+            "icon": "a_a6491f85e18c1bb92bc7b119012ae984",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "744540055837736970",
+            "name": "MheeHub Community",
+            "icon": "0f86516194b750647f826f46c853390b",
+            "owner": false,
+            "permissions": "2222050759790144",
+            "permissionsNew": "2222050759790144"
+          },
+          {
+            "id": "751082376465088614",
+            "name": "Crew Indo",
+            "icon": "837defc09f381706bcc6f6ce27b35c7b",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "762747182268022864",
+            "name": "g5 | Roblox Community",
+            "icon": null,
+            "owner": false,
+            "permissions": "2221707229464129",
+            "permissionsNew": "2221707229464129"
+          },
+          {
+            "id": "821226190189625396",
+            "name": "Frost Trading Hub",
+            "icon": "8c187df0b65bffad812b915ffda56a1d",
+            "owner": false,
+            "permissions": "2221707162095169",
+            "permissionsNew": "2221707162095169"
+          },
+          {
+            "id": "832881901429063710",
+            "name": "Sea Market",
+            "icon": "ea0598825f388908e85ce3d751460990",
+            "owner": false,
+            "permissions": "65537",
+            "permissionsNew": "65537"
+          },
+          {
+            "id": "834159468560384080",
+            "name": "LUNATIC",
+            "icon": "c34065cfacc8de340f5d76dba3ac1453",
+            "owner": false,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "871845273800957982",
+            "name": "Roblox Account Manager",
+            "icon": "95d9e06a4ca634c99c00b84bc5f85103",
+            "owner": false,
+            "permissions": "2221567575657985",
+            "permissionsNew": "2221567575657985"
+          },
+          {
+            "id": "880044612343955457",
+            "name": "Banana Cat Hub",
+            "icon": "a_9c5ac13034e706a3f8e8062bd6950224",
+            "owner": false,
+            "permissions": "1095253201636417",
+            "permissionsNew": "1095253201636417"
+          },
+          {
+            "id": "889325574655467560",
+            "name": "Electron",
+            "icon": "1823cac290739086335c66f74bdf368c",
+            "owner": false,
+            "permissions": "2216759360031744",
+            "permissionsNew": "2216759360031744"
+          },
+          {
+            "id": "900709213817430057",
+            "name": "StayFrosty! | Roblox Community",
+            "icon": "3eeb14965ad5ebaff49111041a8562f0",
+            "owner": false,
+            "permissions": "968552156737",
+            "permissionsNew": "968552156737"
+          },
+          {
+            "id": "906426036772818954",
+            "name": "[ HoHo Community ]",
+            "icon": "01b231120e2fbc0b91ad71ef89c860c1",
+            "owner": false,
+            "permissions": "70508334095425",
+            "permissionsNew": "70508334095425"
+          },
+          {
+            "id": "921014861205504030",
+            "name": "DRACO HUB | $6.50",
+            "icon": "d5a9a8138957574d5af636561e4140b5",
+            "owner": false,
+            "permissions": "554087550529",
+            "permissionsNew": "554087550529"
+          },
+          {
+            "id": "931810629151510569",
+            "name": "siff",
+            "icon": "0de13512d8bbb3c856a0b77b54df796b",
+            "owner": false,
+            "permissions": "110919782043137",
+            "permissionsNew": "110919782043137"
+          },
+          {
+            "id": "935853803419357214",
+            "name": "✿ Cark Store - Market Place ✿",
+            "icon": "671265aa5943366e50f8b577cf7bf6ea",
+            "owner": false,
+            "permissions": "2221982107373121",
+            "permissionsNew": "2221982107373121"
+          },
+          {
+            "id": "973907295413088286",
+            "name": "TPW Store",
+            "icon": "d308c6e3696e6e4b356fa747f0d43631",
+            "owner": false,
+            "permissions": "2221707229515265",
+            "permissionsNew": "2221707229515265"
+          },
+          {
+            "id": "978632997425283092",
+            "name": "Codex Collective",
+            "icon": "808632ee0656e6da0ddf1d4e40734349",
+            "owner": false,
+            "permissions": "2217583993802305",
+            "permissionsNew": "2217583993802305"
+          },
+          {
+            "id": "984530118368165908",
+            "name": "Bizarre Lineage",
+            "icon": "0da3f5a9b38e9a3e7266a17d24316629",
+            "owner": false,
+            "permissions": "140743930872833",
+            "permissionsNew": "140743930872833"
+          },
+          {
+            "id": "991702878257422347",
+            "name": "Arceus X | Intelligent Units | 2026",
+            "icon": "2c8a1d2b4f7f617aa0108ad664e8fecc",
+            "owner": false,
+            "permissions": "1658757208935937",
+            "permissionsNew": "1658757208935937"
+          },
+          {
+            "id": "1006628609991114895",
+            "name": "Swordburst 3",
+            "icon": "eb7b5ea94b4c60e80fb56641abded004",
+            "owner": false,
+            "permissions": "739700779322369",
+            "permissionsNew": "739700779322369"
+          },
+          {
+            "id": "1010643857882501190",
+            "name": "OMORI",
+            "icon": "dc8ae1bc735e7572660ef3253cdd014d",
+            "owner": false,
+            "permissions": "1307291512327745",
+            "permissionsNew": "1307291512327745"
+          },
+          {
+            "id": "1044697884706230332",
+            "name": "Banana Hub",
+            "icon": "2744bee85eca39b14e45a5d9e2afc2ef",
+            "owner": false,
+            "permissions": "2222085186768449",
+            "permissionsNew": "2222085186768449"
+          },
+          {
+            "id": "1063817265910386741",
+            "name": "Carti Hub",
+            "icon": "a_50e62d02f683db25dff0d8d1763700ab",
+            "owner": false,
+            "permissions": "1095807322672705",
+            "permissionsNew": "1095807322672705"
+          },
+          {
+            "id": "1092853395947278478",
+            "name": "Zenith Studios",
+            "icon": "141c16d383392dea25e0d33232089296",
+            "owner": false,
+            "permissions": "110093000887872",
+            "permissionsNew": "110093000887872"
+          },
+          {
+            "id": "1118677956370374748",
+            "name": "Yummy Auto",
+            "icon": "217e84400afcb81c133ec01191aa3bc6",
+            "owner": false,
+            "permissions": "40273945364033",
+            "permissionsNew": "40273945364033"
+          },
+          {
+            "id": "1121190214715576381",
+            "name": "Grand Alfheim",
+            "icon": "bb47f29c5adbca67809bc5456c5c1100",
+            "owner": false,
+            "permissions": "140741820091905",
+            "permissionsNew": "140741820091905"
+          },
+          {
+            "id": "1127725762405998715",
+            "name": "Carti Backup",
+            "icon": "ca1b33bdf9d8bcb63f603586a50ff22f",
+            "owner": false,
+            "permissions": "2221707229466177",
+            "permissionsNew": "2221707229466177"
+          },
+          {
+            "id": "1128986471244771338",
+            "name": "FarmSync",
+            "icon": "383c2aa125b809fad5b0586f62d4e92f",
+            "owner": false,
+            "permissions": "687231848001",
+            "permissionsNew": "687231848001"
+          },
+          {
+            "id": "1129018190308061214",
+            "name": "NS HUB",
+            "icon": "a_4e9acfb415fa00ba8ca440f7c50faa50",
+            "owner": false,
+            "permissions": "2081347698281985",
+            "permissionsNew": "2081347698281985"
+          },
+          {
+            "id": "1130798506358079540",
+            "name": "Magenta Hub | COMMUNITY",
+            "icon": "a_ddd0b990c477473cac68a5d8033be2a5",
+            "owner": false,
+            "permissions": "1799769642307073",
+            "permissionsNew": "1799769642307073"
+          },
+          {
+            "id": "1131244497179783219",
+            "name": "NexusHub",
+            "icon": "4c552971718452cd9af1585e2723cb30",
+            "owner": false,
+            "permissions": "1834984045662017",
+            "permissionsNew": "1834984045662017"
+          },
+          {
+            "id": "1137781727000002561",
+            "name": "Punk Team",
+            "icon": "dd3eebf29a5e86c9adacc85c637e0e0e",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1139973402048856084",
+            "name": "Flame Trading Hub",
+            "icon": "5a28db84132d6044531980e54c3bb39b",
+            "owner": false,
+            "permissions": "2221569723403841",
+            "permissionsNew": "2221569723403841"
+          },
+          {
+            "id": "1142850986159915118",
+            "name": "OMG Hub | Community",
+            "icon": "4d9603fddb0144763406e19975f7cac0",
+            "owner": false,
+            "permissions": "211936271764993",
+            "permissionsNew": "211936271764993"
+          },
+          {
+            "id": "1149319581907832954",
+            "name": "NCL Store",
+            "icon": "b8f824286294d09428d38e223daa50bd",
+            "owner": false,
+            "permissions": "2221982107422273",
+            "permissionsNew": "2221982107422273"
+          },
+          {
+            "id": "1159465984487346226",
+            "name": "MPRI",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1159565695294636233",
+            "name": "RELL Seas: Community",
+            "icon": "4fac4b0e94fa5020f701458e01459589",
+            "owner": false,
+            "permissions": "1935971577826881",
+            "permissionsNew": "1935971577826881"
+          },
+          {
+            "id": "1174965014109618176",
+            "name": "BUANGERS",
+            "icon": "a_7f0570d7c43ad12740045f0b3701dca6",
+            "owner": false,
+            "permissions": "533235259264577",
+            "permissionsNew": "533235259264577"
+          },
+          {
+            "id": "1204973330449567774",
+            "name": "Motion Ime",
+            "icon": "a_1ccb1d61f345a5480770dbb5dbc3aadd",
+            "owner": false,
+            "permissions": "35734231778817",
+            "permissionsNew": "35734231778817"
+          },
+          {
+            "id": "1211536404543307876",
+            "name": "SS",
+            "icon": "add000301d4ad32c61f8564932916059",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1218911125958295642",
+            "name": "Nousigi Hideout",
+            "icon": "1f857b3d03f983aa74a9840882316340",
+            "owner": false,
+            "permissions": "1125899906842624",
+            "permissionsNew": "1125899906842624"
+          },
+          {
+            "id": "1221935816515911850",
+            "name": "Delta Dynamics",
+            "icon": "42dc0822bc4f734f9d8884d7923122c0",
+            "owner": false,
+            "permissions": "2221707162355201",
+            "permissionsNew": "2221707162355201"
+          },
+          {
+            "id": "1224243448685658213",
+            "name": "Zeke Hub",
+            "icon": "97e3a5395262bb4712cf0a423a6e10e1",
+            "owner": false,
+            "permissions": "35598873464384",
+            "permissionsNew": "35598873464384"
+          },
+          {
+            "id": "1233424544673300541",
+            "name": "Goomba Hub",
+            "icon": "3c03914ee90649097c66a6be238589e5",
+            "owner": false,
+            "permissions": "1659133085732417",
+            "permissionsNew": "1659133085732417"
+          },
+          {
+            "id": "1271517538848604181",
+            "name": "NATIVE | 🐰",
+            "icon": "8e8a9da65a283d63fdae7d1e69375128",
+            "owner": false,
+            "permissions": "549792583169",
+            "permissionsNew": "549792583169"
+          },
+          {
+            "id": "1287193618226090005",
+            "name": "Imp Hub | Community",
+            "icon": "e41df427499622817798121ff6bb9aed",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1287367199337611327",
+            "name": "Flutel.com",
+            "icon": "f58b68fdb82659d1c44a106f002e09bc",
+            "owner": false,
+            "permissions": "2222085186641729",
+            "permissionsNew": "2222085186641729"
+          },
+          {
+            "id": "1294212919608872982",
+            "name": "Carti Trading & MM | ROBLOX",
+            "icon": "a_b8a8f2c022437a0220249196d4c33338",
+            "owner": false,
+            "permissions": "1095669883670081",
+            "permissionsNew": "1095669883670081"
+          },
+          {
+            "id": "1301121394112987136",
+            "name": "Sea Hub",
+            "icon": "a_304b81d1a00dd1d98b4885c126201878",
+            "owner": false,
+            "permissions": "1096185212685889",
+            "permissionsNew": "1096185212685889"
+          },
+          {
+            "id": "1325734452382531624",
+            "name": "Leveling: Reborn",
+            "icon": "45970a1dcca4722f6b8dd7530c3f6eae",
+            "owner": false,
+            "permissions": "141014550514689",
+            "permissionsNew": "141014550514689"
+          },
+          {
+            "id": "1330027698671718440",
+            "name": "The Forge Official Community",
+            "icon": "a_d1ba8bdf1c1b6aa230309bd86e961824",
+            "owner": false,
+            "permissions": "141012403031040",
+            "permissionsNew": "141012403031040"
+          },
+          {
+            "id": "1336720839881785417",
+            "name": "Volcano",
+            "icon": "45ab9e1558834bf263c59a3190677633",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "1352066418744754318",
+            "name": "Ronix Studios",
+            "icon": "84385dd4e6abe93edacd7702d7a8e75e",
+            "owner": false,
+            "permissions": "140737525122049",
+            "permissionsNew": "140737525122049"
+          },
+          {
+            "id": "1358613519117062356",
+            "name": "AtherHub",
+            "icon": "b7a20682b2f1e50a9ecef199fdc65746",
+            "owner": false,
+            "permissions": "1096185279794753",
+            "permissionsNew": "1096185279794753"
+          },
+          {
+            "id": "1362923499588550736",
+            "name": "Aeonic Hub",
+            "icon": "8297a9dd4f31e47d9b49fbfb18267696",
+            "owner": false,
+            "permissions": "140737488456705",
+            "permissionsNew": "140737488456705"
+          },
+          {
+            "id": "1364220918225834085",
+            "name": "Lunor Lounge",
+            "icon": "1b4c7fdca3bf612ad549c8912ac3899a",
+            "owner": false,
+            "permissions": "140874927686720",
+            "permissionsNew": "140874927686720"
+          },
+          {
+            "id": "1370730311624687690",
+            "name": "Axon Hub",
+            "icon": "dde354ce0c9b20142d03a23b22430c6e",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1370799935628382489",
+            "name": "Chiyo",
+            "icon": "1e266645132e71da045b987855490140",
+            "owner": false,
+            "permissions": "493412322184769",
+            "permissionsNew": "493412322184769"
+          },
+          {
+            "id": "1376645805498302574",
+            "name": "New Moon",
+            "icon": "50c59e5758e5d82d602bbc002485275b",
+            "owner": false,
+            "permissions": "66560",
+            "permissionsNew": "66560"
+          },
+          {
+            "id": "1377717359002779729",
+            "name": "Anime Overload",
+            "icon": "ceb159eee733992460cc3ec7014c9f6c",
+            "owner": false,
+            "permissions": "140741820091393",
+            "permissionsNew": "140741820091393"
+          },
+          {
+            "id": "1382347306048684155",
+            "name": "MOVED",
+            "icon": "a43455b60c579a32769e28f3e5d8813d",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1388832005419958372",
+            "name": "Merqury Hub",
+            "icon": "704f6f7bc3099e85c5ca260f269b505e",
+            "owner": false,
+            "permissions": "141012436585985",
+            "permissionsNew": "141012436585985"
+          },
+          {
+            "id": "1392562594430320782",
+            "name": "AirFlow",
+            "icon": "2dfac0cc3de21ae28fd658ff1c9617c8",
+            "owner": false,
+            "permissions": "311297",
+            "permissionsNew": "311297"
+          },
+          {
+            "id": "1395020539915014185",
+            "name": "Seliware",
+            "icon": "d0372c5b7593de23b30c86f34f580555",
+            "owner": false,
+            "permissions": "251382392491521",
+            "permissionsNew": "251382392491521"
+          },
+          {
+            "id": "1395039621687152791",
+            "name": "EzHub",
+            "icon": "ba204aae2172ab446270222b7621a405",
+            "owner": false,
+            "permissions": "673972814728769",
+            "permissionsNew": "673972814728769"
+          },
+          {
+            "id": "1404647251980325007",
+            "name": "Kali Hub",
+            "icon": "aead1776d7c3d4f811cc71078d93ebac",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1409079683953328150",
+            "name": "Toasties Community",
+            "icon": "cdcc0d3b3aefc5e48c5ac9556fa963bc",
+            "owner": false,
+            "permissions": "1096183132442177",
+            "permissionsNew": "1096183132442177"
+          },
+          {
+            "id": "1411211795724636289",
+            "name": "Azurix Bloxburg #1",
+            "icon": "e7b0be054605f568ac9aab37721fa2e5",
+            "owner": false,
+            "permissions": "532857302142529",
+            "permissionsNew": "532857302142529"
+          },
+          {
+            "id": "1416408995798978582",
+            "name": "BONK HUB | Community",
+            "icon": "e85e342bc1ddeddffc651ec706467cb9",
+            "owner": false,
+            "permissions": "2221705081982529",
+            "permissionsNew": "2221705081982529"
+          },
+          {
+            "id": "1438517107720720386",
+            "name": "astra [BETA]",
+            "icon": "e839335e6a1764fbe3ecd8ba6c104ad2",
+            "owner": false,
+            "permissions": "110988501536321",
+            "permissionsNew": "110988501536321"
+          },
+          {
+            "id": "1449149654838153341",
+            "name": "MaiHub",
+            "icon": "c6b0f37c2bd990eb2610b5dc8dd60828",
+            "owner": false,
+            "permissions": "2248473465835073",
+            "permissionsNew": "2248473465835073"
+          },
+          {
+            "id": "1458691648241532972",
+            "name": "ud.wtf",
+            "icon": "a_cf53f9dce5ba4cb2ff4e74228de68aed",
+            "owner": false,
+            "permissions": "2248473465704001",
+            "permissionsNew": "2248473465704001"
+          },
+          {
+            "id": "1460670721188430041",
+            "name": "Iron Soul",
+            "icon": "b5aa2a3259775bef4e021e182ca78871",
+            "owner": false,
+            "permissions": "140737488355329",
+            "permissionsNew": "140737488355329"
+          },
+          {
+            "id": "1487432517119246477",
+            "name": "Daily Content For Cliper",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          }
+        ],
+        "csrfToken": "3d82e91a-898e-4899-9106-db955f072bd1",
+        "authMode": "discord",
+        "botGuildSource": "discord_api",
+        "signedInAt": "2026-04-26T05:52:19.568Z",
+        "issuedAt": 1777182739568,
+        "expiresAt": 1777211539568
+      }
+    },
+    {
+      "id": "b672d77d-311e-4d39-82cf-fbdba9968148",
+      "session": {
+        "user": {
+          "id": "394124093936500737",
+          "username": "Oke",
+          "handle": "@roiiiii",
+          "avatar": "069145aefd390508af896ec5158d1962",
+          "discriminator": "0"
+        },
+        "guilds": [
+          {
+            "id": "259409057474019328",
+            "name": "THE HALIMAWAN FOUNDATION",
+            "icon": "a_2b1ee92b85eb80a9602910821eabe01a",
+            "owner": false,
+            "permissions": "2151201046105600",
+            "permissionsNew": "2151201046105600"
+          },
+          {
+            "id": "285276870159630338",
+            "name": "Ultraw Games",
+            "icon": "a_05d718ad11c95bbd45b5f79c889e776d",
+            "owner": false,
+            "permissions": "141293723388928",
+            "permissionsNew": "141293723388928"
+          },
+          {
+            "id": "349051257702580224",
+            "name": "BIG Games",
+            "icon": "a_5dcabd68103f75267ee3a22e87105c31",
+            "owner": false,
+            "permissions": "175921860447232",
+            "permissionsNew": "175921860447232"
+          },
+          {
+            "id": "350467905391034391",
+            "name": "Rumble Studios",
+            "icon": "c35fa8cc6883810a58fd7ca2e54423e3",
+            "owner": false,
+            "permissions": "140737525124097",
+            "permissionsNew": "140737525124097"
+          },
+          {
+            "id": "436103915625250817",
+            "name": "Arena Pro Gaming™",
+            "icon": "a08f5e7c14496cad945ac4fcef85ee00",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "503045718102114305",
+            "name": "Infinite Yield",
+            "icon": "0abc928723b459ad843cbdbbc307c13d",
+            "owner": false,
+            "permissions": "1096082199530049",
+            "permissionsNew": "1096082199530049"
+          },
+          {
+            "id": "505306686907744266",
+            "name": "LNC Discord",
+            "icon": "a_01084920c9a999d25250728d6b2c9b61",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "523059903812599811",
+            "name": "Hytale",
+            "icon": "bbae5f77834487ccbe51db7576488531",
+            "owner": false,
+            "permissions": "141014513812544",
+            "permissionsNew": "141014513812544"
+          },
+          {
+            "id": "525991957118320650",
+            "name": "Reconnect",
+            "icon": "fb7ae8908bc430e994748dc7631c3b43",
+            "owner": false,
+            "permissions": "2221982040301121",
+            "permissionsNew": "2221982040301121"
+          },
+          {
+            "id": "548396374299770881",
+            "name": "MuMuPlayer",
+            "icon": "d969d8df44aa925997dd63a4ba571596",
+            "owner": false,
+            "permissions": "149533651699201",
+            "permissionsNew": "149533651699201"
+          },
+          {
+            "id": "562762757905186828",
+            "name": "RELL Games",
+            "icon": "05d312e0df9dbae9d43273987a53a794",
+            "owner": false,
+            "permissions": "2222085119217216",
+            "permissionsNew": "2222085119217216"
+          },
+          {
+            "id": "614043942089916438",
+            "name": "La Vamillia",
+            "icon": "a_d5e7d08ffd23be31fd9aa65d8f621a96",
+            "owner": false,
+            "permissions": "2221705014873600",
+            "permissionsNew": "2221705014873600"
+          },
+          {
+            "id": "688077625863831560",
+            "name": "~HTH~ Hide The Hamsters",
+            "icon": "b65515b90bc43195252caa27ab9bdaaf",
+            "owner": false,
+            "permissions": "141154204372544",
+            "permissionsNew": "141154204372544"
+          },
+          {
+            "id": "723057746546655249",
+            "name": "Lapak Juragan",
+            "icon": "a_f349297544701d798e3caea02a74b1a9",
+            "owner": false,
+            "permissions": "1302100976930304",
+            "permissionsNew": "1302100976930304"
+          },
+          {
+            "id": "732658777630703637",
+            "name": "Assasine03's Scripts",
+            "icon": "a_a6491f85e18c1bb92bc7b119012ae984",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "744540055837736970",
+            "name": "MheeHub Community",
+            "icon": "0f86516194b750647f826f46c853390b",
+            "owner": false,
+            "permissions": "2222050759790144",
+            "permissionsNew": "2222050759790144"
+          },
+          {
+            "id": "751082376465088614",
+            "name": "Crew Indo",
+            "icon": "837defc09f381706bcc6f6ce27b35c7b",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "762747182268022864",
+            "name": "g5 | Roblox Community",
+            "icon": null,
+            "owner": false,
+            "permissions": "2221707229464129",
+            "permissionsNew": "2221707229464129"
+          },
+          {
+            "id": "821226190189625396",
+            "name": "Frost Trading Hub",
+            "icon": "8c187df0b65bffad812b915ffda56a1d",
+            "owner": false,
+            "permissions": "2221707162095169",
+            "permissionsNew": "2221707162095169"
+          },
+          {
+            "id": "832881901429063710",
+            "name": "Sea Market",
+            "icon": "ea0598825f388908e85ce3d751460990",
+            "owner": false,
+            "permissions": "65537",
+            "permissionsNew": "65537"
+          },
+          {
+            "id": "834159468560384080",
+            "name": "LUNATIC",
+            "icon": "c34065cfacc8de340f5d76dba3ac1453",
+            "owner": false,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "871845273800957982",
+            "name": "Roblox Account Manager",
+            "icon": "95d9e06a4ca634c99c00b84bc5f85103",
+            "owner": false,
+            "permissions": "2221567575657985",
+            "permissionsNew": "2221567575657985"
+          },
+          {
+            "id": "880044612343955457",
+            "name": "Banana Cat Hub",
+            "icon": "a_9c5ac13034e706a3f8e8062bd6950224",
+            "owner": false,
+            "permissions": "1095253201636417",
+            "permissionsNew": "1095253201636417"
+          },
+          {
+            "id": "889325574655467560",
+            "name": "Electron",
+            "icon": "1823cac290739086335c66f74bdf368c",
+            "owner": false,
+            "permissions": "2216759360031744",
+            "permissionsNew": "2216759360031744"
+          },
+          {
+            "id": "900709213817430057",
+            "name": "StayFrosty! | Roblox Community",
+            "icon": "3eeb14965ad5ebaff49111041a8562f0",
+            "owner": false,
+            "permissions": "968552156737",
+            "permissionsNew": "968552156737"
+          },
+          {
+            "id": "906426036772818954",
+            "name": "[ HoHo Community ]",
+            "icon": "01b231120e2fbc0b91ad71ef89c860c1",
+            "owner": false,
+            "permissions": "70508334095425",
+            "permissionsNew": "70508334095425"
+          },
+          {
+            "id": "921014861205504030",
+            "name": "DRACO HUB | $6.50",
+            "icon": "d5a9a8138957574d5af636561e4140b5",
+            "owner": false,
+            "permissions": "554087550529",
+            "permissionsNew": "554087550529"
+          },
+          {
+            "id": "931810629151510569",
+            "name": "siff",
+            "icon": "0de13512d8bbb3c856a0b77b54df796b",
+            "owner": false,
+            "permissions": "110919782043137",
+            "permissionsNew": "110919782043137"
+          },
+          {
+            "id": "935853803419357214",
+            "name": "✿ Cark Store - Market Place ✿",
+            "icon": "671265aa5943366e50f8b577cf7bf6ea",
+            "owner": false,
+            "permissions": "2221982107373121",
+            "permissionsNew": "2221982107373121"
+          },
+          {
+            "id": "973907295413088286",
+            "name": "TPW Store",
+            "icon": "d308c6e3696e6e4b356fa747f0d43631",
+            "owner": false,
+            "permissions": "2221707229515265",
+            "permissionsNew": "2221707229515265"
+          },
+          {
+            "id": "978632997425283092",
+            "name": "Codex Collective",
+            "icon": "808632ee0656e6da0ddf1d4e40734349",
+            "owner": false,
+            "permissions": "2217583993802305",
+            "permissionsNew": "2217583993802305"
+          },
+          {
+            "id": "984530118368165908",
+            "name": "Bizarre Lineage",
+            "icon": "0da3f5a9b38e9a3e7266a17d24316629",
+            "owner": false,
+            "permissions": "140743930872833",
+            "permissionsNew": "140743930872833"
+          },
+          {
+            "id": "991702878257422347",
+            "name": "Arceus X | Intelligent Units | 2026",
+            "icon": "2c8a1d2b4f7f617aa0108ad664e8fecc",
+            "owner": false,
+            "permissions": "1658757208935937",
+            "permissionsNew": "1658757208935937"
+          },
+          {
+            "id": "1006628609991114895",
+            "name": "Swordburst 3",
+            "icon": "eb7b5ea94b4c60e80fb56641abded004",
+            "owner": false,
+            "permissions": "739700779322369",
+            "permissionsNew": "739700779322369"
+          },
+          {
+            "id": "1010643857882501190",
+            "name": "OMORI",
+            "icon": "dc8ae1bc735e7572660ef3253cdd014d",
+            "owner": false,
+            "permissions": "1307291512327745",
+            "permissionsNew": "1307291512327745"
+          },
+          {
+            "id": "1044697884706230332",
+            "name": "Banana Hub",
+            "icon": "2744bee85eca39b14e45a5d9e2afc2ef",
+            "owner": false,
+            "permissions": "2222085186768449",
+            "permissionsNew": "2222085186768449"
+          },
+          {
+            "id": "1063817265910386741",
+            "name": "Carti Hub",
+            "icon": "a_50e62d02f683db25dff0d8d1763700ab",
+            "owner": false,
+            "permissions": "1095807322672705",
+            "permissionsNew": "1095807322672705"
+          },
+          {
+            "id": "1092853395947278478",
+            "name": "Zenith Studios",
+            "icon": "141c16d383392dea25e0d33232089296",
+            "owner": false,
+            "permissions": "110093000887872",
+            "permissionsNew": "110093000887872"
+          },
+          {
+            "id": "1118677956370374748",
+            "name": "Yummy Auto",
+            "icon": "217e84400afcb81c133ec01191aa3bc6",
+            "owner": false,
+            "permissions": "40273945364033",
+            "permissionsNew": "40273945364033"
+          },
+          {
+            "id": "1121190214715576381",
+            "name": "Grand Alfheim",
+            "icon": "bb47f29c5adbca67809bc5456c5c1100",
+            "owner": false,
+            "permissions": "140741820091905",
+            "permissionsNew": "140741820091905"
+          },
+          {
+            "id": "1127725762405998715",
+            "name": "Carti Backup",
+            "icon": "ca1b33bdf9d8bcb63f603586a50ff22f",
+            "owner": false,
+            "permissions": "2221707229466177",
+            "permissionsNew": "2221707229466177"
+          },
+          {
+            "id": "1128986471244771338",
+            "name": "FarmSync",
+            "icon": "383c2aa125b809fad5b0586f62d4e92f",
+            "owner": false,
+            "permissions": "687231848001",
+            "permissionsNew": "687231848001"
+          },
+          {
+            "id": "1129018190308061214",
+            "name": "NS HUB",
+            "icon": "a_4e9acfb415fa00ba8ca440f7c50faa50",
+            "owner": false,
+            "permissions": "2081347698281985",
+            "permissionsNew": "2081347698281985"
+          },
+          {
+            "id": "1130798506358079540",
+            "name": "Magenta Hub | COMMUNITY",
+            "icon": "a_ddd0b990c477473cac68a5d8033be2a5",
+            "owner": false,
+            "permissions": "1799769642307073",
+            "permissionsNew": "1799769642307073"
+          },
+          {
+            "id": "1131244497179783219",
+            "name": "NexusHub",
+            "icon": "4c552971718452cd9af1585e2723cb30",
+            "owner": false,
+            "permissions": "1834984045662017",
+            "permissionsNew": "1834984045662017"
+          },
+          {
+            "id": "1137781727000002561",
+            "name": "Punk Team",
+            "icon": "dd3eebf29a5e86c9adacc85c637e0e0e",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1139973402048856084",
+            "name": "Flame Trading Hub",
+            "icon": "5a28db84132d6044531980e54c3bb39b",
+            "owner": false,
+            "permissions": "2221569723403841",
+            "permissionsNew": "2221569723403841"
+          },
+          {
+            "id": "1142850986159915118",
+            "name": "OMG Hub | Community",
+            "icon": "4d9603fddb0144763406e19975f7cac0",
+            "owner": false,
+            "permissions": "211936271764993",
+            "permissionsNew": "211936271764993"
+          },
+          {
+            "id": "1149319581907832954",
+            "name": "NCL Store",
+            "icon": "b8f824286294d09428d38e223daa50bd",
+            "owner": false,
+            "permissions": "2221982107422273",
+            "permissionsNew": "2221982107422273"
+          },
+          {
+            "id": "1159465984487346226",
+            "name": "MPRI",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1159565695294636233",
+            "name": "RELL Seas: Community",
+            "icon": "4fac4b0e94fa5020f701458e01459589",
+            "owner": false,
+            "permissions": "1935971577826881",
+            "permissionsNew": "1935971577826881"
+          },
+          {
+            "id": "1174965014109618176",
+            "name": "BUANGERS",
+            "icon": "a_7f0570d7c43ad12740045f0b3701dca6",
+            "owner": false,
+            "permissions": "533235259264577",
+            "permissionsNew": "533235259264577"
+          },
+          {
+            "id": "1204973330449567774",
+            "name": "Motion Ime",
+            "icon": "a_1ccb1d61f345a5480770dbb5dbc3aadd",
+            "owner": false,
+            "permissions": "35734231778817",
+            "permissionsNew": "35734231778817"
+          },
+          {
+            "id": "1211536404543307876",
+            "name": "SS",
+            "icon": "add000301d4ad32c61f8564932916059",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1218911125958295642",
+            "name": "Nousigi Hideout",
+            "icon": "1f857b3d03f983aa74a9840882316340",
+            "owner": false,
+            "permissions": "1125899906842624",
+            "permissionsNew": "1125899906842624"
+          },
+          {
+            "id": "1221935816515911850",
+            "name": "Delta Dynamics",
+            "icon": "42dc0822bc4f734f9d8884d7923122c0",
+            "owner": false,
+            "permissions": "2221707162355201",
+            "permissionsNew": "2221707162355201"
+          },
+          {
+            "id": "1224243448685658213",
+            "name": "Zeke Hub",
+            "icon": "97e3a5395262bb4712cf0a423a6e10e1",
+            "owner": false,
+            "permissions": "35598873464384",
+            "permissionsNew": "35598873464384"
+          },
+          {
+            "id": "1233424544673300541",
+            "name": "Goomba Hub",
+            "icon": "3c03914ee90649097c66a6be238589e5",
+            "owner": false,
+            "permissions": "1659133085732417",
+            "permissionsNew": "1659133085732417"
+          },
+          {
+            "id": "1271517538848604181",
+            "name": "NATIVE | 🐰",
+            "icon": "8e8a9da65a283d63fdae7d1e69375128",
+            "owner": false,
+            "permissions": "549792583169",
+            "permissionsNew": "549792583169"
+          },
+          {
+            "id": "1287193618226090005",
+            "name": "Imp Hub | Community",
+            "icon": "e41df427499622817798121ff6bb9aed",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1287367199337611327",
+            "name": "Flutel.com",
+            "icon": "f58b68fdb82659d1c44a106f002e09bc",
+            "owner": false,
+            "permissions": "2222085186641729",
+            "permissionsNew": "2222085186641729"
+          },
+          {
+            "id": "1294212919608872982",
+            "name": "Carti Trading & MM | ROBLOX",
+            "icon": "a_b8a8f2c022437a0220249196d4c33338",
+            "owner": false,
+            "permissions": "1095669883670081",
+            "permissionsNew": "1095669883670081"
+          },
+          {
+            "id": "1301121394112987136",
+            "name": "Sea Hub",
+            "icon": "a_304b81d1a00dd1d98b4885c126201878",
+            "owner": false,
+            "permissions": "1096185212685889",
+            "permissionsNew": "1096185212685889"
+          },
+          {
+            "id": "1325734452382531624",
+            "name": "Leveling: Reborn",
+            "icon": "45970a1dcca4722f6b8dd7530c3f6eae",
+            "owner": false,
+            "permissions": "141014550514689",
+            "permissionsNew": "141014550514689"
+          },
+          {
+            "id": "1330027698671718440",
+            "name": "The Forge Official Community",
+            "icon": "a_d1ba8bdf1c1b6aa230309bd86e961824",
+            "owner": false,
+            "permissions": "141012403031040",
+            "permissionsNew": "141012403031040"
+          },
+          {
+            "id": "1336720839881785417",
+            "name": "Volcano",
+            "icon": "45ab9e1558834bf263c59a3190677633",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "1352066418744754318",
+            "name": "Ronix Studios",
+            "icon": "84385dd4e6abe93edacd7702d7a8e75e",
+            "owner": false,
+            "permissions": "140737525122049",
+            "permissionsNew": "140737525122049"
+          },
+          {
+            "id": "1358613519117062356",
+            "name": "AtherHub",
+            "icon": "b7a20682b2f1e50a9ecef199fdc65746",
+            "owner": false,
+            "permissions": "1096185279794753",
+            "permissionsNew": "1096185279794753"
+          },
+          {
+            "id": "1362923499588550736",
+            "name": "Aeonic Hub",
+            "icon": "8297a9dd4f31e47d9b49fbfb18267696",
+            "owner": false,
+            "permissions": "140737488456705",
+            "permissionsNew": "140737488456705"
+          },
+          {
+            "id": "1364220918225834085",
+            "name": "Lunor Lounge",
+            "icon": "1b4c7fdca3bf612ad549c8912ac3899a",
+            "owner": false,
+            "permissions": "140874927686720",
+            "permissionsNew": "140874927686720"
+          },
+          {
+            "id": "1370730311624687690",
+            "name": "Axon Hub",
+            "icon": "dde354ce0c9b20142d03a23b22430c6e",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1370799935628382489",
+            "name": "Chiyo",
+            "icon": "1e266645132e71da045b987855490140",
+            "owner": false,
+            "permissions": "493412322184769",
+            "permissionsNew": "493412322184769"
+          },
+          {
+            "id": "1376645805498302574",
+            "name": "New Moon",
+            "icon": "50c59e5758e5d82d602bbc002485275b",
+            "owner": false,
+            "permissions": "66560",
+            "permissionsNew": "66560"
+          },
+          {
+            "id": "1377717359002779729",
+            "name": "Anime Overload",
+            "icon": "ceb159eee733992460cc3ec7014c9f6c",
+            "owner": false,
+            "permissions": "140741820091393",
+            "permissionsNew": "140741820091393"
+          },
+          {
+            "id": "1382347306048684155",
+            "name": "MOVED",
+            "icon": "a43455b60c579a32769e28f3e5d8813d",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1388832005419958372",
+            "name": "Merqury Hub",
+            "icon": "704f6f7bc3099e85c5ca260f269b505e",
+            "owner": false,
+            "permissions": "141012436585985",
+            "permissionsNew": "141012436585985"
+          },
+          {
+            "id": "1392562594430320782",
+            "name": "AirFlow",
+            "icon": "2dfac0cc3de21ae28fd658ff1c9617c8",
+            "owner": false,
+            "permissions": "311297",
+            "permissionsNew": "311297"
+          },
+          {
+            "id": "1395020539915014185",
+            "name": "Seliware",
+            "icon": "d0372c5b7593de23b30c86f34f580555",
+            "owner": false,
+            "permissions": "251382392491521",
+            "permissionsNew": "251382392491521"
+          },
+          {
+            "id": "1395039621687152791",
+            "name": "EzHub",
+            "icon": "ba204aae2172ab446270222b7621a405",
+            "owner": false,
+            "permissions": "673972814728769",
+            "permissionsNew": "673972814728769"
+          },
+          {
+            "id": "1404647251980325007",
+            "name": "Kali Hub",
+            "icon": "aead1776d7c3d4f811cc71078d93ebac",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1409079683953328150",
+            "name": "Toasties Community",
+            "icon": "cdcc0d3b3aefc5e48c5ac9556fa963bc",
+            "owner": false,
+            "permissions": "1096183132442177",
+            "permissionsNew": "1096183132442177"
+          },
+          {
+            "id": "1411211795724636289",
+            "name": "Azurix Bloxburg #1",
+            "icon": "e7b0be054605f568ac9aab37721fa2e5",
+            "owner": false,
+            "permissions": "532857302142529",
+            "permissionsNew": "532857302142529"
+          },
+          {
+            "id": "1416408995798978582",
+            "name": "BONK HUB | Community",
+            "icon": "e85e342bc1ddeddffc651ec706467cb9",
+            "owner": false,
+            "permissions": "2221705081982529",
+            "permissionsNew": "2221705081982529"
+          },
+          {
+            "id": "1438517107720720386",
+            "name": "astra [BETA]",
+            "icon": "e839335e6a1764fbe3ecd8ba6c104ad2",
+            "owner": false,
+            "permissions": "110988501536321",
+            "permissionsNew": "110988501536321"
+          },
+          {
+            "id": "1449149654838153341",
+            "name": "MaiHub",
+            "icon": "c6b0f37c2bd990eb2610b5dc8dd60828",
+            "owner": false,
+            "permissions": "2248473465835073",
+            "permissionsNew": "2248473465835073"
+          },
+          {
+            "id": "1458691648241532972",
+            "name": "ud.wtf",
+            "icon": "a_cf53f9dce5ba4cb2ff4e74228de68aed",
+            "owner": false,
+            "permissions": "2248473465704001",
+            "permissionsNew": "2248473465704001"
+          },
+          {
+            "id": "1460670721188430041",
+            "name": "Iron Soul",
+            "icon": "b5aa2a3259775bef4e021e182ca78871",
+            "owner": false,
+            "permissions": "140737488355329",
+            "permissionsNew": "140737488355329"
+          },
+          {
+            "id": "1487432517119246477",
+            "name": "Daily Content For Cliper",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          }
+        ],
+        "csrfToken": "4f12abbc-072d-4789-903c-fb49fe3af593",
+        "authMode": "discord",
+        "botGuildSource": "discord_api",
+        "signedInAt": "2026-04-26T11:12:41.017Z",
+        "issuedAt": 1777201961017,
+        "expiresAt": 1777230761017
+      }
+    },
+    {
+      "id": "063b8928-5074-42cc-8ceb-b1913b3981fa",
+      "session": {
+        "user": {
+          "id": "394124093936500737",
+          "username": "Oke",
+          "handle": "@roiiiii",
+          "avatar": "069145aefd390508af896ec5158d1962",
+          "discriminator": "0"
+        },
+        "guilds": [
+          {
+            "id": "259409057474019328",
+            "name": "THE HALIMAWAN FOUNDATION",
+            "icon": "a_2b1ee92b85eb80a9602910821eabe01a",
+            "owner": false,
+            "permissions": "2151201046105600",
+            "permissionsNew": "2151201046105600"
+          },
+          {
+            "id": "285276870159630338",
+            "name": "Ultraw Games",
+            "icon": "a_05d718ad11c95bbd45b5f79c889e776d",
+            "owner": false,
+            "permissions": "141293723388928",
+            "permissionsNew": "141293723388928"
+          },
+          {
+            "id": "349051257702580224",
+            "name": "BIG Games",
+            "icon": "a_5dcabd68103f75267ee3a22e87105c31",
+            "owner": false,
+            "permissions": "175921860447232",
+            "permissionsNew": "175921860447232"
+          },
+          {
+            "id": "350467905391034391",
+            "name": "Rumble Studios",
+            "icon": "c35fa8cc6883810a58fd7ca2e54423e3",
+            "owner": false,
+            "permissions": "140737525124097",
+            "permissionsNew": "140737525124097"
+          },
+          {
+            "id": "436103915625250817",
+            "name": "Arena Pro Gaming™",
+            "icon": "a08f5e7c14496cad945ac4fcef85ee00",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "503045718102114305",
+            "name": "Infinite Yield",
+            "icon": "0abc928723b459ad843cbdbbc307c13d",
+            "owner": false,
+            "permissions": "1096082199530049",
+            "permissionsNew": "1096082199530049"
+          },
+          {
+            "id": "505306686907744266",
+            "name": "LNC Discord",
+            "icon": "a_01084920c9a999d25250728d6b2c9b61",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "523059903812599811",
+            "name": "Hytale",
+            "icon": "bbae5f77834487ccbe51db7576488531",
+            "owner": false,
+            "permissions": "141014513812544",
+            "permissionsNew": "141014513812544"
+          },
+          {
+            "id": "525991957118320650",
+            "name": "Reconnect",
+            "icon": "fb7ae8908bc430e994748dc7631c3b43",
+            "owner": false,
+            "permissions": "2221982040301121",
+            "permissionsNew": "2221982040301121"
+          },
+          {
+            "id": "548396374299770881",
+            "name": "MuMuPlayer",
+            "icon": "d969d8df44aa925997dd63a4ba571596",
+            "owner": false,
+            "permissions": "149533651699201",
+            "permissionsNew": "149533651699201"
+          },
+          {
+            "id": "562762757905186828",
+            "name": "RELL Games",
+            "icon": "05d312e0df9dbae9d43273987a53a794",
+            "owner": false,
+            "permissions": "2222085119217216",
+            "permissionsNew": "2222085119217216"
+          },
+          {
+            "id": "614043942089916438",
+            "name": "La Vamillia",
+            "icon": "a_d5e7d08ffd23be31fd9aa65d8f621a96",
+            "owner": false,
+            "permissions": "2221705014873600",
+            "permissionsNew": "2221705014873600"
+          },
+          {
+            "id": "688077625863831560",
+            "name": "~HTH~ Hide The Hamsters",
+            "icon": "b65515b90bc43195252caa27ab9bdaaf",
+            "owner": false,
+            "permissions": "141154204372544",
+            "permissionsNew": "141154204372544"
+          },
+          {
+            "id": "723057746546655249",
+            "name": "Lapak Juragan",
+            "icon": "a_f349297544701d798e3caea02a74b1a9",
+            "owner": false,
+            "permissions": "1302100976930304",
+            "permissionsNew": "1302100976930304"
+          },
+          {
+            "id": "732658777630703637",
+            "name": "Assasine03's Scripts",
+            "icon": "a_a6491f85e18c1bb92bc7b119012ae984",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "744540055837736970",
+            "name": "MheeHub Community",
+            "icon": "0f86516194b750647f826f46c853390b",
+            "owner": false,
+            "permissions": "2222050759790144",
+            "permissionsNew": "2222050759790144"
+          },
+          {
+            "id": "751082376465088614",
+            "name": "Crew Indo",
+            "icon": "837defc09f381706bcc6f6ce27b35c7b",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "762747182268022864",
+            "name": "g5 | Roblox Community",
+            "icon": null,
+            "owner": false,
+            "permissions": "2221707229464129",
+            "permissionsNew": "2221707229464129"
+          },
+          {
+            "id": "821226190189625396",
+            "name": "Frost Trading Hub",
+            "icon": "8c187df0b65bffad812b915ffda56a1d",
+            "owner": false,
+            "permissions": "2221707162095169",
+            "permissionsNew": "2221707162095169"
+          },
+          {
+            "id": "832881901429063710",
+            "name": "Sea Market",
+            "icon": "ea0598825f388908e85ce3d751460990",
+            "owner": false,
+            "permissions": "65537",
+            "permissionsNew": "65537"
+          },
+          {
+            "id": "834159468560384080",
+            "name": "LUNATIC",
+            "icon": "c34065cfacc8de340f5d76dba3ac1453",
+            "owner": false,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "871845273800957982",
+            "name": "Roblox Account Manager",
+            "icon": "95d9e06a4ca634c99c00b84bc5f85103",
+            "owner": false,
+            "permissions": "2221567575657985",
+            "permissionsNew": "2221567575657985"
+          },
+          {
+            "id": "880044612343955457",
+            "name": "Banana Cat Hub",
+            "icon": "a_9c5ac13034e706a3f8e8062bd6950224",
+            "owner": false,
+            "permissions": "1095253201636417",
+            "permissionsNew": "1095253201636417"
+          },
+          {
+            "id": "889325574655467560",
+            "name": "Electron",
+            "icon": "1823cac290739086335c66f74bdf368c",
+            "owner": false,
+            "permissions": "2216759360031744",
+            "permissionsNew": "2216759360031744"
+          },
+          {
+            "id": "900709213817430057",
+            "name": "StayFrosty! | Roblox Community",
+            "icon": "3eeb14965ad5ebaff49111041a8562f0",
+            "owner": false,
+            "permissions": "968552156737",
+            "permissionsNew": "968552156737"
+          },
+          {
+            "id": "906426036772818954",
+            "name": "[ HoHo Community ]",
+            "icon": "01b231120e2fbc0b91ad71ef89c860c1",
+            "owner": false,
+            "permissions": "70508334095425",
+            "permissionsNew": "70508334095425"
+          },
+          {
+            "id": "921014861205504030",
+            "name": "DRACO HUB | $6.50",
+            "icon": "d5a9a8138957574d5af636561e4140b5",
+            "owner": false,
+            "permissions": "554087550529",
+            "permissionsNew": "554087550529"
+          },
+          {
+            "id": "931810629151510569",
+            "name": "siff",
+            "icon": "0de13512d8bbb3c856a0b77b54df796b",
+            "owner": false,
+            "permissions": "110919782043137",
+            "permissionsNew": "110919782043137"
+          },
+          {
+            "id": "935853803419357214",
+            "name": "✿ Cark Store - Market Place ✿",
+            "icon": "671265aa5943366e50f8b577cf7bf6ea",
+            "owner": false,
+            "permissions": "2221982107373121",
+            "permissionsNew": "2221982107373121"
+          },
+          {
+            "id": "973907295413088286",
+            "name": "TPW Store",
+            "icon": "d308c6e3696e6e4b356fa747f0d43631",
+            "owner": false,
+            "permissions": "2221707229515265",
+            "permissionsNew": "2221707229515265"
+          },
+          {
+            "id": "978632997425283092",
+            "name": "Codex Collective",
+            "icon": "808632ee0656e6da0ddf1d4e40734349",
+            "owner": false,
+            "permissions": "2217583993802305",
+            "permissionsNew": "2217583993802305"
+          },
+          {
+            "id": "984530118368165908",
+            "name": "Bizarre Lineage",
+            "icon": "0da3f5a9b38e9a3e7266a17d24316629",
+            "owner": false,
+            "permissions": "140743930872833",
+            "permissionsNew": "140743930872833"
+          },
+          {
+            "id": "991702878257422347",
+            "name": "Arceus X | Intelligent Units | 2026",
+            "icon": "2c8a1d2b4f7f617aa0108ad664e8fecc",
+            "owner": false,
+            "permissions": "1658757208935937",
+            "permissionsNew": "1658757208935937"
+          },
+          {
+            "id": "1006628609991114895",
+            "name": "Swordburst 3",
+            "icon": "eb7b5ea94b4c60e80fb56641abded004",
+            "owner": false,
+            "permissions": "739700779322369",
+            "permissionsNew": "739700779322369"
+          },
+          {
+            "id": "1010643857882501190",
+            "name": "OMORI",
+            "icon": "dc8ae1bc735e7572660ef3253cdd014d",
+            "owner": false,
+            "permissions": "1307291512327745",
+            "permissionsNew": "1307291512327745"
+          },
+          {
+            "id": "1044697884706230332",
+            "name": "Banana Hub",
+            "icon": "2744bee85eca39b14e45a5d9e2afc2ef",
+            "owner": false,
+            "permissions": "2222085186768449",
+            "permissionsNew": "2222085186768449"
+          },
+          {
+            "id": "1063817265910386741",
+            "name": "Carti Hub",
+            "icon": "a_50e62d02f683db25dff0d8d1763700ab",
+            "owner": false,
+            "permissions": "1095807322672705",
+            "permissionsNew": "1095807322672705"
+          },
+          {
+            "id": "1092853395947278478",
+            "name": "Zenith Studios",
+            "icon": "141c16d383392dea25e0d33232089296",
+            "owner": false,
+            "permissions": "110093000887872",
+            "permissionsNew": "110093000887872"
+          },
+          {
+            "id": "1118677956370374748",
+            "name": "Yummy Auto",
+            "icon": "217e84400afcb81c133ec01191aa3bc6",
+            "owner": false,
+            "permissions": "40273945364033",
+            "permissionsNew": "40273945364033"
+          },
+          {
+            "id": "1121190214715576381",
+            "name": "Grand Alfheim",
+            "icon": "bb47f29c5adbca67809bc5456c5c1100",
+            "owner": false,
+            "permissions": "140741820091905",
+            "permissionsNew": "140741820091905"
+          },
+          {
+            "id": "1127725762405998715",
+            "name": "Carti Backup",
+            "icon": "ca1b33bdf9d8bcb63f603586a50ff22f",
+            "owner": false,
+            "permissions": "2221707229466177",
+            "permissionsNew": "2221707229466177"
+          },
+          {
+            "id": "1128986471244771338",
+            "name": "FarmSync",
+            "icon": "383c2aa125b809fad5b0586f62d4e92f",
+            "owner": false,
+            "permissions": "687231848001",
+            "permissionsNew": "687231848001"
+          },
+          {
+            "id": "1129018190308061214",
+            "name": "NS HUB",
+            "icon": "a_4e9acfb415fa00ba8ca440f7c50faa50",
+            "owner": false,
+            "permissions": "2081347698281985",
+            "permissionsNew": "2081347698281985"
+          },
+          {
+            "id": "1130798506358079540",
+            "name": "Magenta Hub | COMMUNITY",
+            "icon": "a_ddd0b990c477473cac68a5d8033be2a5",
+            "owner": false,
+            "permissions": "1799769642307073",
+            "permissionsNew": "1799769642307073"
+          },
+          {
+            "id": "1131244497179783219",
+            "name": "NexusHub",
+            "icon": "4c552971718452cd9af1585e2723cb30",
+            "owner": false,
+            "permissions": "1834984045662017",
+            "permissionsNew": "1834984045662017"
+          },
+          {
+            "id": "1137781727000002561",
+            "name": "Punk Team",
+            "icon": "dd3eebf29a5e86c9adacc85c637e0e0e",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1139973402048856084",
+            "name": "Flame Trading Hub",
+            "icon": "5a28db84132d6044531980e54c3bb39b",
+            "owner": false,
+            "permissions": "2221569723403841",
+            "permissionsNew": "2221569723403841"
+          },
+          {
+            "id": "1142850986159915118",
+            "name": "OMG Hub | Community",
+            "icon": "4d9603fddb0144763406e19975f7cac0",
+            "owner": false,
+            "permissions": "211936271764993",
+            "permissionsNew": "211936271764993"
+          },
+          {
+            "id": "1149319581907832954",
+            "name": "NCL Store",
+            "icon": "b8f824286294d09428d38e223daa50bd",
+            "owner": false,
+            "permissions": "2221982107422273",
+            "permissionsNew": "2221982107422273"
+          },
+          {
+            "id": "1159465984487346226",
+            "name": "MPRI",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1159565695294636233",
+            "name": "RELL Seas: Community",
+            "icon": "4fac4b0e94fa5020f701458e01459589",
+            "owner": false,
+            "permissions": "1935971577826881",
+            "permissionsNew": "1935971577826881"
+          },
+          {
+            "id": "1174965014109618176",
+            "name": "BUANGERS",
+            "icon": "a_7f0570d7c43ad12740045f0b3701dca6",
+            "owner": false,
+            "permissions": "533235259264577",
+            "permissionsNew": "533235259264577"
+          },
+          {
+            "id": "1204973330449567774",
+            "name": "Motion Ime",
+            "icon": "a_1ccb1d61f345a5480770dbb5dbc3aadd",
+            "owner": false,
+            "permissions": "35734231778817",
+            "permissionsNew": "35734231778817"
+          },
+          {
+            "id": "1211536404543307876",
+            "name": "SS",
+            "icon": "add000301d4ad32c61f8564932916059",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1218911125958295642",
+            "name": "Nousigi Hideout",
+            "icon": "1f857b3d03f983aa74a9840882316340",
+            "owner": false,
+            "permissions": "1125899906842624",
+            "permissionsNew": "1125899906842624"
+          },
+          {
+            "id": "1221935816515911850",
+            "name": "Delta Dynamics",
+            "icon": "42dc0822bc4f734f9d8884d7923122c0",
+            "owner": false,
+            "permissions": "2221707162355201",
+            "permissionsNew": "2221707162355201"
+          },
+          {
+            "id": "1224243448685658213",
+            "name": "Zeke Hub",
+            "icon": "97e3a5395262bb4712cf0a423a6e10e1",
+            "owner": false,
+            "permissions": "35598873464384",
+            "permissionsNew": "35598873464384"
+          },
+          {
+            "id": "1233424544673300541",
+            "name": "Goomba Hub",
+            "icon": "3c03914ee90649097c66a6be238589e5",
+            "owner": false,
+            "permissions": "1659133085732417",
+            "permissionsNew": "1659133085732417"
+          },
+          {
+            "id": "1271517538848604181",
+            "name": "NATIVE | 🐰",
+            "icon": "8e8a9da65a283d63fdae7d1e69375128",
+            "owner": false,
+            "permissions": "549792583169",
+            "permissionsNew": "549792583169"
+          },
+          {
+            "id": "1287193618226090005",
+            "name": "Imp Hub | Community",
+            "icon": "e41df427499622817798121ff6bb9aed",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1287367199337611327",
+            "name": "Flutel.com",
+            "icon": "f58b68fdb82659d1c44a106f002e09bc",
+            "owner": false,
+            "permissions": "2222085186641729",
+            "permissionsNew": "2222085186641729"
+          },
+          {
+            "id": "1294212919608872982",
+            "name": "Carti Trading & MM | ROBLOX",
+            "icon": "a_b8a8f2c022437a0220249196d4c33338",
+            "owner": false,
+            "permissions": "1095669883670081",
+            "permissionsNew": "1095669883670081"
+          },
+          {
+            "id": "1301121394112987136",
+            "name": "Sea Hub",
+            "icon": "a_304b81d1a00dd1d98b4885c126201878",
+            "owner": false,
+            "permissions": "1096185212685889",
+            "permissionsNew": "1096185212685889"
+          },
+          {
+            "id": "1325734452382531624",
+            "name": "Leveling: Reborn",
+            "icon": "45970a1dcca4722f6b8dd7530c3f6eae",
+            "owner": false,
+            "permissions": "141014550514689",
+            "permissionsNew": "141014550514689"
+          },
+          {
+            "id": "1330027698671718440",
+            "name": "The Forge Official Community",
+            "icon": "a_d1ba8bdf1c1b6aa230309bd86e961824",
+            "owner": false,
+            "permissions": "141012403031040",
+            "permissionsNew": "141012403031040"
+          },
+          {
+            "id": "1336720839881785417",
+            "name": "Volcano",
+            "icon": "45ab9e1558834bf263c59a3190677633",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "1352066418744754318",
+            "name": "Ronix Studios",
+            "icon": "84385dd4e6abe93edacd7702d7a8e75e",
+            "owner": false,
+            "permissions": "140737525122049",
+            "permissionsNew": "140737525122049"
+          },
+          {
+            "id": "1358613519117062356",
+            "name": "AtherHub",
+            "icon": "b7a20682b2f1e50a9ecef199fdc65746",
+            "owner": false,
+            "permissions": "1096185279794753",
+            "permissionsNew": "1096185279794753"
+          },
+          {
+            "id": "1362923499588550736",
+            "name": "Aeonic Hub",
+            "icon": "8297a9dd4f31e47d9b49fbfb18267696",
+            "owner": false,
+            "permissions": "140737488456705",
+            "permissionsNew": "140737488456705"
+          },
+          {
+            "id": "1364220918225834085",
+            "name": "Lunor Lounge",
+            "icon": "1b4c7fdca3bf612ad549c8912ac3899a",
+            "owner": false,
+            "permissions": "140874927686720",
+            "permissionsNew": "140874927686720"
+          },
+          {
+            "id": "1370730311624687690",
+            "name": "Axon Hub",
+            "icon": "dde354ce0c9b20142d03a23b22430c6e",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1370799935628382489",
+            "name": "Chiyo",
+            "icon": "1e266645132e71da045b987855490140",
+            "owner": false,
+            "permissions": "493412322184769",
+            "permissionsNew": "493412322184769"
+          },
+          {
+            "id": "1376645805498302574",
+            "name": "New Moon",
+            "icon": "50c59e5758e5d82d602bbc002485275b",
+            "owner": false,
+            "permissions": "66560",
+            "permissionsNew": "66560"
+          },
+          {
+            "id": "1377717359002779729",
+            "name": "Anime Overload",
+            "icon": "ceb159eee733992460cc3ec7014c9f6c",
+            "owner": false,
+            "permissions": "140741820091393",
+            "permissionsNew": "140741820091393"
+          },
+          {
+            "id": "1382347306048684155",
+            "name": "MOVED",
+            "icon": "a43455b60c579a32769e28f3e5d8813d",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1388832005419958372",
+            "name": "Merqury Hub",
+            "icon": "704f6f7bc3099e85c5ca260f269b505e",
+            "owner": false,
+            "permissions": "141012436585985",
+            "permissionsNew": "141012436585985"
+          },
+          {
+            "id": "1392562594430320782",
+            "name": "AirFlow",
+            "icon": "2dfac0cc3de21ae28fd658ff1c9617c8",
+            "owner": false,
+            "permissions": "311297",
+            "permissionsNew": "311297"
+          },
+          {
+            "id": "1395020539915014185",
+            "name": "Seliware",
+            "icon": "d0372c5b7593de23b30c86f34f580555",
+            "owner": false,
+            "permissions": "251382392491521",
+            "permissionsNew": "251382392491521"
+          },
+          {
+            "id": "1395039621687152791",
+            "name": "EzHub",
+            "icon": "ba204aae2172ab446270222b7621a405",
+            "owner": false,
+            "permissions": "673972814728769",
+            "permissionsNew": "673972814728769"
+          },
+          {
+            "id": "1404647251980325007",
+            "name": "Kali Hub",
+            "icon": "aead1776d7c3d4f811cc71078d93ebac",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1409079683953328150",
+            "name": "Toasties Community",
+            "icon": "cdcc0d3b3aefc5e48c5ac9556fa963bc",
+            "owner": false,
+            "permissions": "1096183132442177",
+            "permissionsNew": "1096183132442177"
+          },
+          {
+            "id": "1411211795724636289",
+            "name": "Azurix Bloxburg #1",
+            "icon": "e7b0be054605f568ac9aab37721fa2e5",
+            "owner": false,
+            "permissions": "532857302142529",
+            "permissionsNew": "532857302142529"
+          },
+          {
+            "id": "1416408995798978582",
+            "name": "BONK HUB | Community",
+            "icon": "e85e342bc1ddeddffc651ec706467cb9",
+            "owner": false,
+            "permissions": "2221705081982529",
+            "permissionsNew": "2221705081982529"
+          },
+          {
+            "id": "1438517107720720386",
+            "name": "astra [BETA]",
+            "icon": "e839335e6a1764fbe3ecd8ba6c104ad2",
+            "owner": false,
+            "permissions": "110988501536321",
+            "permissionsNew": "110988501536321"
+          },
+          {
+            "id": "1449149654838153341",
+            "name": "MaiHub",
+            "icon": "c6b0f37c2bd990eb2610b5dc8dd60828",
+            "owner": false,
+            "permissions": "2248473465835073",
+            "permissionsNew": "2248473465835073"
+          },
+          {
+            "id": "1458691648241532972",
+            "name": "ud.wtf",
+            "icon": "a_cf53f9dce5ba4cb2ff4e74228de68aed",
+            "owner": false,
+            "permissions": "2248473465704001",
+            "permissionsNew": "2248473465704001"
+          },
+          {
+            "id": "1460670721188430041",
+            "name": "Iron Soul",
+            "icon": "b5aa2a3259775bef4e021e182ca78871",
+            "owner": false,
+            "permissions": "140737488355329",
+            "permissionsNew": "140737488355329"
+          },
+          {
+            "id": "1487432517119246477",
+            "name": "Daily Content For Cliper",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          }
+        ],
+        "csrfToken": "41fbc8f2-733d-4d20-8d23-335255b4f782",
+        "authMode": "discord",
+        "botGuildSource": "discord_api",
+        "signedInAt": "2026-04-26T11:13:55.271Z",
+        "issuedAt": 1777202035271,
+        "expiresAt": 1777230835271
+      }
+    },
+    {
+      "id": "2d020c1f-d291-4899-9197-c36a71e23bc2",
+      "session": {
+        "user": {
+          "id": "394124093936500737",
+          "username": "Oke",
+          "handle": "@roiiiii",
+          "avatar": "069145aefd390508af896ec5158d1962",
+          "discriminator": "0"
+        },
+        "guilds": [
+          {
+            "id": "259409057474019328",
+            "name": "THE HALIMAWAN FOUNDATION",
+            "icon": "a_2b1ee92b85eb80a9602910821eabe01a",
+            "owner": false,
+            "permissions": "2151201046105600",
+            "permissionsNew": "2151201046105600"
+          },
+          {
+            "id": "285276870159630338",
+            "name": "Ultraw Games",
+            "icon": "a_05d718ad11c95bbd45b5f79c889e776d",
+            "owner": false,
+            "permissions": "141293723388928",
+            "permissionsNew": "141293723388928"
+          },
+          {
+            "id": "349051257702580224",
+            "name": "BIG Games",
+            "icon": "a_5dcabd68103f75267ee3a22e87105c31",
+            "owner": false,
+            "permissions": "175921860447232",
+            "permissionsNew": "175921860447232"
+          },
+          {
+            "id": "350467905391034391",
+            "name": "Rumble Studios",
+            "icon": "c35fa8cc6883810a58fd7ca2e54423e3",
+            "owner": false,
+            "permissions": "140737525124097",
+            "permissionsNew": "140737525124097"
+          },
+          {
+            "id": "436103915625250817",
+            "name": "Arena Pro Gaming™",
+            "icon": "a08f5e7c14496cad945ac4fcef85ee00",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "503045718102114305",
+            "name": "Infinite Yield",
+            "icon": "0abc928723b459ad843cbdbbc307c13d",
+            "owner": false,
+            "permissions": "1096082199530049",
+            "permissionsNew": "1096082199530049"
+          },
+          {
+            "id": "505306686907744266",
+            "name": "LNC Discord",
+            "icon": "a_01084920c9a999d25250728d6b2c9b61",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "523059903812599811",
+            "name": "Hytale",
+            "icon": "bbae5f77834487ccbe51db7576488531",
+            "owner": false,
+            "permissions": "141014513812544",
+            "permissionsNew": "141014513812544"
+          },
+          {
+            "id": "525991957118320650",
+            "name": "Reconnect",
+            "icon": "fb7ae8908bc430e994748dc7631c3b43",
+            "owner": false,
+            "permissions": "2221982040301121",
+            "permissionsNew": "2221982040301121"
+          },
+          {
+            "id": "548396374299770881",
+            "name": "MuMuPlayer",
+            "icon": "d969d8df44aa925997dd63a4ba571596",
+            "owner": false,
+            "permissions": "149533651699201",
+            "permissionsNew": "149533651699201"
+          },
+          {
+            "id": "562762757905186828",
+            "name": "RELL Games",
+            "icon": "05d312e0df9dbae9d43273987a53a794",
+            "owner": false,
+            "permissions": "2222085119217216",
+            "permissionsNew": "2222085119217216"
+          },
+          {
+            "id": "614043942089916438",
+            "name": "La Vamillia",
+            "icon": "a_d5e7d08ffd23be31fd9aa65d8f621a96",
+            "owner": false,
+            "permissions": "2221705014873600",
+            "permissionsNew": "2221705014873600"
+          },
+          {
+            "id": "688077625863831560",
+            "name": "~HTH~ Hide The Hamsters",
+            "icon": "b65515b90bc43195252caa27ab9bdaaf",
+            "owner": false,
+            "permissions": "141154204372544",
+            "permissionsNew": "141154204372544"
+          },
+          {
+            "id": "723057746546655249",
+            "name": "Lapak Juragan",
+            "icon": "a_f349297544701d798e3caea02a74b1a9",
+            "owner": false,
+            "permissions": "1302100976930304",
+            "permissionsNew": "1302100976930304"
+          },
+          {
+            "id": "732658777630703637",
+            "name": "Assasine03's Scripts",
+            "icon": "a_a6491f85e18c1bb92bc7b119012ae984",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "744540055837736970",
+            "name": "MheeHub Community",
+            "icon": "0f86516194b750647f826f46c853390b",
+            "owner": false,
+            "permissions": "2222050759790144",
+            "permissionsNew": "2222050759790144"
+          },
+          {
+            "id": "751082376465088614",
+            "name": "Crew Indo",
+            "icon": "837defc09f381706bcc6f6ce27b35c7b",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "762747182268022864",
+            "name": "g5 | Roblox Community",
+            "icon": null,
+            "owner": false,
+            "permissions": "2221707229464129",
+            "permissionsNew": "2221707229464129"
+          },
+          {
+            "id": "821226190189625396",
+            "name": "Frost Trading Hub",
+            "icon": "8c187df0b65bffad812b915ffda56a1d",
+            "owner": false,
+            "permissions": "2221707162095169",
+            "permissionsNew": "2221707162095169"
+          },
+          {
+            "id": "832881901429063710",
+            "name": "Sea Market",
+            "icon": "ea0598825f388908e85ce3d751460990",
+            "owner": false,
+            "permissions": "65537",
+            "permissionsNew": "65537"
+          },
+          {
+            "id": "834159468560384080",
+            "name": "LUNATIC",
+            "icon": "c34065cfacc8de340f5d76dba3ac1453",
+            "owner": false,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "871845273800957982",
+            "name": "Roblox Account Manager",
+            "icon": "95d9e06a4ca634c99c00b84bc5f85103",
+            "owner": false,
+            "permissions": "2221567575657985",
+            "permissionsNew": "2221567575657985"
+          },
+          {
+            "id": "880044612343955457",
+            "name": "Banana Cat Hub",
+            "icon": "a_9c5ac13034e706a3f8e8062bd6950224",
+            "owner": false,
+            "permissions": "1095253201636417",
+            "permissionsNew": "1095253201636417"
+          },
+          {
+            "id": "889325574655467560",
+            "name": "Electron",
+            "icon": "1823cac290739086335c66f74bdf368c",
+            "owner": false,
+            "permissions": "2216759360031744",
+            "permissionsNew": "2216759360031744"
+          },
+          {
+            "id": "900709213817430057",
+            "name": "StayFrosty! | Roblox Community",
+            "icon": "3eeb14965ad5ebaff49111041a8562f0",
+            "owner": false,
+            "permissions": "968552156737",
+            "permissionsNew": "968552156737"
+          },
+          {
+            "id": "906426036772818954",
+            "name": "[ HoHo Community ]",
+            "icon": "01b231120e2fbc0b91ad71ef89c860c1",
+            "owner": false,
+            "permissions": "70508334095425",
+            "permissionsNew": "70508334095425"
+          },
+          {
+            "id": "921014861205504030",
+            "name": "DRACO HUB | $6.50",
+            "icon": "d5a9a8138957574d5af636561e4140b5",
+            "owner": false,
+            "permissions": "554087550529",
+            "permissionsNew": "554087550529"
+          },
+          {
+            "id": "931810629151510569",
+            "name": "siff",
+            "icon": "0de13512d8bbb3c856a0b77b54df796b",
+            "owner": false,
+            "permissions": "110919782043137",
+            "permissionsNew": "110919782043137"
+          },
+          {
+            "id": "935853803419357214",
+            "name": "✿ Cark Store - Market Place ✿",
+            "icon": "671265aa5943366e50f8b577cf7bf6ea",
+            "owner": false,
+            "permissions": "2221982107373121",
+            "permissionsNew": "2221982107373121"
+          },
+          {
+            "id": "973907295413088286",
+            "name": "TPW Store",
+            "icon": "d308c6e3696e6e4b356fa747f0d43631",
+            "owner": false,
+            "permissions": "2221707229515265",
+            "permissionsNew": "2221707229515265"
+          },
+          {
+            "id": "978632997425283092",
+            "name": "Codex Collective",
+            "icon": "808632ee0656e6da0ddf1d4e40734349",
+            "owner": false,
+            "permissions": "2217583993802305",
+            "permissionsNew": "2217583993802305"
+          },
+          {
+            "id": "984530118368165908",
+            "name": "Bizarre Lineage",
+            "icon": "0da3f5a9b38e9a3e7266a17d24316629",
+            "owner": false,
+            "permissions": "140743930872833",
+            "permissionsNew": "140743930872833"
+          },
+          {
+            "id": "991702878257422347",
+            "name": "Arceus X | Intelligent Units | 2026",
+            "icon": "2c8a1d2b4f7f617aa0108ad664e8fecc",
+            "owner": false,
+            "permissions": "1658757208935937",
+            "permissionsNew": "1658757208935937"
+          },
+          {
+            "id": "1006628609991114895",
+            "name": "Swordburst 3",
+            "icon": "eb7b5ea94b4c60e80fb56641abded004",
+            "owner": false,
+            "permissions": "739700779322369",
+            "permissionsNew": "739700779322369"
+          },
+          {
+            "id": "1010643857882501190",
+            "name": "OMORI",
+            "icon": "dc8ae1bc735e7572660ef3253cdd014d",
+            "owner": false,
+            "permissions": "1307291512327745",
+            "permissionsNew": "1307291512327745"
+          },
+          {
+            "id": "1044697884706230332",
+            "name": "Banana Hub",
+            "icon": "2744bee85eca39b14e45a5d9e2afc2ef",
+            "owner": false,
+            "permissions": "2222085186768449",
+            "permissionsNew": "2222085186768449"
+          },
+          {
+            "id": "1063817265910386741",
+            "name": "Carti Hub",
+            "icon": "a_50e62d02f683db25dff0d8d1763700ab",
+            "owner": false,
+            "permissions": "1095807322672705",
+            "permissionsNew": "1095807322672705"
+          },
+          {
+            "id": "1092853395947278478",
+            "name": "Zenith Studios",
+            "icon": "141c16d383392dea25e0d33232089296",
+            "owner": false,
+            "permissions": "110093000887872",
+            "permissionsNew": "110093000887872"
+          },
+          {
+            "id": "1118677956370374748",
+            "name": "Yummy Auto",
+            "icon": "217e84400afcb81c133ec01191aa3bc6",
+            "owner": false,
+            "permissions": "40273945364033",
+            "permissionsNew": "40273945364033"
+          },
+          {
+            "id": "1121190214715576381",
+            "name": "Grand Alfheim",
+            "icon": "bb47f29c5adbca67809bc5456c5c1100",
+            "owner": false,
+            "permissions": "140741820091905",
+            "permissionsNew": "140741820091905"
+          },
+          {
+            "id": "1127725762405998715",
+            "name": "Carti Backup",
+            "icon": "ca1b33bdf9d8bcb63f603586a50ff22f",
+            "owner": false,
+            "permissions": "2221707229466177",
+            "permissionsNew": "2221707229466177"
+          },
+          {
+            "id": "1128986471244771338",
+            "name": "FarmSync",
+            "icon": "383c2aa125b809fad5b0586f62d4e92f",
+            "owner": false,
+            "permissions": "687231848001",
+            "permissionsNew": "687231848001"
+          },
+          {
+            "id": "1129018190308061214",
+            "name": "NS HUB",
+            "icon": "a_4e9acfb415fa00ba8ca440f7c50faa50",
+            "owner": false,
+            "permissions": "2081347698281985",
+            "permissionsNew": "2081347698281985"
+          },
+          {
+            "id": "1130798506358079540",
+            "name": "Magenta Hub | COMMUNITY",
+            "icon": "a_ddd0b990c477473cac68a5d8033be2a5",
+            "owner": false,
+            "permissions": "1799769642307073",
+            "permissionsNew": "1799769642307073"
+          },
+          {
+            "id": "1131244497179783219",
+            "name": "NexusHub",
+            "icon": "4c552971718452cd9af1585e2723cb30",
+            "owner": false,
+            "permissions": "1834984045662017",
+            "permissionsNew": "1834984045662017"
+          },
+          {
+            "id": "1137781727000002561",
+            "name": "Punk Team",
+            "icon": "dd3eebf29a5e86c9adacc85c637e0e0e",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1139973402048856084",
+            "name": "Flame Trading Hub",
+            "icon": "5a28db84132d6044531980e54c3bb39b",
+            "owner": false,
+            "permissions": "2221569723403841",
+            "permissionsNew": "2221569723403841"
+          },
+          {
+            "id": "1142850986159915118",
+            "name": "OMG Hub | Community",
+            "icon": "4d9603fddb0144763406e19975f7cac0",
+            "owner": false,
+            "permissions": "211936271764993",
+            "permissionsNew": "211936271764993"
+          },
+          {
+            "id": "1149319581907832954",
+            "name": "NCL Store",
+            "icon": "b8f824286294d09428d38e223daa50bd",
+            "owner": false,
+            "permissions": "2221982107422273",
+            "permissionsNew": "2221982107422273"
+          },
+          {
+            "id": "1159465984487346226",
+            "name": "MPRI",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1159565695294636233",
+            "name": "RELL Seas: Community",
+            "icon": "4fac4b0e94fa5020f701458e01459589",
+            "owner": false,
+            "permissions": "1935971577826881",
+            "permissionsNew": "1935971577826881"
+          },
+          {
+            "id": "1174965014109618176",
+            "name": "BUANGERS",
+            "icon": "a_7f0570d7c43ad12740045f0b3701dca6",
+            "owner": false,
+            "permissions": "533235259264577",
+            "permissionsNew": "533235259264577"
+          },
+          {
+            "id": "1204973330449567774",
+            "name": "Motion Ime",
+            "icon": "a_1ccb1d61f345a5480770dbb5dbc3aadd",
+            "owner": false,
+            "permissions": "35734231778817",
+            "permissionsNew": "35734231778817"
+          },
+          {
+            "id": "1211536404543307876",
+            "name": "SS",
+            "icon": "add000301d4ad32c61f8564932916059",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1218911125958295642",
+            "name": "Nousigi Hideout",
+            "icon": "1f857b3d03f983aa74a9840882316340",
+            "owner": false,
+            "permissions": "1125899906842624",
+            "permissionsNew": "1125899906842624"
+          },
+          {
+            "id": "1221935816515911850",
+            "name": "Delta Dynamics",
+            "icon": "42dc0822bc4f734f9d8884d7923122c0",
+            "owner": false,
+            "permissions": "2221707162355201",
+            "permissionsNew": "2221707162355201"
+          },
+          {
+            "id": "1224243448685658213",
+            "name": "Zeke Hub",
+            "icon": "97e3a5395262bb4712cf0a423a6e10e1",
+            "owner": false,
+            "permissions": "35598873464384",
+            "permissionsNew": "35598873464384"
+          },
+          {
+            "id": "1233424544673300541",
+            "name": "Goomba Hub",
+            "icon": "3c03914ee90649097c66a6be238589e5",
+            "owner": false,
+            "permissions": "1659133085732417",
+            "permissionsNew": "1659133085732417"
+          },
+          {
+            "id": "1271517538848604181",
+            "name": "NATIVE | 🐰",
+            "icon": "8e8a9da65a283d63fdae7d1e69375128",
+            "owner": false,
+            "permissions": "549792583169",
+            "permissionsNew": "549792583169"
+          },
+          {
+            "id": "1287193618226090005",
+            "name": "Imp Hub | Community",
+            "icon": "e41df427499622817798121ff6bb9aed",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1287367199337611327",
+            "name": "Flutel.com",
+            "icon": "f58b68fdb82659d1c44a106f002e09bc",
+            "owner": false,
+            "permissions": "2222085186641729",
+            "permissionsNew": "2222085186641729"
+          },
+          {
+            "id": "1294212919608872982",
+            "name": "Carti Trading & MM | ROBLOX",
+            "icon": "a_b8a8f2c022437a0220249196d4c33338",
+            "owner": false,
+            "permissions": "1095669883670081",
+            "permissionsNew": "1095669883670081"
+          },
+          {
+            "id": "1301121394112987136",
+            "name": "Sea Hub",
+            "icon": "a_304b81d1a00dd1d98b4885c126201878",
+            "owner": false,
+            "permissions": "1096185212685889",
+            "permissionsNew": "1096185212685889"
+          },
+          {
+            "id": "1325734452382531624",
+            "name": "Leveling: Reborn",
+            "icon": "45970a1dcca4722f6b8dd7530c3f6eae",
+            "owner": false,
+            "permissions": "141014550514689",
+            "permissionsNew": "141014550514689"
+          },
+          {
+            "id": "1330027698671718440",
+            "name": "The Forge Official Community",
+            "icon": "a_d1ba8bdf1c1b6aa230309bd86e961824",
+            "owner": false,
+            "permissions": "141012403031040",
+            "permissionsNew": "141012403031040"
+          },
+          {
+            "id": "1336720839881785417",
+            "name": "Volcano",
+            "icon": "45ab9e1558834bf263c59a3190677633",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "1352066418744754318",
+            "name": "Ronix Studios",
+            "icon": "84385dd4e6abe93edacd7702d7a8e75e",
+            "owner": false,
+            "permissions": "140737525122049",
+            "permissionsNew": "140737525122049"
+          },
+          {
+            "id": "1358613519117062356",
+            "name": "AtherHub",
+            "icon": "b7a20682b2f1e50a9ecef199fdc65746",
+            "owner": false,
+            "permissions": "1096185279794753",
+            "permissionsNew": "1096185279794753"
+          },
+          {
+            "id": "1362923499588550736",
+            "name": "Aeonic Hub",
+            "icon": "8297a9dd4f31e47d9b49fbfb18267696",
+            "owner": false,
+            "permissions": "140737488456705",
+            "permissionsNew": "140737488456705"
+          },
+          {
+            "id": "1364220918225834085",
+            "name": "Lunor Lounge",
+            "icon": "1b4c7fdca3bf612ad549c8912ac3899a",
+            "owner": false,
+            "permissions": "140874927686720",
+            "permissionsNew": "140874927686720"
+          },
+          {
+            "id": "1370730311624687690",
+            "name": "Axon Hub",
+            "icon": "dde354ce0c9b20142d03a23b22430c6e",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1370799935628382489",
+            "name": "Chiyo",
+            "icon": "1e266645132e71da045b987855490140",
+            "owner": false,
+            "permissions": "493412322184769",
+            "permissionsNew": "493412322184769"
+          },
+          {
+            "id": "1376645805498302574",
+            "name": "New Moon",
+            "icon": "50c59e5758e5d82d602bbc002485275b",
+            "owner": false,
+            "permissions": "66560",
+            "permissionsNew": "66560"
+          },
+          {
+            "id": "1377717359002779729",
+            "name": "Anime Overload",
+            "icon": "ceb159eee733992460cc3ec7014c9f6c",
+            "owner": false,
+            "permissions": "140741820091393",
+            "permissionsNew": "140741820091393"
+          },
+          {
+            "id": "1382347306048684155",
+            "name": "MOVED",
+            "icon": "a43455b60c579a32769e28f3e5d8813d",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1388832005419958372",
+            "name": "Merqury Hub",
+            "icon": "704f6f7bc3099e85c5ca260f269b505e",
+            "owner": false,
+            "permissions": "141012436585985",
+            "permissionsNew": "141012436585985"
+          },
+          {
+            "id": "1392562594430320782",
+            "name": "AirFlow",
+            "icon": "2dfac0cc3de21ae28fd658ff1c9617c8",
+            "owner": false,
+            "permissions": "311297",
+            "permissionsNew": "311297"
+          },
+          {
+            "id": "1395020539915014185",
+            "name": "Seliware",
+            "icon": "d0372c5b7593de23b30c86f34f580555",
+            "owner": false,
+            "permissions": "251382392491521",
+            "permissionsNew": "251382392491521"
+          },
+          {
+            "id": "1395039621687152791",
+            "name": "EzHub",
+            "icon": "ba204aae2172ab446270222b7621a405",
+            "owner": false,
+            "permissions": "673972814728769",
+            "permissionsNew": "673972814728769"
+          },
+          {
+            "id": "1404647251980325007",
+            "name": "Kali Hub",
+            "icon": "aead1776d7c3d4f811cc71078d93ebac",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1409079683953328150",
+            "name": "Toasties Community",
+            "icon": "cdcc0d3b3aefc5e48c5ac9556fa963bc",
+            "owner": false,
+            "permissions": "1096183132442177",
+            "permissionsNew": "1096183132442177"
+          },
+          {
+            "id": "1411211795724636289",
+            "name": "Azurix Bloxburg #1",
+            "icon": "e7b0be054605f568ac9aab37721fa2e5",
+            "owner": false,
+            "permissions": "532857302142529",
+            "permissionsNew": "532857302142529"
+          },
+          {
+            "id": "1416408995798978582",
+            "name": "BONK HUB | Community",
+            "icon": "e85e342bc1ddeddffc651ec706467cb9",
+            "owner": false,
+            "permissions": "2221705081982529",
+            "permissionsNew": "2221705081982529"
+          },
+          {
+            "id": "1438517107720720386",
+            "name": "astra [BETA]",
+            "icon": "e839335e6a1764fbe3ecd8ba6c104ad2",
+            "owner": false,
+            "permissions": "110988501536321",
+            "permissionsNew": "110988501536321"
+          },
+          {
+            "id": "1449149654838153341",
+            "name": "MaiHub",
+            "icon": "c6b0f37c2bd990eb2610b5dc8dd60828",
+            "owner": false,
+            "permissions": "2248473465835073",
+            "permissionsNew": "2248473465835073"
+          },
+          {
+            "id": "1458691648241532972",
+            "name": "ud.wtf",
+            "icon": "a_cf53f9dce5ba4cb2ff4e74228de68aed",
+            "owner": false,
+            "permissions": "2248473465704001",
+            "permissionsNew": "2248473465704001"
+          },
+          {
+            "id": "1460670721188430041",
+            "name": "Iron Soul",
+            "icon": "b5aa2a3259775bef4e021e182ca78871",
+            "owner": false,
+            "permissions": "140737488355329",
+            "permissionsNew": "140737488355329"
+          },
+          {
+            "id": "1487432517119246477",
+            "name": "Daily Content For Cliper",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          }
+        ],
+        "csrfToken": "bbd68546-a3fb-41b4-b7bf-a0d20cec5365",
+        "authMode": "discord",
+        "botGuildSource": "discord_api",
+        "signedInAt": "2026-04-26T11:40:09.213Z",
+        "issuedAt": 1777203609213,
+        "expiresAt": 1777232409213
+      }
+    },
+    {
+      "id": "05262da5-2e11-4b9f-b3aa-0278df6557a1",
+      "session": {
+        "user": {
+          "id": "394124093936500737",
+          "username": "Oke",
+          "handle": "@roiiiii",
+          "avatar": "069145aefd390508af896ec5158d1962",
+          "discriminator": "0"
+        },
+        "guilds": [
+          {
+            "id": "259409057474019328",
+            "name": "THE HALIMAWAN FOUNDATION",
+            "icon": "a_2b1ee92b85eb80a9602910821eabe01a",
+            "owner": false,
+            "permissions": "2151201046105600",
+            "permissionsNew": "2151201046105600"
+          },
+          {
+            "id": "285276870159630338",
+            "name": "Ultraw Games",
+            "icon": "a_05d718ad11c95bbd45b5f79c889e776d",
+            "owner": false,
+            "permissions": "141293723388928",
+            "permissionsNew": "141293723388928"
+          },
+          {
+            "id": "349051257702580224",
+            "name": "BIG Games",
+            "icon": "a_5dcabd68103f75267ee3a22e87105c31",
+            "owner": false,
+            "permissions": "175921860447232",
+            "permissionsNew": "175921860447232"
+          },
+          {
+            "id": "350467905391034391",
+            "name": "Rumble Studios",
+            "icon": "c35fa8cc6883810a58fd7ca2e54423e3",
+            "owner": false,
+            "permissions": "140737525124097",
+            "permissionsNew": "140737525124097"
+          },
+          {
+            "id": "436103915625250817",
+            "name": "Arena Pro Gaming™",
+            "icon": "a08f5e7c14496cad945ac4fcef85ee00",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "503045718102114305",
+            "name": "Infinite Yield",
+            "icon": "0abc928723b459ad843cbdbbc307c13d",
+            "owner": false,
+            "permissions": "1096082199530049",
+            "permissionsNew": "1096082199530049"
+          },
+          {
+            "id": "505306686907744266",
+            "name": "LNC Discord",
+            "icon": "a_01084920c9a999d25250728d6b2c9b61",
+            "owner": false,
+            "permissions": "2222085186772545",
+            "permissionsNew": "2222085186772545"
+          },
+          {
+            "id": "523059903812599811",
+            "name": "Hytale",
+            "icon": "bbae5f77834487ccbe51db7576488531",
+            "owner": false,
+            "permissions": "141014513812544",
+            "permissionsNew": "141014513812544"
+          },
+          {
+            "id": "525991957118320650",
+            "name": "Reconnect",
+            "icon": "fb7ae8908bc430e994748dc7631c3b43",
+            "owner": false,
+            "permissions": "2221982040301121",
+            "permissionsNew": "2221982040301121"
+          },
+          {
+            "id": "548396374299770881",
+            "name": "MuMuPlayer",
+            "icon": "d969d8df44aa925997dd63a4ba571596",
+            "owner": false,
+            "permissions": "149533651699201",
+            "permissionsNew": "149533651699201"
+          },
+          {
+            "id": "562762757905186828",
+            "name": "RELL Games",
+            "icon": "05d312e0df9dbae9d43273987a53a794",
+            "owner": false,
+            "permissions": "2222085119217216",
+            "permissionsNew": "2222085119217216"
+          },
+          {
+            "id": "614043942089916438",
+            "name": "La Vamillia",
+            "icon": "a_d5e7d08ffd23be31fd9aa65d8f621a96",
+            "owner": false,
+            "permissions": "2221705014873600",
+            "permissionsNew": "2221705014873600"
+          },
+          {
+            "id": "688077625863831560",
+            "name": "~HTH~ Hide The Hamsters",
+            "icon": "b65515b90bc43195252caa27ab9bdaaf",
+            "owner": false,
+            "permissions": "141154204372544",
+            "permissionsNew": "141154204372544"
+          },
+          {
+            "id": "723057746546655249",
+            "name": "Lapak Juragan",
+            "icon": "a_f349297544701d798e3caea02a74b1a9",
+            "owner": false,
+            "permissions": "1302100976930304",
+            "permissionsNew": "1302100976930304"
+          },
+          {
+            "id": "732658777630703637",
+            "name": "Assasine03's Scripts",
+            "icon": "a_a6491f85e18c1bb92bc7b119012ae984",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "744540055837736970",
+            "name": "MheeHub Community",
+            "icon": "0f86516194b750647f826f46c853390b",
+            "owner": false,
+            "permissions": "2222050759790144",
+            "permissionsNew": "2222050759790144"
+          },
+          {
+            "id": "751082376465088614",
+            "name": "Crew Indo",
+            "icon": "837defc09f381706bcc6f6ce27b35c7b",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "762747182268022864",
+            "name": "g5 | Roblox Community",
+            "icon": null,
+            "owner": false,
+            "permissions": "2221707229464129",
+            "permissionsNew": "2221707229464129"
+          },
+          {
+            "id": "821226190189625396",
+            "name": "Frost Trading Hub",
+            "icon": "8c187df0b65bffad812b915ffda56a1d",
+            "owner": false,
+            "permissions": "2221707162095169",
+            "permissionsNew": "2221707162095169"
+          },
+          {
+            "id": "832881901429063710",
+            "name": "Sea Market",
+            "icon": "ea0598825f388908e85ce3d751460990",
+            "owner": false,
+            "permissions": "65537",
+            "permissionsNew": "65537"
+          },
+          {
+            "id": "834159468560384080",
+            "name": "LUNATIC",
+            "icon": "c34065cfacc8de340f5d76dba3ac1453",
+            "owner": false,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "871845273800957982",
+            "name": "Roblox Account Manager",
+            "icon": "95d9e06a4ca634c99c00b84bc5f85103",
+            "owner": false,
+            "permissions": "2221567575657985",
+            "permissionsNew": "2221567575657985"
+          },
+          {
+            "id": "880044612343955457",
+            "name": "Banana Cat Hub",
+            "icon": "a_9c5ac13034e706a3f8e8062bd6950224",
+            "owner": false,
+            "permissions": "1095253201636417",
+            "permissionsNew": "1095253201636417"
+          },
+          {
+            "id": "889325574655467560",
+            "name": "Electron",
+            "icon": "1823cac290739086335c66f74bdf368c",
+            "owner": false,
+            "permissions": "2216759360031744",
+            "permissionsNew": "2216759360031744"
+          },
+          {
+            "id": "900709213817430057",
+            "name": "StayFrosty! | Roblox Community",
+            "icon": "3eeb14965ad5ebaff49111041a8562f0",
+            "owner": false,
+            "permissions": "968552156737",
+            "permissionsNew": "968552156737"
+          },
+          {
+            "id": "906426036772818954",
+            "name": "[ HoHo Community ]",
+            "icon": "01b231120e2fbc0b91ad71ef89c860c1",
+            "owner": false,
+            "permissions": "70508334095425",
+            "permissionsNew": "70508334095425"
+          },
+          {
+            "id": "921014861205504030",
+            "name": "DRACO HUB | $6.50",
+            "icon": "d5a9a8138957574d5af636561e4140b5",
+            "owner": false,
+            "permissions": "554087550529",
+            "permissionsNew": "554087550529"
+          },
+          {
+            "id": "931810629151510569",
+            "name": "siff",
+            "icon": "0de13512d8bbb3c856a0b77b54df796b",
+            "owner": false,
+            "permissions": "110919782043137",
+            "permissionsNew": "110919782043137"
+          },
+          {
+            "id": "935853803419357214",
+            "name": "✿ Cark Store - Market Place ✿",
+            "icon": "671265aa5943366e50f8b577cf7bf6ea",
+            "owner": false,
+            "permissions": "2221982107373121",
+            "permissionsNew": "2221982107373121"
+          },
+          {
+            "id": "973907295413088286",
+            "name": "TPW Store",
+            "icon": "d308c6e3696e6e4b356fa747f0d43631",
+            "owner": false,
+            "permissions": "2221707229515265",
+            "permissionsNew": "2221707229515265"
+          },
+          {
+            "id": "978632997425283092",
+            "name": "Codex Collective",
+            "icon": "808632ee0656e6da0ddf1d4e40734349",
+            "owner": false,
+            "permissions": "2217583993802305",
+            "permissionsNew": "2217583993802305"
+          },
+          {
+            "id": "984530118368165908",
+            "name": "Bizarre Lineage",
+            "icon": "0da3f5a9b38e9a3e7266a17d24316629",
+            "owner": false,
+            "permissions": "140743930872833",
+            "permissionsNew": "140743930872833"
+          },
+          {
+            "id": "991702878257422347",
+            "name": "Arceus X | Intelligent Units | 2026",
+            "icon": "2c8a1d2b4f7f617aa0108ad664e8fecc",
+            "owner": false,
+            "permissions": "1658757208935937",
+            "permissionsNew": "1658757208935937"
+          },
+          {
+            "id": "1006628609991114895",
+            "name": "Swordburst 3",
+            "icon": "eb7b5ea94b4c60e80fb56641abded004",
+            "owner": false,
+            "permissions": "739700779322369",
+            "permissionsNew": "739700779322369"
+          },
+          {
+            "id": "1010643857882501190",
+            "name": "OMORI",
+            "icon": "dc8ae1bc735e7572660ef3253cdd014d",
+            "owner": false,
+            "permissions": "1307291512327745",
+            "permissionsNew": "1307291512327745"
+          },
+          {
+            "id": "1044697884706230332",
+            "name": "Banana Hub",
+            "icon": "2744bee85eca39b14e45a5d9e2afc2ef",
+            "owner": false,
+            "permissions": "2222085186768449",
+            "permissionsNew": "2222085186768449"
+          },
+          {
+            "id": "1063817265910386741",
+            "name": "Carti Hub",
+            "icon": "a_50e62d02f683db25dff0d8d1763700ab",
+            "owner": false,
+            "permissions": "1095807322672705",
+            "permissionsNew": "1095807322672705"
+          },
+          {
+            "id": "1092853395947278478",
+            "name": "Zenith Studios",
+            "icon": "141c16d383392dea25e0d33232089296",
+            "owner": false,
+            "permissions": "110093000887872",
+            "permissionsNew": "110093000887872"
+          },
+          {
+            "id": "1118677956370374748",
+            "name": "Yummy Auto",
+            "icon": "217e84400afcb81c133ec01191aa3bc6",
+            "owner": false,
+            "permissions": "40273945364033",
+            "permissionsNew": "40273945364033"
+          },
+          {
+            "id": "1121190214715576381",
+            "name": "Grand Alfheim",
+            "icon": "bb47f29c5adbca67809bc5456c5c1100",
+            "owner": false,
+            "permissions": "140741820091905",
+            "permissionsNew": "140741820091905"
+          },
+          {
+            "id": "1127725762405998715",
+            "name": "Carti Backup",
+            "icon": "ca1b33bdf9d8bcb63f603586a50ff22f",
+            "owner": false,
+            "permissions": "2221707229466177",
+            "permissionsNew": "2221707229466177"
+          },
+          {
+            "id": "1128986471244771338",
+            "name": "FarmSync",
+            "icon": "383c2aa125b809fad5b0586f62d4e92f",
+            "owner": false,
+            "permissions": "687231848001",
+            "permissionsNew": "687231848001"
+          },
+          {
+            "id": "1129018190308061214",
+            "name": "NS HUB",
+            "icon": "a_4e9acfb415fa00ba8ca440f7c50faa50",
+            "owner": false,
+            "permissions": "2081347698281985",
+            "permissionsNew": "2081347698281985"
+          },
+          {
+            "id": "1130798506358079540",
+            "name": "Magenta Hub | COMMUNITY",
+            "icon": "a_ddd0b990c477473cac68a5d8033be2a5",
+            "owner": false,
+            "permissions": "1799769642307073",
+            "permissionsNew": "1799769642307073"
+          },
+          {
+            "id": "1131244497179783219",
+            "name": "NexusHub",
+            "icon": "4c552971718452cd9af1585e2723cb30",
+            "owner": false,
+            "permissions": "1834984045662017",
+            "permissionsNew": "1834984045662017"
+          },
+          {
+            "id": "1137781727000002561",
+            "name": "Punk Team",
+            "icon": "dd3eebf29a5e86c9adacc85c637e0e0e",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1139973402048856084",
+            "name": "Flame Trading Hub",
+            "icon": "5a28db84132d6044531980e54c3bb39b",
+            "owner": false,
+            "permissions": "2221569723403841",
+            "permissionsNew": "2221569723403841"
+          },
+          {
+            "id": "1142850986159915118",
+            "name": "OMG Hub | Community",
+            "icon": "4d9603fddb0144763406e19975f7cac0",
+            "owner": false,
+            "permissions": "211936271764993",
+            "permissionsNew": "211936271764993"
+          },
+          {
+            "id": "1149319581907832954",
+            "name": "NCL Store",
+            "icon": "b8f824286294d09428d38e223daa50bd",
+            "owner": false,
+            "permissions": "2221982107422273",
+            "permissionsNew": "2221982107422273"
+          },
+          {
+            "id": "1159465984487346226",
+            "name": "MPRI",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1159565695294636233",
+            "name": "RELL Seas: Community",
+            "icon": "4fac4b0e94fa5020f701458e01459589",
+            "owner": false,
+            "permissions": "1935971577826881",
+            "permissionsNew": "1935971577826881"
+          },
+          {
+            "id": "1174965014109618176",
+            "name": "BUANGERS",
+            "icon": "a_7f0570d7c43ad12740045f0b3701dca6",
+            "owner": false,
+            "permissions": "533235259264577",
+            "permissionsNew": "533235259264577"
+          },
+          {
+            "id": "1204973330449567774",
+            "name": "Motion Ime",
+            "icon": "a_1ccb1d61f345a5480770dbb5dbc3aadd",
+            "owner": false,
+            "permissions": "35734231778817",
+            "permissionsNew": "35734231778817"
+          },
+          {
+            "id": "1211536404543307876",
+            "name": "SS",
+            "icon": "add000301d4ad32c61f8564932916059",
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          },
+          {
+            "id": "1218911125958295642",
+            "name": "Nousigi Hideout",
+            "icon": "1f857b3d03f983aa74a9840882316340",
+            "owner": false,
+            "permissions": "1125899906842624",
+            "permissionsNew": "1125899906842624"
+          },
+          {
+            "id": "1221935816515911850",
+            "name": "Delta Dynamics",
+            "icon": "42dc0822bc4f734f9d8884d7923122c0",
+            "owner": false,
+            "permissions": "2221707162355201",
+            "permissionsNew": "2221707162355201"
+          },
+          {
+            "id": "1224243448685658213",
+            "name": "Zeke Hub",
+            "icon": "97e3a5395262bb4712cf0a423a6e10e1",
+            "owner": false,
+            "permissions": "35598873464384",
+            "permissionsNew": "35598873464384"
+          },
+          {
+            "id": "1233424544673300541",
+            "name": "Goomba Hub",
+            "icon": "3c03914ee90649097c66a6be238589e5",
+            "owner": false,
+            "permissions": "1659133085732417",
+            "permissionsNew": "1659133085732417"
+          },
+          {
+            "id": "1271517538848604181",
+            "name": "NATIVE | 🐰",
+            "icon": "8e8a9da65a283d63fdae7d1e69375128",
+            "owner": false,
+            "permissions": "549792583169",
+            "permissionsNew": "549792583169"
+          },
+          {
+            "id": "1287193618226090005",
+            "name": "Imp Hub | Community",
+            "icon": "e41df427499622817798121ff6bb9aed",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1287367199337611327",
+            "name": "Flutel.com",
+            "icon": "f58b68fdb82659d1c44a106f002e09bc",
+            "owner": false,
+            "permissions": "2222085186641729",
+            "permissionsNew": "2222085186641729"
+          },
+          {
+            "id": "1294212919608872982",
+            "name": "Carti Trading & MM | ROBLOX",
+            "icon": "a_b8a8f2c022437a0220249196d4c33338",
+            "owner": false,
+            "permissions": "1095669883670081",
+            "permissionsNew": "1095669883670081"
+          },
+          {
+            "id": "1301121394112987136",
+            "name": "Sea Hub",
+            "icon": "a_304b81d1a00dd1d98b4885c126201878",
+            "owner": false,
+            "permissions": "1096185212685889",
+            "permissionsNew": "1096185212685889"
+          },
+          {
+            "id": "1325734452382531624",
+            "name": "Leveling: Reborn",
+            "icon": "45970a1dcca4722f6b8dd7530c3f6eae",
+            "owner": false,
+            "permissions": "141014550514689",
+            "permissionsNew": "141014550514689"
+          },
+          {
+            "id": "1330027698671718440",
+            "name": "The Forge Official Community",
+            "icon": "a_d1ba8bdf1c1b6aa230309bd86e961824",
+            "owner": false,
+            "permissions": "141012403031040",
+            "permissionsNew": "141012403031040"
+          },
+          {
+            "id": "1336720839881785417",
+            "name": "Volcano",
+            "icon": "45ab9e1558834bf263c59a3190677633",
+            "owner": false,
+            "permissions": "2222085119528513",
+            "permissionsNew": "2222085119528513"
+          },
+          {
+            "id": "1352066418744754318",
+            "name": "Ronix Studios",
+            "icon": "84385dd4e6abe93edacd7702d7a8e75e",
+            "owner": false,
+            "permissions": "140737525122049",
+            "permissionsNew": "140737525122049"
+          },
+          {
+            "id": "1358613519117062356",
+            "name": "AtherHub",
+            "icon": "b7a20682b2f1e50a9ecef199fdc65746",
+            "owner": false,
+            "permissions": "1096185279794753",
+            "permissionsNew": "1096185279794753"
+          },
+          {
+            "id": "1362923499588550736",
+            "name": "Aeonic Hub",
+            "icon": "8297a9dd4f31e47d9b49fbfb18267696",
+            "owner": false,
+            "permissions": "140737488456705",
+            "permissionsNew": "140737488456705"
+          },
+          {
+            "id": "1364220918225834085",
+            "name": "Lunor Lounge",
+            "icon": "1b4c7fdca3bf612ad549c8912ac3899a",
+            "owner": false,
+            "permissions": "140874927686720",
+            "permissionsNew": "140874927686720"
+          },
+          {
+            "id": "1370730311624687690",
+            "name": "Axon Hub",
+            "icon": "dde354ce0c9b20142d03a23b22430c6e",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1370799935628382489",
+            "name": "Chiyo",
+            "icon": "1e266645132e71da045b987855490140",
+            "owner": false,
+            "permissions": "493412322184769",
+            "permissionsNew": "493412322184769"
+          },
+          {
+            "id": "1376645805498302574",
+            "name": "New Moon",
+            "icon": "50c59e5758e5d82d602bbc002485275b",
+            "owner": false,
+            "permissions": "66560",
+            "permissionsNew": "66560"
+          },
+          {
+            "id": "1377717359002779729",
+            "name": "Anime Overload",
+            "icon": "ceb159eee733992460cc3ec7014c9f6c",
+            "owner": false,
+            "permissions": "140741820091393",
+            "permissionsNew": "140741820091393"
+          },
+          {
+            "id": "1382347306048684155",
+            "name": "MOVED",
+            "icon": "a43455b60c579a32769e28f3e5d8813d",
+            "owner": false,
+            "permissions": "68673",
+            "permissionsNew": "68673"
+          },
+          {
+            "id": "1388832005419958372",
+            "name": "Merqury Hub",
+            "icon": "704f6f7bc3099e85c5ca260f269b505e",
+            "owner": false,
+            "permissions": "141012436585985",
+            "permissionsNew": "141012436585985"
+          },
+          {
+            "id": "1392562594430320782",
+            "name": "AirFlow",
+            "icon": "2dfac0cc3de21ae28fd658ff1c9617c8",
+            "owner": false,
+            "permissions": "311297",
+            "permissionsNew": "311297"
+          },
+          {
+            "id": "1395020539915014185",
+            "name": "Seliware",
+            "icon": "d0372c5b7593de23b30c86f34f580555",
+            "owner": false,
+            "permissions": "251382392491521",
+            "permissionsNew": "251382392491521"
+          },
+          {
+            "id": "1395039621687152791",
+            "name": "EzHub",
+            "icon": "ba204aae2172ab446270222b7621a405",
+            "owner": false,
+            "permissions": "673972814728769",
+            "permissionsNew": "673972814728769"
+          },
+          {
+            "id": "1404647251980325007",
+            "name": "Kali Hub",
+            "icon": "aead1776d7c3d4f811cc71078d93ebac",
+            "owner": false,
+            "permissions": "2222085186637377",
+            "permissionsNew": "2222085186637377"
+          },
+          {
+            "id": "1409079683953328150",
+            "name": "Toasties Community",
+            "icon": "cdcc0d3b3aefc5e48c5ac9556fa963bc",
+            "owner": false,
+            "permissions": "1096183132442177",
+            "permissionsNew": "1096183132442177"
+          },
+          {
+            "id": "1411211795724636289",
+            "name": "Azurix Bloxburg #1",
+            "icon": "e7b0be054605f568ac9aab37721fa2e5",
+            "owner": false,
+            "permissions": "532857302142529",
+            "permissionsNew": "532857302142529"
+          },
+          {
+            "id": "1416408995798978582",
+            "name": "BONK HUB | Community",
+            "icon": "e85e342bc1ddeddffc651ec706467cb9",
+            "owner": false,
+            "permissions": "2221705081982529",
+            "permissionsNew": "2221705081982529"
+          },
+          {
+            "id": "1438517107720720386",
+            "name": "astra [BETA]",
+            "icon": "e839335e6a1764fbe3ecd8ba6c104ad2",
+            "owner": false,
+            "permissions": "110988501536321",
+            "permissionsNew": "110988501536321"
+          },
+          {
+            "id": "1449149654838153341",
+            "name": "MaiHub",
+            "icon": "c6b0f37c2bd990eb2610b5dc8dd60828",
+            "owner": false,
+            "permissions": "2248473465835073",
+            "permissionsNew": "2248473465835073"
+          },
+          {
+            "id": "1458691648241532972",
+            "name": "ud.wtf",
+            "icon": "a_cf53f9dce5ba4cb2ff4e74228de68aed",
+            "owner": false,
+            "permissions": "2248473465704001",
+            "permissionsNew": "2248473465704001"
+          },
+          {
+            "id": "1460670721188430041",
+            "name": "Iron Soul",
+            "icon": "b5aa2a3259775bef4e021e182ca78871",
+            "owner": false,
+            "permissions": "140737488355329",
+            "permissionsNew": "140737488355329"
+          },
+          {
+            "id": "1487432517119246477",
+            "name": "Daily Content For Cliper",
+            "icon": null,
+            "owner": true,
+            "permissions": "18014398509481983",
+            "permissionsNew": "18014398509481983"
+          }
+        ],
+        "csrfToken": "45dc65a7-6aec-4359-a743-1fa206ec1363",
+        "authMode": "discord",
+        "botGuildSource": "discord_api",
+        "signedInAt": "2026-04-26T12:11:36.768Z",
+        "issuedAt": 1777205496768,
+        "expiresAt": 1777234296768
+      }
+    }
+  ]
+}

@@ -139,6 +139,19 @@ function validateOptionalWebhookUrl(env, name) {
   }
 }
 
+function validateHttpUrl(value, name) {
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(String(value).trim());
+  } catch (_error) {
+    throw new Error(`${name} harus berupa URL valid.`);
+  }
+
+  if (!["http:", "https:"].includes(parsedUrl.protocol)) {
+    throw new Error(`${name} hanya menerima protokol http/https.`);
+  }
+}
+
 function collectEnvironmentIssues(env) {
   const checks = [
     () => validateDiscordToken(env.DISCORD_TOKEN),
@@ -167,7 +180,28 @@ function collectEnvironmentIssues(env) {
     () => validateIntegerEnv(env, "CANARY_INTERVAL_MS", { min: 60_000, max: 86_400_000 }),
     () => validateIntegerEnv(env, "CANARY_FAILURE_THRESHOLD", { min: 1, max: 20 }),
     () => validateIntegerEnv(env, "SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS", { min: 500, max: 600_000 }),
+    () => validateIntegerEnv(env, "CONFIG_SYNC_INTERVAL_MS", { min: 5_000, max: 3_600_000 }),
+    () => validateIntegerEnv(env, "CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS", { min: 1_000, max: 30_000 }),
+    () => validateBooleanEnv(env, "CONFIG_SYNC_ENABLED"),
+    () => validateBooleanEnv(env, "CONFIG_SYNC_BOOTSTRAP_ON_READY"),
+    () => validateBooleanEnv(env, "CONFIG_SYNC_EVENT_STREAM_ENABLED"),
     () => validateOptionalWebhookUrl(env, "EXTERNAL_LOG_WEBHOOK_URL"),
+    () => {
+      const syncEnabled = parseBooleanish(env.CONFIG_SYNC_ENABLED);
+      if (syncEnabled !== true) {
+        return;
+      }
+
+      if (isBlank(env.CONFIG_SERVICE_BASE_URL)) {
+        throw new Error("CONFIG_SYNC_ENABLED=true membutuhkan CONFIG_SERVICE_BASE_URL.");
+      }
+
+      validateHttpUrl(env.CONFIG_SERVICE_BASE_URL, "CONFIG_SERVICE_BASE_URL");
+
+      if (isBlank(env.CONFIG_SERVICE_TOKEN)) {
+        throw new Error("CONFIG_SYNC_ENABLED=true membutuhkan CONFIG_SERVICE_TOKEN.");
+      }
+    },
     () => {
       const userWhitelistEnabled = parseBooleanish(env.GUARD_USER_WHITELIST_ENABLED);
       if (userWhitelistEnabled !== true) {

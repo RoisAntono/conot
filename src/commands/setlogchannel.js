@@ -8,6 +8,7 @@ const {
   SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS
 } = require("../config/constants");
 const { updateLogChannelForGuild } = require("../services/logChannelService");
+const { logGuildAction } = require("../services/userActionLogService");
 const { resolveGuildChannel } = require("../utils/discordResolvers");
 const {
   buildLogChannelUpdatedEmbed,
@@ -21,12 +22,12 @@ function isDisableValue(value) {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("setlogchannel")
-    .setDescription("Atur channel Discord untuk log error, warning, dan kegagalan bot.")
+    .setDescription("Atur channel Discord untuk log aksi admin (audit konfigurasi).")
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
     .addChannelOption((option) =>
       option
         .setName("discord_channel")
-        .setDescription("Channel tujuan log bot")
+        .setDescription("Channel tujuan log aksi admin")
         .addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)
         .setRequired(false)
     )
@@ -60,7 +61,24 @@ module.exports = {
 
     const updated = await updateLogChannelForGuild(interaction.guildId, disable ? null : discordChannel.id);
     await interaction.editReply({
-      embeds: [buildLogChannelUpdatedEmbed(updated.logChannelId)]
+      embeds: [buildLogChannelUpdatedEmbed(updated.logChannelId, interaction.guildId)]
+    });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: "Log channel diperbarui",
+      description: disable
+        ? "Admin menonaktifkan channel log aksi server."
+        : "Admin mengubah channel log aksi server.",
+      keyParts: [updated.logChannelId || "off", interaction.user?.id],
+      details: [
+        {
+          name: "Log Channel",
+          value: updated.logChannelId ? `<#${updated.logChannelId}>` : "Nonaktif",
+          inline: true
+        }
+      ]
     });
   },
   async executePrefix(message, args, context) {
@@ -76,7 +94,22 @@ module.exports = {
     if (isDisableValue(rawValue)) {
       const updated = await updateLogChannelForGuild(message.guild.id, null);
       await message.reply({
-        embeds: [buildLogChannelUpdatedEmbed(updated.logChannelId)]
+        embeds: [buildLogChannelUpdatedEmbed(updated.logChannelId, message.guild.id)]
+      });
+
+      await logGuildAction(message.client, {
+        guildId: message.guild.id,
+        actor: message.author,
+        action: "Log channel diperbarui",
+        description: "Admin menonaktifkan channel log aksi server.",
+        keyParts: ["off", message.author?.id],
+        details: [
+          {
+            name: "Log Channel",
+            value: "Nonaktif",
+            inline: true
+          }
+        ]
       });
       return;
     }
@@ -91,7 +124,22 @@ module.exports = {
 
     const updated = await updateLogChannelForGuild(message.guild.id, discordChannel.id);
     await message.reply({
-      embeds: [buildLogChannelUpdatedEmbed(updated.logChannelId)]
+      embeds: [buildLogChannelUpdatedEmbed(updated.logChannelId, message.guild.id)]
+    });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: "Log channel diperbarui",
+      description: "Admin mengubah channel log aksi server.",
+      keyParts: [updated.logChannelId, message.author?.id],
+      details: [
+        {
+          name: "Log Channel",
+          value: `<#${updated.logChannelId}>`,
+          inline: true
+        }
+      ]
     });
   }
 };

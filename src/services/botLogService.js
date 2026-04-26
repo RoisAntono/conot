@@ -88,6 +88,21 @@ function normalizeDetails(details = []) {
     .slice(0, 10);
 }
 
+function isDevLogActionable(payload) {
+  const scope = String(payload?.scope || "").trim().toLowerCase();
+  const title = String(payload?.title || "").trim().toLowerCase();
+
+  if (scope === "rss") {
+    return false;
+  }
+
+  if (scope === "title watch" && title.includes("pencarian title watch gagal")) {
+    return false;
+  }
+
+  return true;
+}
+
 function buildLogEmbed({
   level = LOG_LEVELS.INFO,
   scope = "System",
@@ -293,6 +308,10 @@ async function sendDevLog(client, payload) {
     return false;
   }
 
+  if (!isDevLogActionable(payload)) {
+    return false;
+  }
+
   const globalLogging = await getDevLogSettings();
   const devLogChannelId = globalLogging?.devLogChannelId || null;
   if (!devLogChannelId) {
@@ -329,7 +348,7 @@ async function sendDevLog(client, payload) {
       embeds: [buildLogEmbed({
         ...payload,
         details,
-        includeErrorStack: true
+        includeErrorStack: eventLevel === LOG_LEVELS.ERROR
       })]
     });
     rememberGuard(devLogGuardState, guardKey);
@@ -344,15 +363,67 @@ function bindBotLogClient(client) {
   activeClient = client;
 }
 
+function resolveLogTargets(payload) {
+  const rawTargets = payload?.targets;
+  const user = Object.prototype.hasOwnProperty.call(rawTargets || {}, "user")
+    ? Boolean(rawTargets.user)
+    : true;
+  const dev = Object.prototype.hasOwnProperty.call(rawTargets || {}, "dev")
+    ? Boolean(rawTargets.dev)
+    : true;
+  const external = Object.prototype.hasOwnProperty.call(rawTargets || {}, "external")
+    ? Boolean(rawTargets.external)
+    : true;
+
+  return { user, dev, external };
+}
+
 async function sendGuildLog(client, payload) {
   const resolvedClient = client || activeClient;
-  const results = await Promise.all([
-    sendExternalLog(payload),
-    sendUserGuildLog(resolvedClient, payload),
-    sendDevLog(resolvedClient, payload)
-  ]);
+  const targets = resolveLogTargets(payload);
+  const requests = [];
+
+  if (targets.external) {
+    requests.push(sendExternalLog(payload));
+  }
+
+  if (targets.user) {
+    requests.push(sendUserGuildLog(resolvedClient, payload));
+  }
+
+  if (targets.dev) {
+    requests.push(sendDevLog(resolvedClient, payload));
+  }
+
+  if (!requests.length) {
+    return false;
+  }
+
+  const results = await Promise.all(requests);
 
   return results.some(Boolean);
+}
+
+async function sendUserLog(client, payload) {
+  return sendGuildLog(client, {
+    ...payload,
+    targets: {
+      user: true,
+      dev: false,
+      external: false
+    }
+  });
+}
+
+async function sendSystemLog(client, payload) {
+  return sendGuildLog(client, {
+    ...payload,
+    targets: {
+      user: false,
+      dev: true,
+      external: true
+    }
+  });
 }
 
 async function broadcastGlobalLog(payload) {
@@ -382,5 +453,7 @@ async function broadcastGlobalLog(payload) {
 module.exports = {
   bindBotLogClient,
   broadcastGlobalLog,
-  sendGuildLog
+  sendGuildLog,
+  sendSystemLog,
+  sendUserLog
 };

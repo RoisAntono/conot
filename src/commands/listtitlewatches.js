@@ -26,14 +26,14 @@ module.exports = {
 
     if (!titleWatches.length) {
       await interaction.reply({
-        embeds: [buildEmptyTitleWatchListEmbed(prefix)],
+        embeds: [buildEmptyTitleWatchListEmbed(prefix, interaction.guildId)],
         ephemeral: true
       });
       return;
     }
 
     await interaction.reply({
-      embeds: [buildTitleWatchListEmbed(titleWatches, prefix)],
+      embeds: [buildTitleWatchListEmbed(titleWatches, prefix, interaction.guildId)],
       ephemeral: true
     });
   },
@@ -41,12 +41,12 @@ module.exports = {
     const titleWatches = await listTitleWatches(message.guild.id);
 
     if (!titleWatches.length) {
-      await message.reply({ embeds: [buildEmptyTitleWatchListEmbed(context.prefix)] });
+      await message.reply({ embeds: [buildEmptyTitleWatchListEmbed(context.prefix, message.guild.id)] });
       return;
     }
 
     await message.reply({
-      embeds: [buildTitleWatchListEmbed(titleWatches, context.prefix)]
+      embeds: [buildTitleWatchListEmbed(titleWatches, context.prefix, message.guild.id)]
     });
   }
 };

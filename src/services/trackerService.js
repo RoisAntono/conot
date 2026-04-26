@@ -3,6 +3,7 @@ const { MAX_TRACKERS_PER_GUILD } = require("../config/constants");
 const fileDb = require("../utils/fileDb");
 const { getContentFilterLabel, normalizeContentFilter } = require("../utils/contentFilter");
 const { normalizeEmbedLayout } = require("../utils/embedLayout");
+const { buildGuildDashboardUrl } = require("../utils/dashboardLink");
 const rssChecker = require("../utils/rssChecker");
 const { normalizeCustomMessage } = require("../utils/messageTemplate");
 const { getTitleFilterLabel, normalizeTitleFilters } = require("../utils/titleFilter");
@@ -230,10 +231,12 @@ async function listTrackedChannels(guildId) {
   return fileDb.getTrackedChannelsByGuild(guildId);
 }
 
-function buildTrackedChannelsEmbed(trackedChannels, guildPrefix) {
+function buildTrackedChannelsEmbed(trackedChannels, guildPrefix, guildId = null) {
   const maxVisible = 8;
   const visibleEntries = trackedChannels.slice(0, maxVisible);
   const hiddenCount = Math.max(0, trackedChannels.length - visibleEntries.length);
+  const resolvedGuildId = guildId || trackedChannels[0]?.discord?.guildId || null;
+  const dashboardUrl = buildGuildDashboardUrl(resolvedGuildId, "trackers");
 
   return new EmbedBuilder()
     .setColor(0x2563eb)
@@ -255,6 +258,13 @@ function buildTrackedChannelsEmbed(trackedChannels, guildPrefix) {
         ? [{
             name: "Sisa Data",
             value: `${hiddenCount} tracker lainnya tidak ditampilkan agar embed tetap ringkas.`,
+            inline: false
+          }]
+        : []),
+      ...(dashboardUrl
+        ? [{
+            name: "Dashboard",
+            value: `[Buka Dashboard](${dashboardUrl})`,
             inline: false
           }]
         : [])

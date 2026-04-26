@@ -1,0 +1,16 @@
+{
+  "name": "@conot/shared-types",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "build": "echo \"shared-types build not required\"",
+    "lint": "echo \"shared-types lint delegated to root\"",
+    "test": "echo \"shared-types test delegated to root\"",
+    "typecheck": "echo \"shared-types typecheck pending TS migration\""
+  }
+}

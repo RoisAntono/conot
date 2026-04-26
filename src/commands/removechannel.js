@@ -8,6 +8,7 @@ const {
 } = require("../config/constants");
 const { getPrefixForGuild } = require("../services/prefixService");
 const { removeChannelTracker } = require("../services/trackerService");
+const { logGuildAction } = require("../services/userActionLogService");
 const {
   buildTrackerNotFoundEmbed,
   buildTrackerRemovedEmbed,
@@ -42,11 +43,26 @@ module.exports = {
     const removed = await removeChannelTracker(interaction.guildId, username);
 
     if (!removed) {
-      await interaction.editReply({ embeds: [buildTrackerNotFoundEmbed(prefix)] });
+      await interaction.editReply({ embeds: [buildTrackerNotFoundEmbed(prefix, interaction.guildId)] });
       return;
     }
 
     await interaction.editReply({ embeds: [buildTrackerRemovedEmbed(removed, prefix)] });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: "Tracker dihapus",
+      description: "Admin menghapus tracker YouTube dari server.",
+      keyParts: [removed.youtube?.channelId, interaction.user?.id],
+      details: [
+        {
+          name: "YouTube",
+          value: `${removed.youtube?.title || removed.youtube?.username} (\`${removed.youtube?.channelId}\`)`,
+          inline: false
+        }
+      ]
+    });
   },
   async executePrefix(message, args, context) {
     const username = args[0];
@@ -61,10 +77,25 @@ module.exports = {
     const removed = await removeChannelTracker(message.guild.id, username);
 
     if (!removed) {
-      await message.reply({ embeds: [buildTrackerNotFoundEmbed(context.prefix)] });
+      await message.reply({ embeds: [buildTrackerNotFoundEmbed(context.prefix, message.guild.id)] });
       return;
     }
 
     await message.reply({ embeds: [buildTrackerRemovedEmbed(removed, context.prefix)] });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: "Tracker dihapus",
+      description: "Admin menghapus tracker YouTube dari server.",
+      keyParts: [removed.youtube?.channelId, message.author?.id],
+      details: [
+        {
+          name: "YouTube",
+          value: `${removed.youtube?.title || removed.youtube?.username} (\`${removed.youtube?.channelId}\`)`,
+          inline: false
+        }
+      ]
+    });
   }
 };

@@ -11,6 +11,7 @@ const {
 } = require("../config/constants");
 const { getPrefixForGuild } = require("../services/prefixService");
 const { updateChannelTracker } = require("../services/trackerService");
+const { logGuildAction } = require("../services/userActionLogService");
 const { resolveGuildChannel, resolveGuildRole } = require("../utils/discordResolvers");
 const { diagnoseChannelAccess } = require("../utils/discordDeliveryDiagnostics");
 const {
@@ -163,7 +164,7 @@ module.exports = {
     const prefix = await getPrefixForGuild(interaction.guildId);
 
     if (!result) {
-      await interaction.editReply({ embeds: [buildTrackerNotFoundEmbed(prefix)] });
+      await interaction.editReply({ embeds: [buildTrackerNotFoundEmbed(prefix, interaction.guildId)] });
       return;
     }
 
@@ -175,6 +176,31 @@ module.exports = {
           latestVideo: result.latestVideo,
           prefix
         })
+      ]
+    });
+
+    await logGuildAction(interaction.client, {
+      guildId: interaction.guildId,
+      actor: interaction.user,
+      action: "Tracker diperbarui",
+      description: "Admin memperbarui konfigurasi tracker YouTube.",
+      keyParts: [result.entry.youtube.channelId, interaction.user?.id],
+      details: [
+        {
+          name: "YouTube",
+          value: `${result.entry.youtube.title || result.entry.youtube.username} (\`${result.entry.youtube.channelId}\`)`,
+          inline: false
+        },
+        {
+          name: "Target Channel",
+          value: `<#${result.entry.discord.channelId}>`,
+          inline: true
+        },
+        {
+          name: "Ping Role",
+          value: result.entry.discord.roleId ? `<@&${result.entry.discord.roleId}>` : "Tidak ada",
+          inline: true
+        }
       ]
     });
   },
@@ -237,7 +263,7 @@ module.exports = {
     }
 
     if (!result) {
-      await message.reply({ embeds: [buildTrackerNotFoundEmbed(context.prefix)] });
+      await message.reply({ embeds: [buildTrackerNotFoundEmbed(context.prefix, message.guild.id)] });
       return;
     }
 
@@ -249,6 +275,31 @@ module.exports = {
           latestVideo: result.latestVideo,
           prefix: context.prefix
         })
+      ]
+    });
+
+    await logGuildAction(message.client, {
+      guildId: message.guild.id,
+      actor: message.author,
+      action: "Tracker diperbarui",
+      description: "Admin memperbarui konfigurasi tracker YouTube.",
+      keyParts: [result.entry.youtube.channelId, message.author?.id],
+      details: [
+        {
+          name: "YouTube",
+          value: `${result.entry.youtube.title || result.entry.youtube.username} (\`${result.entry.youtube.channelId}\`)`,
+          inline: false
+        },
+        {
+          name: "Target Channel",
+          value: `<#${result.entry.discord.channelId}>`,
+          inline: true
+        },
+        {
+          name: "Ping Role",
+          value: result.entry.discord.roleId ? `<@&${result.entry.discord.roleId}>` : "Tidak ada",
+          inline: true
+        }
       ]
     });
   }

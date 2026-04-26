@@ -1,0 +1,23 @@
+{
+  "dataVersion": 5,
+  "globalSettings": {
+    "accessControl": {
+      "guildWhitelistEnabled": false,
+      "userWhitelistEnabled": false,
+      "leaveUnauthorizedGuilds": false,
+      "whitelistGuildIds": [],
+      "whitelistUserIds": [],
+      "updatedAt": null
+    },
+    "logging": {
+      "devLogChannelId": null,
+      "devLogLevel": "warn",
+      "userIncludeErrorStack": false
+    }
+  },
+  "guildSettings": [],
+  "trackedChannels": [],
+  "guildLogs": [],
+  "auditLogs": [],
+  "notificationHistory": []
+}

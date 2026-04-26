@@ -2,7 +2,7 @@
 
 ## Current Version
 
-- `dataVersion`: `4`
+- `dataVersion`: `5`
 
 ## Migration Strategy
 
@@ -25,6 +25,21 @@
 
 - Menambahkan `trackedChannels[].recentSeenVideoIds`.
 - Polling tracker kini bisa mendeteksi beberapa video terbaru dalam satu siklus (window RSS), bukan hanya item pertama.
+
+## Version 5 Highlights
+
+- Menambahkan `notificationHistory[]` untuk riwayat delivery notifikasi tracker/title watch.
+- Menjaga kompatibilitas data `guildLogs` dan `auditLogs` saat bot menulis `data.json`.
+
+## Runtime Timestamp Semantics
+
+- `trackedChannels[].configUpdatedAt`: perubahan konfigurasi tracker terakhir.
+- `trackedChannels[].stateUpdatedAt`: perubahan state runtime tracker terakhir.
+- `trackedChannels[].lastCheckedAt`: poll/check RSS tracker terakhir yang berhasil.
+- `trackedChannels[].updatedAt`: field legacy/backward-compatible; UI baru tidak memakai field ini sebagai label generik.
+- `guildSettings[].titleWatches[].configUpdatedAt`: perubahan konfigurasi title watch terakhir.
+- `guildSettings[].titleWatches[].stateUpdatedAt`: perubahan state runtime title watch terakhir.
+- `guildSettings[].titleWatches[].lastMatchedAt`: waktu terakhir search result title watch diproses sebagai match/history state.
 
 ## Rollback Notes
 

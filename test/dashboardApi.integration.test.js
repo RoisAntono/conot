@@ -47,7 +47,7 @@ async function createApiTestContext() {
   process.env.DASHBOARD_CONFIG_STORAGE_DRIVER = "json";
   process.env.DASHBOARD_SQLITE_FILE_PATH = path.join(tempDir, "dashboard-config.sqlite");
   process.env.CONFIG_SERVICE_TOKEN = "test-config-token";
-  process.env.DISCORD_TOKEN = "";
+  delete process.env.DISCORD_TOKEN;
 
   const api = createApiServer();
   await new Promise((resolve) => api.server.listen(0, "127.0.0.1", resolve));

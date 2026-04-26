@@ -16,3 +16,8 @@ data/data.json
 data/dashboard-sessions.json
 data/*.pre-restore-*.json
 data/*.restore-drill-*.json
+apps/*/data/backups/
+apps/*/data/data.json
+apps/*/data/dashboard-sessions.json
+apps/*/data/*.pre-restore-*.json
+apps/*/data/*.restore-drill-*.json

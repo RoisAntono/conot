@@ -78,6 +78,8 @@ Conot/
 |       `-- tsconfig/
 |-- data/
 |   `-- data.json
+|-- config/
+|   `-- app.config.json
 |-- src/
 |   |-- commands/
 |   |-- config/
@@ -111,62 +113,36 @@ npm run test:coverage
 npm run lint:secrets
 ```
 
-### 2. Configure `.env`
+### 2. Configure `.env` dan config
 
 ```env
+# Secrets and deployment-specific overrides only.
+# Operational defaults live in config/app.config.json.
+
 DISCORD_TOKEN=your_discord_bot_token
 GUILD_ID=
 BOT_OWNER_IDS=YOUR_OWNER_USER_ID
-GUARD_GUILD_WHITELIST_ENABLED=false
-GUARD_USER_WHITELIST_ENABLED=false
-GUARD_LEAVE_UNAUTHORIZED_GUILDS=false
 GUARD_GUILD_IDS=
 GUARD_USER_IDS=
-DATA_BACKUP_INTERVAL_MS=21600000
-DATA_BACKUP_RETENTION=30
-HTTP_RETRY_ATTEMPTS=3
-RSS_RETRY_ATTEMPTS=3
-RETRY_BASE_DELAY_MS=750
-NOTIFICATION_HISTORY_WINDOW_MS=86400000
-RSS_FAILURE_LOG_THRESHOLD=3
-RSS_FAILURE_LOG_REPEAT_EVERY=6
-RSS_RECENT_VIDEOS_LIMIT=5
-MAX_TRACKERS_PER_GUILD=100
-MAX_TITLE_WATCHES_PER_GUILD=50
-CANARY_ENABLED=false
-CANARY_HANDLES=
-CANARY_INTERVAL_MS=1800000
-CANARY_FAILURE_THRESHOLD=3
 EXTERNAL_LOG_WEBHOOK_URL=
-SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS=10000
+DASHBOARD_SESSION_SECRET=replace-with-strong-secret
+DASHBOARD_REDIS_URL=
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+CONFIG_SERVICE_TOKEN=replace-with-strong-token
+CONOT_CONFIG_PATH=config/app.config.json
 DASHBOARD_API_HOST=::
 DASHBOARD_API_PORT=4310
 DASHBOARD_API_BASE_URL=http://localhost:4310
 DASHBOARD_WEB_HOST=::
+DASHBOARD_WEB_PORT=4320
 DASHBOARD_WEB_ORIGIN=http://localhost:4320
 DASHBOARD_PUBLIC_URL=
 DASHBOARD_AUTH_MODE=mock
-DASHBOARD_SESSION_STORE=file
-DASHBOARD_SESSION_FILE_PATH=data/dashboard-sessions.json
-DASHBOARD_SESSION_TTL_MS=604800000
-DASHBOARD_REDIS_URL=
-DASHBOARD_REDIS_PREFIX=conot:dashboard
-DASHBOARD_MUTATION_RATE_WINDOW_MS=10000
-DASHBOARD_MUTATION_RATE_MAX=8
-DASHBOARD_PREVIEW_RATE_WINDOW_MS=10000
-DASHBOARD_PREVIEW_RATE_MAX=2
-DISCORD_CLIENT_ID=
-DISCORD_CLIENT_SECRET=
 DISCORD_REDIRECT_URI=http://localhost:4310/v1/auth/discord/callback
 DASHBOARD_DEFAULT_RETURN_TO=http://localhost:4320/dashboard
-DASHBOARD_MOCK_AUTO_LOGIN=true
-CONFIG_SERVICE_TOKEN=replace-with-strong-token
-CONFIG_SYNC_ENABLED=false
-CONFIG_SERVICE_BASE_URL=http://localhost:4310
-CONFIG_SYNC_INTERVAL_MS=60000
-CONFIG_SYNC_BOOTSTRAP_ON_READY=true
-CONFIG_SYNC_EVENT_STREAM_ENABLED=true
-CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS=25000
+DATA_FILE_PATH=data/data.json
+DASHBOARD_SESSION_FILE_PATH=data/dashboard-sessions.json
 DASHBOARD_CONFIG_STORAGE_DRIVER=json
 DASHBOARD_SQLITE_FILE_PATH=data/dashboard-config.sqlite
 ```
@@ -177,17 +153,14 @@ Catatan:
 - `GUILD_ID` opsional
 - isi `GUILD_ID` jika ingin registrasi slash command lebih cepat ke satu server
 - `BOT_OWNER_IDS` dipakai untuk owner instance yang boleh mengatur whitelist dan dev log global
-- `GUARD_*` opsional untuk bootstrap whitelist dari environment
+- `.env` sekarang dipakai untuk secret dan override per deployment; default operasional ada di `config/app.config.json`
+- nilai `.env` tetap menang atas `config/app.config.json`, jadi production bisa override tanpa mengubah file config versi repo
+- `CONOT_CONFIG_PATH` opsional jika ingin memakai file config lain, misalnya `config/production.config.json`
+- tuning seperti `DATA_BACKUP_*`, `RSS_*`, `MAX_*`, `CANARY_*`, `CONFIG_SYNC_*`, session TTL, rate limit dashboard, dan storage default sebaiknya diubah di `config/app.config.json`
+- secret tetap harus di `.env`: `DISCORD_TOKEN`, `DISCORD_CLIENT_SECRET`, `DASHBOARD_SESSION_SECRET`, `DASHBOARD_REDIS_URL`, `CONFIG_SERVICE_TOKEN`, dan `EXTERNAL_LOG_WEBHOOK_URL`
+- `GUARD_GUILD_IDS` dan `GUARD_USER_IDS` opsional untuk bootstrap whitelist dari environment
 - jika `GUARD_USER_WHITELIST_ENABLED=true`, minimal isi satu owner di `BOT_OWNER_IDS`/`OWNER_USER_IDS` agar tidak lockout
-- `DATA_BACKUP_*` opsional untuk jadwal backup data lokal
-- `HTTP_RETRY_ATTEMPTS` dan `RSS_RETRY_ATTEMPTS` opsional untuk ketahanan jaringan
-- `NOTIFICATION_HISTORY_WINDOW_MS` untuk guard tambahan dedupe signature notifikasi
-- `RSS_FAILURE_LOG_*` untuk menahan spam log RSS saat error sementara
-- `RSS_RECENT_VIDEOS_LIMIT` untuk jumlah item RSS terbaru yang dipindai per siklus (anti-miss)
-- `MAX_TRACKERS_PER_GUILD` dan `MAX_TITLE_WATCHES_PER_GUILD` untuk batas skala per guild
-- `CANARY_*` untuk pemantauan health scraping YouTube
 - `EXTERNAL_LOG_WEBHOOK_URL` opsional untuk kirim log warn/error ke sistem observability eksternal
-- `CONFIG_SYNC_*` untuk sinkronisasi config bot dari dashboard API (event stream + fallback interval)
 - `DASHBOARD_PUBLIC_URL` opsional untuk deep-link command bot ke URL dashboard publik (berguna jika web dashboard berada di domain berbeda dari origin lokal)
 - `DASHBOARD_SESSION_STORE=file|redis` untuk memilih session backend dashboard
 - `DASHBOARD_SESSION_TTL_MS` default 7 hari; session memakai rolling refresh sehingga tidak logout hanya karena tab/browser ditutup

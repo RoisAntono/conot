@@ -1,6 +1,7 @@
 const {
   CANARY_ENABLED,
   CANARY_FAILURE_THRESHOLD,
+  CANARY_HANDLES,
   CANARY_INTERVAL_MS
 } = require("../config/constants");
 const { broadcastGlobalLog } = require("./botLogService");
@@ -20,10 +21,7 @@ let canaryCycleCount = 0;
 const canaryFailureState = new Map();
 
 function parseCanaryHandles() {
-  return String(process.env.CANARY_HANDLES || "")
-    .split(",")
-    .map((value) => value.trim())
-    .filter(Boolean);
+  return CANARY_HANDLES;
 }
 
 function getFailureRecord(handle) {

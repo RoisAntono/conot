@@ -1,0 +1,67 @@
+{
+  "bot": {
+    "dataFilePath": "data/data.json",
+    "backupIntervalMs": 21600000,
+    "backupRetention": 30,
+    "httpRetryAttempts": 3,
+    "rssRetryAttempts": 3,
+    "retryBaseDelayMs": 750,
+    "notificationHistoryWindowMs": 86400000,
+    "rssFailureLogThreshold": 3,
+    "rssFailureLogRepeatEvery": 6,
+    "rssRecentVideosLimit": 5,
+    "maxTrackersPerGuild": 100,
+    "maxTitleWatchesPerGuild": 50,
+    "sensitiveCommandBucketRateLimitMs": 10000
+  },
+  "guard": {
+    "guildWhitelistEnabled": false,
+    "userWhitelistEnabled": false,
+    "leaveUnauthorizedGuilds": false
+  },
+  "canary": {
+    "enabled": false,
+    "handles": [],
+    "intervalMs": 1800000,
+    "failureThreshold": 3
+  },
+  "dashboard": {
+    "apiHost": "::",
+    "apiPort": 4310,
+    "apiBaseUrl": "http://localhost:4310",
+    "webHost": "::",
+    "webPort": 4320,
+    "webOrigin": "http://localhost:4320",
+    "publicUrl": "",
+    "authMode": "",
+    "sessionCookieName": "conot_session",
+    "sessionTtlMs": 604800000,
+    "sessionStore": "file",
+    "sessionFilePath": "data/dashboard-sessions.json",
+    "redisPrefix": "conot:dashboard",
+    "csrfHeaderName": "x-csrf-token",
+    "mutationRateWindowMs": 10000,
+    "mutationRateMax": 8,
+    "previewRateWindowMs": 10000,
+    "previewRateMax": 2,
+    "discordRedirectUri": "http://localhost:4310/v1/auth/discord/callback",
+    "discordApiTimeoutMs": 12000,
+    "discordBotGuildCacheMs": 60000,
+    "defaultReturnTo": "http://localhost:4320/dashboard",
+    "mockAutoLogin": true,
+    "mockUserId": "100000000000000001",
+    "mockUsername": "mock-admin",
+    "mockGuildIds": ["123456789012345678"],
+    "mockAdminGuildIds": ["123456789012345678"],
+    "configStorageDriver": "json",
+    "sqliteFilePath": "data/dashboard-config.sqlite"
+  },
+  "configSync": {
+    "enabled": false,
+    "serviceBaseUrl": "http://localhost:4310",
+    "intervalMs": 60000,
+    "bootstrapOnReady": true,
+    "eventStreamEnabled": true,
+    "eventPollTimeoutMs": 25000
+  }
+}

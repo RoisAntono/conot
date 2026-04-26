@@ -1,11 +1,19 @@
 const path = require("node:path");
+const {
+  getConfigBoolean,
+  getConfigList,
+  getConfigNumber,
+  getConfigString,
+  resolveAppPath
+} = require("./appConfig");
 
 const POLL_INTERVAL_MS = 5 * 60 * 1000;
-const DATA_FILE = path.join(process.cwd(), "data", "data.json");
-const DATA_BACKUP_DIR = path.join(process.cwd(), "data", "backups");
+const DATA_FILE_PATH = getConfigString("bot.dataFilePath", "DATA_FILE_PATH", "data/data.json");
+const DATA_FILE = resolveAppPath(DATA_FILE_PATH, "data/data.json");
+const DATA_BACKUP_DIR = resolveAppPath(path.join("data", "backups"));
 const DATA_SCHEMA_VERSION = 5;
-const DATA_BACKUP_INTERVAL_MS = Number(process.env.DATA_BACKUP_INTERVAL_MS || (6 * 60 * 60 * 1000));
-const DATA_BACKUP_RETENTION = Number(process.env.DATA_BACKUP_RETENTION || 30);
+const DATA_BACKUP_INTERVAL_MS = getConfigNumber("bot.backupIntervalMs", "DATA_BACKUP_INTERVAL_MS", 6 * 60 * 60 * 1000);
+const DATA_BACKUP_RETENTION = getConfigNumber("bot.backupRetention", "DATA_BACKUP_RETENTION", 30);
 const DEFAULT_PREFIX = "?n";
 const MAX_PREFIX_LENGTH = 5;
 const DEFAULT_CUSTOM_MESSAGE = "Ada video baru dari {channel}!";
@@ -20,9 +28,9 @@ const LOG_LEVELS = {
   WARN: "warn",
   ERROR: "error"
 };
-const DEFAULT_GUILD_WHITELIST_ENABLED = false;
-const DEFAULT_USER_WHITELIST_ENABLED = false;
-const DEFAULT_LEAVE_UNAUTHORIZED_GUILDS = false;
+const DEFAULT_GUILD_WHITELIST_ENABLED = getConfigBoolean("guard.guildWhitelistEnabled", "GUARD_GUILD_WHITELIST_ENABLED", false);
+const DEFAULT_USER_WHITELIST_ENABLED = getConfigBoolean("guard.userWhitelistEnabled", "GUARD_USER_WHITELIST_ENABLED", false);
+const DEFAULT_LEAVE_UNAUTHORIZED_GUILDS = getConfigBoolean("guard.leaveUnauthorizedGuilds", "GUARD_LEAVE_UNAUTHORIZED_GUILDS", false);
 const DEFAULT_TITLE_WATCH_MAX_AGE_DAYS = 3;
 const MAX_TITLE_WATCH_MAX_AGE_DAYS = 30;
 const TITLE_WATCH_SEARCH_LIMIT = 10;
@@ -30,28 +38,29 @@ const TITLE_WATCH_HISTORY_LIMIT = 25;
 const HEAVY_COMMAND_RATE_LIMIT_MS = 15 * 1000;
 const SETTINGS_COMMAND_RATE_LIMIT_MS = 5 * 1000;
 const OWNER_COMMAND_RATE_LIMIT_MS = 3 * 1000;
-const SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS = Number(process.env.SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS || 10 * 1000);
+const SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS = getConfigNumber("bot.sensitiveCommandBucketRateLimitMs", "SENSITIVE_COMMAND_BUCKET_RATE_LIMIT_MS", 10 * 1000);
 const NOTIFICATION_GUARD_WINDOW_MS = 30 * 60 * 1000;
-const NOTIFICATION_HISTORY_WINDOW_MS = Number(process.env.NOTIFICATION_HISTORY_WINDOW_MS || 24 * 60 * 60 * 1000);
-const RSS_FAILURE_LOG_THRESHOLD = Number(process.env.RSS_FAILURE_LOG_THRESHOLD || 3);
-const RSS_FAILURE_LOG_REPEAT_EVERY = Number(process.env.RSS_FAILURE_LOG_REPEAT_EVERY || 6);
-const RSS_RECENT_VIDEOS_LIMIT = Number(process.env.RSS_RECENT_VIDEOS_LIMIT || 5);
+const NOTIFICATION_HISTORY_WINDOW_MS = getConfigNumber("bot.notificationHistoryWindowMs", "NOTIFICATION_HISTORY_WINDOW_MS", 24 * 60 * 60 * 1000);
+const RSS_FAILURE_LOG_THRESHOLD = getConfigNumber("bot.rssFailureLogThreshold", "RSS_FAILURE_LOG_THRESHOLD", 3);
+const RSS_FAILURE_LOG_REPEAT_EVERY = getConfigNumber("bot.rssFailureLogRepeatEvery", "RSS_FAILURE_LOG_REPEAT_EVERY", 6);
+const RSS_RECENT_VIDEOS_LIMIT = getConfigNumber("bot.rssRecentVideosLimit", "RSS_RECENT_VIDEOS_LIMIT", 5);
 const LOG_GUARD_WINDOW_MS = 30 * 60 * 1000;
-const HTTP_RETRY_ATTEMPTS = Number(process.env.HTTP_RETRY_ATTEMPTS || 3);
-const RSS_RETRY_ATTEMPTS = Number(process.env.RSS_RETRY_ATTEMPTS || 3);
-const RETRY_BASE_DELAY_MS = Number(process.env.RETRY_BASE_DELAY_MS || 750);
-const MAX_TRACKERS_PER_GUILD = Number(process.env.MAX_TRACKERS_PER_GUILD || 100);
-const MAX_TITLE_WATCHES_PER_GUILD = Number(process.env.MAX_TITLE_WATCHES_PER_GUILD || 50);
-const CANARY_ENABLED = String(process.env.CANARY_ENABLED || "false").toLowerCase() === "true";
-const CANARY_INTERVAL_MS = Number(process.env.CANARY_INTERVAL_MS || 30 * 60 * 1000);
-const CANARY_FAILURE_THRESHOLD = Number(process.env.CANARY_FAILURE_THRESHOLD || 3);
+const HTTP_RETRY_ATTEMPTS = getConfigNumber("bot.httpRetryAttempts", "HTTP_RETRY_ATTEMPTS", 3);
+const RSS_RETRY_ATTEMPTS = getConfigNumber("bot.rssRetryAttempts", "RSS_RETRY_ATTEMPTS", 3);
+const RETRY_BASE_DELAY_MS = getConfigNumber("bot.retryBaseDelayMs", "RETRY_BASE_DELAY_MS", 750);
+const MAX_TRACKERS_PER_GUILD = getConfigNumber("bot.maxTrackersPerGuild", "MAX_TRACKERS_PER_GUILD", 100);
+const MAX_TITLE_WATCHES_PER_GUILD = getConfigNumber("bot.maxTitleWatchesPerGuild", "MAX_TITLE_WATCHES_PER_GUILD", 50);
+const CANARY_ENABLED = getConfigBoolean("canary.enabled", "CANARY_ENABLED", false);
+const CANARY_HANDLES = getConfigList("canary.handles", "CANARY_HANDLES", []);
+const CANARY_INTERVAL_MS = getConfigNumber("canary.intervalMs", "CANARY_INTERVAL_MS", 30 * 60 * 1000);
+const CANARY_FAILURE_THRESHOLD = getConfigNumber("canary.failureThreshold", "CANARY_FAILURE_THRESHOLD", 3);
 const EXTERNAL_LOG_WEBHOOK_URL = String(process.env.EXTERNAL_LOG_WEBHOOK_URL || "").trim() || null;
-const CONFIG_SYNC_ENABLED = String(process.env.CONFIG_SYNC_ENABLED || "false").toLowerCase() === "true";
-const CONFIG_SYNC_INTERVAL_MS = Number(process.env.CONFIG_SYNC_INTERVAL_MS || 60 * 1000);
-const CONFIG_SYNC_BOOTSTRAP_ON_READY = String(process.env.CONFIG_SYNC_BOOTSTRAP_ON_READY || "true").toLowerCase() === "true";
-const CONFIG_SYNC_EVENT_STREAM_ENABLED = String(process.env.CONFIG_SYNC_EVENT_STREAM_ENABLED || "true").toLowerCase() === "true";
-const CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS = Number(process.env.CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS || 25_000);
-const CONFIG_SERVICE_BASE_URL = String(process.env.CONFIG_SERVICE_BASE_URL || "").trim().replace(/\/+$/, "");
+const CONFIG_SYNC_ENABLED = getConfigBoolean("configSync.enabled", "CONFIG_SYNC_ENABLED", false);
+const CONFIG_SYNC_INTERVAL_MS = getConfigNumber("configSync.intervalMs", "CONFIG_SYNC_INTERVAL_MS", 60 * 1000);
+const CONFIG_SYNC_BOOTSTRAP_ON_READY = getConfigBoolean("configSync.bootstrapOnReady", "CONFIG_SYNC_BOOTSTRAP_ON_READY", true);
+const CONFIG_SYNC_EVENT_STREAM_ENABLED = getConfigBoolean("configSync.eventStreamEnabled", "CONFIG_SYNC_EVENT_STREAM_ENABLED", true);
+const CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS = getConfigNumber("configSync.eventPollTimeoutMs", "CONFIG_SYNC_EVENT_POLL_TIMEOUT_MS", 25_000);
+const CONFIG_SERVICE_BASE_URL = getConfigString("configSync.serviceBaseUrl", "CONFIG_SERVICE_BASE_URL", "").trim().replace(/\/+$/, "");
 const CONFIG_SERVICE_TOKEN = String(process.env.CONFIG_SERVICE_TOKEN || "").trim();
 const CONTENT_FILTERS = {
   ALL: "all",
@@ -118,6 +127,7 @@ module.exports = {
   MAX_TRACKERS_PER_GUILD,
   MAX_TITLE_WATCHES_PER_GUILD,
   CANARY_ENABLED,
+  CANARY_HANDLES,
   CANARY_INTERVAL_MS,
   CANARY_FAILURE_THRESHOLD,
   EXTERNAL_LOG_WEBHOOK_URL,

@@ -1,3 +1,5 @@
+const { getConfigString } = require("../config/appConfig");
+
 function normalizeOrigin(value) {
   const raw = String(value || "").trim();
   if (!raw) {
@@ -8,7 +10,9 @@ function normalizeOrigin(value) {
 }
 
 function getDashboardOrigin() {
-  return normalizeOrigin(process.env.DASHBOARD_PUBLIC_URL || process.env.DASHBOARD_WEB_ORIGIN);
+  const publicUrl = getConfigString("dashboard.publicUrl", "DASHBOARD_PUBLIC_URL", "");
+  const webOrigin = getConfigString("dashboard.webOrigin", "DASHBOARD_WEB_ORIGIN", "");
+  return normalizeOrigin(publicUrl || webOrigin);
 }
 
 function buildGuildDashboardUrl(guildId, section = null) {
